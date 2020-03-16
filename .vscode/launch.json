@@ -1,0 +1,19 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "val_test",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/a.out",
+            "args": ["${workspaceFolder}/maps/lem-in_test/lem-in_maps/map_6"],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "externalConsole": false,
+            "MIMode": "lldb"
+        }
+    ]
+}
