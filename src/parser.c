@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dheredat <dheredat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/06 17:44:55 by dheredat          #+#    #+#             */
-/*   Updated: 2020/03/16 20:34:46 by dheredat         ###   ########.fr       */
+/*   Created: 2020/04/01 12:11:47 by dheredat          #+#    #+#             */
+/*   Updated: 2020/04/02 17:26:21 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -247,4 +247,4 @@ void parse_rooms(char **lines)
 // 	else
 // 		printf("TO MANY ARGS\n");
 // 	return (0);
-// }
+// }test_links_matrix();

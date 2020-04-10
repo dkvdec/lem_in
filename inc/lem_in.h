@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lem_in.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dheredat <dheredat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 17:55:00 by dheredat          #+#    #+#             */
-/*   Updated: 2020/03/16 19:58:27 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/10 16:32:26 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,14 @@ struct		s_valid{
 	int		end_counter;
 }			t_valid;
 
-struct		s_room_proto{
-	char	*name;
-	int		nbr;
-	int		*connected_to_nbr;
-	int		max_connect;
-	int		cur_connect;
-	//list of connections
-}			t_room_proto;
+// struct		s_room_proto{
+// 	char	*name;
+// 	int		nbr;
+// 	int		*connected_to_nbr;
+// 	int		max_connect;
+// 	int		cur_connect;
+// 	//list of connections
+// }			t_room_proto;
 
 struct		s_rooms{
 	char	**room_list;
@@ -51,10 +51,41 @@ struct		s_links{
 	int		max_size;
 }			t_links;
 
+typedef struct		s_room{
+	int				room_nbr;
+	int				ant_nbr;
+	struct s_room	*next_room;
+	struct s_room	*prev_room;
+}					t_room;
+
+
+typedef struct		s_way{
+	int				way_nbr;
+	int				lenght;
+	t_room			*start_room;
+	t_room			*end_room;
+	struct s_way	*next;
+}					t_way;
+
+struct				s_move{
+	t_way			*head;
+	t_way			*curr;
+	int				*ways_len;
+	int				ways;
+}					t_move;
+
+
+
 
 void error_func(char *str);
 void parse_rooms(char **lines);
 void check_room_duplicates();
 void parse_links(char **lines);
+void test_deixtra_alg();
+void test_links_matrix();
+void form_ways();
+int map_mark(int i, int price);
+void change_value();
+void get_ways_len();
 
 #endif

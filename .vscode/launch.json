@@ -5,15 +5,23 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "val_test",
+            "name": "test",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/src/a.out",
-            "args": ["${workspaceFolder}/maps/lem-in_test/lem-in_maps/map_6"],
+            "args": ["${workspaceFolder}/src/test.map"],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
+            "environment": [],
             "externalConsole": false,
-            "MIMode": "lldb"
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
         }
     ]
 }

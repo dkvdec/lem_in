@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   valid.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dheredat <dheredat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/14 12:49:23 by dheredat          #+#    #+#             */
-/*   Updated: 2020/03/16 20:35:17 by dheredat         ###   ########.fr       */
+/*   Created: 2020/04/01 12:12:12 by dheredat          #+#    #+#             */
+/*   Updated: 2020/04/02 21:44:12 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -231,7 +231,7 @@ void	test_links_matrix()
 	{
 		j = 0;
 		while (j < t_links.max_size)
-			ft_printf("%2d", t_links.room_links[i][j++]);
+			ft_printf("%-3d", t_links.room_links[i][j++]);
 		ft_printf("\n");
 		i++;
 	}
@@ -266,6 +266,7 @@ void base_valid(char **lines)
 	check_room_duplicates();
 	parse_links(lines);
 	test_links_matrix(); // tester
+	test_deixtra_alg();
 }
 
 void s_valid_reset()
