@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/01 12:12:12 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/02 21:44:12 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/11 00:15:23 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -299,7 +299,8 @@ void valid_core(int fd)
 		error_func("Split malloc error!");
 	s_valid_reset();
 	base_valid(lines);
-	error_func("BASE VALID PASSED!");
+	ft_printf("%s\n\n", buff);
+	transport_core();
 }
 
 int main(int argc, char **argv)

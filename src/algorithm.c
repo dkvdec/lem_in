@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/01 12:11:24 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/10 16:24:56 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/11 00:11:43 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -220,4 +220,5 @@ void test_deixtra_alg()
 	test_links_matrix();
 	show_ways();
 	get_ways_len();
+	//transport_core();
 }

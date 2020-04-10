@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 17:55:00 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/10 16:32:26 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/11 00:04:59 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ struct				s_move{
 	t_way			*head;
 	t_way			*curr;
 	int				*ways_len;
+	int				ant_nbr;
+	int				ants_in_rooms;
 	int				ways;
 }					t_move;
 
@@ -87,5 +89,6 @@ void form_ways();
 int map_mark(int i, int price);
 void change_value();
 void get_ways_len();
+void transport_core();
 
 #endif
