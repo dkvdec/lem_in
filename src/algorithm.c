@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/01 12:11:24 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/11 00:11:43 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/11 23:44:33 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,12 @@ void change_value()
 		while (j < t_links.max_size)
 		{
 			if (t_links.room_links[i][j] != 0)
-				t_links.room_links[i][j] = 99;
+				t_links.room_links[i][j] = 2147483647;
 			j++;
 		}
 		i++;
 	}
-	test_links_matrix();
+	//test_links_matrix();
 }
 
 void deixtra_proto(int i, int price)
@@ -103,122 +103,12 @@ int map_mark(int i, int price)
 	return (flag);
 }
 
-// void set_link_price(int i, int j, int price)
-// {
-// 	t_links.room_links[i][j] = price;
-// 	t_links.room_links[j][i] = price;
-// }
-//переработать для зануления в случае отсуствия конца и более дешёвых линков
-// int map_mark(int i, int price)
-// {
-// 	int j;
-// 	int flag;
-// 	int swap;
-
-// 	price++;
-// 	j = 0;
-// 	flag = -1;
-// 	while(j < t_links.max_size)
-// 	{
-// 		if (t_links.room_links[i][j] != 0)
-// 		{
-// 			if (t_links.room_links[i][j] > price)
-// 			{
-				
-// 				if (i != t_rooms.end_room_nbr
-// 				&& j != t_rooms.end_room_nbr)
-// 				{
-// 					set_link_price(i, j, -1);// useless
-// 					if ((swap = map_mark(j, price)) > flag)
-// 						flag = swap;
-// 					if (swap >= 0)
-// 						set_link_price(i, j, price);
-// 				}
-// 				else
-// 					flag = 1;
-// 			}
-// 			else
-// 				flag = (flag >= 0) ? flag : 0;
-// 		}
-// 		j++;
-// 	}
-// 	// if (flag < 0)
-// 	// 	remove_link(i);
-// 	return (flag);
-// }
-// 			else
-// 				flag = (flag >= 0) ? flag : 0;
-// 		}
-// 		j++;
-// 	}
-// 	// if (flag < 0)
-
-// int deixtra_proto2(int i, int price)
-// {
-// 	int j;
-// 	int flag;
-
-// 	price++;
-// 			else
-// 				flag = (flag >= 0) ? flag : 0;
-// 		}
-// 		j++;
-// 	}
-// 	// if (flag < 0)
-// 		{
-// 			t_links.room_links[i][j] = price;
-// 			t_links.room_links[j][i] = price;
-// 			if (i != t_rooms.end_room_nbr
-// 			&& j != t_rooms.end_room_nbr)
-// 			{
-// 				if ((deixtra_proto2(j, price)) > 0)
-// 					flag++;
-// 				else
-// 				{
-// 					t_links.room_links[i][j] = -1;
-// 					t_links.room_links[j][i] = -1;
-// 				}
-// 			}
-// 			else
-// 				flag++;
-			
-// 		}
-// 		else if (t_links.room_links[i][j] > 0 && t_links.room_links[i][j] < price)
-// 			flag++;
-// 		j++;
-// 	}
-// 	return (flag);
-// }
-
-void show_ways()
-{
-	t_way *curr;
-	t_room *room;
-
-	curr = t_move.head;
-	while (curr != NULL)
-	{
-		ft_printf("______________________\nway_nbr = %d\nway_length = %d\n", curr->way_nbr, curr->lenght);
-		room = curr->start_room;
-		ft_printf("|%d|->", t_rooms.start_room_nbr);
-		while (room != NULL)
-		{
-			ft_printf("|%d|", room->room_nbr);
-			if (room->room_nbr != t_rooms.end_room_nbr)
-				ft_printf("->");
-			room = room->next_room;
-		}
-		ft_printf("\n");
-		curr = curr->next;
-	}
-}
-
 void test_deixtra_alg()
 {
 	form_ways();
-	ft_printf("start = %d\nend = %d\n", t_rooms.start_room_nbr, t_rooms.end_room_nbr);
-	test_links_matrix();
-	show_ways();
+	//ft_printf("start = %d\nend = %d\n", t_rooms.start_room_nbr, t_rooms.end_room_nbr);
+	//test_links_matrix();
+	//show_ways();
 	get_ways_len();
 	//transport_core();
 }

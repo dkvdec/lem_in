@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/08 21:16:26 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/11 00:13:53 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/11 23:58:53 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,20 +114,27 @@ void form_ways()
 	int i;
 
 	change_value();
+	ft_putendl("   value_changed");
 	if (map_mark(t_rooms.start_room_nbr, 0) < 1)
-		ft_printf("Map Error! No conection between ##start and ##end.");
+		error_func("Map Error! No conection between ##start and ##end.");
+	ft_putendl("   map_marked");
 	i = 0;
 	curr = make_way(i++);
 	t_move.head = curr;
 	change_value();
+	ft_putendl("   value_changed");
+	ft_putendl("first_way done");
 	while (map_mark(t_rooms.start_room_nbr, 0) == 1)
 	{
+		ft_putendl("   map_marked");
 		curr->next = make_way(i++);
 		curr = curr->next;
-		change_value();        
+		change_value();
+		ft_putendl("   value_changed");
+		ft_putendl("additional_way done");
 	}
 	t_move.ways = i;
-	ft_printf("WAYS FORMED = %d\n", i);////////////
+	//ft_printf("WAYS FORMED = %d\n", i);////////////
 }
 
 void get_ways_len()
@@ -146,12 +153,13 @@ void get_ways_len()
 		curr = curr->next;
 	}
 	//
-	i = 0;
-	ft_printf("_______________\nLEN_WAYS\n");
-	while (i < t_move.ways)
-	{
-		ft_printf("way_nbr = %d len = %d\n", i, t_move.ways_len[i++]);
-	}
+	// i = 0;
+	// ft_printf("_______________\nLEN_WAYS\n");
+	// while (i < t_move.ways)
+	// {
+	// 	ft_printf("way_nbr = %d len = %d\n", i, t_move.ways_len[i++]);
+	// }
+	// ft_printf("\n\n\n");
 	//
 }
 
@@ -216,6 +224,16 @@ void ants_mover()
 	}
 }
 
+void writer(int i, t_room* room)
+{
+	if (i != 0)
+		ft_putchar(' ');
+	ft_putchar('L');
+	ft_putnbr(room->ant_nbr);
+	ft_putchar('-');
+	ft_putstr(t_rooms.room_list[room->room_nbr]);
+}
+
 void display_status()
 {
 	t_way	*curr;
@@ -230,23 +248,19 @@ void display_status()
 		while (room != NULL)
 		{
 			if (room->ant_nbr != 0)
-			{
-				if (i == 0)
-					ft_printf("L%d-%s", room->ant_nbr, t_rooms.room_list[room->room_nbr]);
-				else
-					ft_printf(" L%d-%s", room->ant_nbr, t_rooms.room_list[room->room_nbr]);
-				i++;
-			}
+				writer(i++, room);
 			room = room->prev_room;
 		}
 		curr = curr->next;
 	}
-	ft_printf("\n");
+	ft_putchar('\n');
 }
 
-void transport_core()
+void transport_core(char *buff)
 {
 	t_move.ant_nbr = 1;
+	//ft_putendl(buff);
+	ft_putchar('\n');
 	while (t_move.ants_in_rooms > 0 || t_valid.ants_nbr > 0)
 	{
 		if (t_move.ants_in_rooms > 0)
@@ -256,25 +270,4 @@ void transport_core()
 		if (t_move.ants_in_rooms > 0)
 			display_status();
 	}
-	ft_printf(">>>>>>>>>END<<<<<<<<<\n");
 }
-
-//версия с рекурсией
-// t_room *make_way(int room_nbr, t_room *prev)
-// {
-//     t_room *curr;
-//     int min_nbr;
-
-//     // if (!(curr = (t_room*)malloc(sizeof(t_room))))
-// 	// 	error_func("Malloc Error!");
-//     curr->room_nbr = room_nbr;
-//     curr->ant_nbr = 0;
-//     min_nbr = min_price_next_room(room_nbr);
-//     if (min_nbr == t_rooms.start_room_nbr)
-//         curr->next_room = NULL;
-//     else
-//         curr->next_room = make_way(min_nbr, &curr);
-//     if (room_nbr != t_rooms.end_room_nbr)
-//         remove_link(room_nbr);
-//     return (&curr);
-// }

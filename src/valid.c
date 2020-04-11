@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/01 12:12:12 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/11 00:15:23 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/11 23:47:08 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@
 
 void error_func(char *str)
 {
-    printf("%s\n", str);
+    ft_putendl(str);
     exit(0);
 }
 
@@ -120,7 +120,7 @@ int		room_check(char *line)
 int		is_room(char *line, int i)
 {
 	if (t_valid.ants_flg == 0 || line[0] == 'L')
-		error_func("Map Error! L");
+		error_func("Map Error! Room name begins with L.");
 	if (line[0] == '#' || !(room_check(line)))
 		return (0);
 	if (t_valid.rooms_begin == 0)
@@ -175,7 +175,6 @@ int		is_link(char *line, int l_nbr)
 		j = i + 1;
 	else
 		return (0);
-		// ft_printf("Link error #1 in line %d!\n", l_nbr);
 	while (ft_isalnum(line[j]) || line[j] == '_')
 		j++;
 	if (i + 1 < j && line[j] == '\0')
@@ -185,20 +184,7 @@ int		is_link(char *line, int l_nbr)
 	 	t_valid.links_counter++;
 	 	return (1);
 	}
-	// ft_printf("Link error #2 in line %d! i=%d j=%d\n", l_nbr, i, j);
 	return (0);
-	// while(line[i] && line[i] != '-')
-	// 	i++;
-	// if (i > 0 && line[i] == '-'
-	// && (ft_isalnum(line[i - 1]) || line[i - 1] == '_')
-	// && (ft_isalnum(line[i + 1]) || line[i + 1] == '_'))
-	// {
-	// 	if (t_valid.links_begin == 0)
-	// 		t_valid.links_begin = l_nbr;
-	// 	t_valid.links_counter++;
-	// 	return (1);
-	// }
-	// return (0);
 }
 
 void	base_valid_result()
@@ -208,35 +194,8 @@ void	base_valid_result()
 	&& t_valid.links_counter > 0
 	&& t_valid.start_counter == 1
 	&& t_valid.end_counter == 1))
-		error_func("Map Error! base_valid");
+		error_func("Map Error! Base validation error.");
 }
-
-///////////////////////////////////////
-void	test_room_list()
-{
-	int i;
-
-	i = 0;
-	while (t_rooms.room_list[i])
-		ft_printf("%s\n", t_rooms.room_list[i++]);
-}
-void	test_links_matrix()
-{
-	int i;
-	int j;
-
-	i = 0;
-	ft_printf(">>>LINK MATRIX\n");
-	while (i < t_links.max_size)
-	{
-		j = 0;
-		while (j < t_links.max_size)
-			ft_printf("%-3d", t_links.room_links[i][j++]);
-		ft_printf("\n");
-		i++;
-	}
-}
-///////////////////////////////////////
 
 void base_valid(char **lines)
 {
@@ -261,12 +220,14 @@ void base_valid(char **lines)
 			error_func("Map Error!");			
 	}
 	base_valid_result();
+	ft_putendl("base_valid done");
 	parse_rooms(lines);
-	test_room_list(); // tester
+	ft_putendl("room_valid done");
+	//test_room_list(); // tester
 	check_room_duplicates();
 	parse_links(lines);
-	test_links_matrix(); // tester
-	test_deixtra_alg();
+	ft_putendl("parse_links done");
+	//test_links_matrix(); // tester
 }
 
 void s_valid_reset()
@@ -299,8 +260,10 @@ void valid_core(int fd)
 		error_func("Split malloc error!");
 	s_valid_reset();
 	base_valid(lines);
-	ft_printf("%s\n\n", buff);
-	transport_core();
+	ft_putendl("->base_valid done");
+	test_deixtra_alg();
+	ft_putendl("ways_formed done");
+	transport_core(buff);
 }
 
 int main(int argc, char **argv)
@@ -309,7 +272,7 @@ int main(int argc, char **argv)
     char *pnt;
 
     if (argc < 2)
-        printf("NO ARG\n");
+        error_func("No arguments!");
     else if (argc == 2)
     {
         if (((fd = open(argv[1], O_RDONLY)) > 0) && ((read(fd, pnt,0) == 0)))
@@ -321,6 +284,6 @@ int main(int argc, char **argv)
             error_func("Incorrect format or unreadable file!");
     }
     else
-        printf("TO MANY ARGS\n");
+        error_func("Too many arguments!");
     return (0);
 }
