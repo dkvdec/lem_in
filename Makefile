@@ -6,7 +6,7 @@
 #    By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/12 11:27:08 by dheredat          #+#    #+#              #
-#    Updated: 2020/04/12 13:39:20 by dheredat         ###   ########.fr        #
+#    Updated: 2020/04/12 13:52:03 by dheredat         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,9 +30,9 @@ LIBFT = $(LIBFT_DIR)/libftprintf.a
 all: $(NAME)
 
 $(LIBFT):
-	make -C ft_printf
+	make -C $(LIBFT_DIR)
 
-$(NAME):
+$(NAME): $(LIBFT)
 	gcc -g $(SRC_T) $(LIBFT) -o $(NAME)
 
 clean:
