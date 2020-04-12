@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/01 12:12:12 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/11 23:47:08 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/12 11:01:32 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -220,13 +220,13 @@ void base_valid(char **lines)
 			error_func("Map Error!");			
 	}
 	base_valid_result();
-	ft_putendl("base_valid done");
+	ft_putendl("base_valid done");//visu
 	parse_rooms(lines);
-	ft_putendl("room_valid done");
+	ft_putendl("room_valid done");//visu
 	//test_room_list(); // tester
 	check_room_duplicates();
 	parse_links(lines);
-	ft_putendl("parse_links done");
+	ft_putendl("parse_links done");//visu
 	//test_links_matrix(); // tester
 }
 
@@ -260,9 +260,9 @@ void valid_core(int fd)
 		error_func("Split malloc error!");
 	s_valid_reset();
 	base_valid(lines);
-	ft_putendl("->base_valid done");
+	ft_putendl("->base_valid done");//visu
 	test_deixtra_alg();
-	ft_putendl("ways_formed done");
+	ft_putendl("ways_formed done");//visu
 	transport_core(buff);
 }
 

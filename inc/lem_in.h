@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 17:55:00 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/11 00:04:59 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/12 11:25:20 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,12 +83,38 @@ void error_func(char *str);
 void parse_rooms(char **lines);
 void check_room_duplicates();
 void parse_links(char **lines);
-void test_deixtra_alg();
-void test_links_matrix();
-void form_ways();
-int map_mark(int i, int price);
-void change_value();
-void get_ways_len();
 void transport_core();
+
+/*
+**			ALGO_PROTO_C
+*/
+
+void	remove_link(int i);
+void	reset_room_price();
+void	change_value();
+int		map_mark(int i, int price);
+void	test_deixtra_alg();
+
+/*
+**			MAKE_WAY_PROTO_C
+*/
+
+int		min_price_next_room(int i, int **length);
+t_room	*make_room(int room_nbr, t_room *prev);
+t_room	*make_path(int room_nbr, t_room **end_room, int *length);
+t_way	*make_way(int way_nbr);
+void	form_ways();
+void	get_ways_len();
+
+/*
+**			TRANSPORT_C
+*/
+
+int		acess_giver(int way_nbr);
+void	ants_launcher();
+void	ants_mover();
+void	writer(int i, t_room* room);
+void	display_status();
+void	transport_core(char *buff);
 
 #endif

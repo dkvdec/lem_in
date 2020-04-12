@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algorithm.c                                        :+:      :+:    :+:   */
+/*   algo_proto.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/01 12:11:24 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/11 23:44:33 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/12 11:17:38 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,18 @@
 ** 2. Глубокая фильтрация карты, удаление всех петель
 */
 
+void remove_link(int i)
+{
+	int j;
+
+	j = 0;
+	while(j < t_links.max_size)
+	{
+		t_links.room_links[i][j] = 0;
+		t_links.room_links[j][i] = 0;
+		j++;
+	}
+}
 
 void change_value()
 {
@@ -45,26 +57,26 @@ void change_value()
 	//test_links_matrix();
 }
 
-void deixtra_proto(int i, int price)
-{
-	int j;
+// void deixtra_proto(int i, int price)
+// {
+// 	int j;
 
-	price++;
-	j = 0;
-	while(j < t_links.max_size)
-	{
-		if (t_links.room_links[i][j] != 0
-		&& t_links.room_links[i][j] > price)
-		{
-			t_links.room_links[i][j] = price;
-			t_links.room_links[j][i] = price;
-			if (i != t_rooms.end_room_nbr
-			&& j != t_rooms.end_room_nbr)
-				deixtra_proto(j, price);
-		}
-		j++;
-	}
-}
+// 	price++;
+// 	j = 0;
+// 	while(j < t_links.max_size)
+// 	{
+// 		if (t_links.room_links[i][j] != 0
+// 		&& t_links.room_links[i][j] > price)
+// 		{
+// 			t_links.room_links[i][j] = price;
+// 			t_links.room_links[j][i] = price;
+// 			if (i != t_rooms.end_room_nbr
+// 			&& j != t_rooms.end_room_nbr)
+// 				deixtra_proto(j, price);
+// 		}
+// 		j++;
+// 	}
+// }
 
 /*
 **	map_mark
@@ -110,5 +122,4 @@ void test_deixtra_alg()
 	//test_links_matrix();
 	//show_ways();
 	get_ways_len();
-	//transport_core();
 }
