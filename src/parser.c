@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/01 12:11:47 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/11 22:46:43 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/12 16:58:14 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,8 @@ void free_strsplit(char ***str)
 		((*str)[i]) = NULL;
 		i++;
 	}
+	free(*str);
+	*str = NULL;
 }
 
 void link_to_matrix(char *line)
@@ -84,6 +86,7 @@ void link_to_matrix(char *line)
 		error_func("Malloc Error!");
 	room1 = get_room_nbr(rooms[0]);
 	room2 = get_room_nbr(rooms[1]);
+	free_strsplit(&rooms);
 	if (t_links.room_links[room1][room2] == 0)
 		t_links.room_links[room1][room2] = 1;
 	else
@@ -92,7 +95,6 @@ void link_to_matrix(char *line)
 		t_links.room_links[room2][room1] = 1;
 	else
 		error_func("Map Error! Map contains room relinks.");
-	free_strsplit(&rooms);
 }
 
 void parse_links(char **lines)
