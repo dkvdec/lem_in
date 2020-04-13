@@ -4,12 +4,13 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+    
         {
             "name": "test",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/src/a.out",
-            "args": ["${workspaceFolder}/src/test.map"],
+            "program": "${workspaceFolder}/lem_in",
+            "args": ["${workspaceFolder}/bsp_maps/big-superposition"],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
             "environment": [],

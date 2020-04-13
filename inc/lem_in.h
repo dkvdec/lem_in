@@ -6,14 +6,14 @@
 /*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 17:55:00 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/12 16:52:06 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/13 22:23:44 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LEM_IN_H
 # define LEM_IN_H
 
-# define BUFFSIZE 5000
+# define BUFFSIZE 200000
 
 # include "../ft_printf/inc/proto_vlst.h"
 # include <fcntl.h>
@@ -83,7 +83,7 @@ void	error_func(char *str);
 void	parse_rooms(char **lines);
 void	check_room_duplicates();
 void	parse_links(char **lines);
-void	free_strsplit(char ***str);
+void	free_strsplit(char **str);
 
 /*
 **			ALGO_PROTO_C

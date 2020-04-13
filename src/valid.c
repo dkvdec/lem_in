@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/01 12:12:12 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/12 23:09:17 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/13 21:25:35 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -251,13 +251,7 @@ void valid_core(int fd)
 	char **lines;
 	char buff[BUFFSIZE + 1];
 
-	///
-	// i = 0;
-	// while (i <= BUFFSIZE)
-	// 	buff[i++] = '\0';
-	///
-	data = read(fd, buff, BUFFSIZE);
-	if (data < 32)
+	if ((data = read(fd, buff, BUFFSIZE)) < 32)
 		error_func("Map Error!");
 	buff[data] = '\0';
 	empty_lines_check(buff);
@@ -265,23 +259,24 @@ void valid_core(int fd)
 		error_func("Split malloc error!");
 	s_valid_reset();
 	base_valid(lines);
-	free_strsplit(&lines);
+	free_strsplit(lines);
 	ft_putendl("->base_valid done");//visu
 	test_deixtra_alg();
 	ft_putendl("ways_formed done");//visu
 	transport_core(buff);
+	exit (0);
 }
 
 int main(int argc, char **argv)
 {    
     int fd;
-    char pnt[1];
+    char pnt;
 
     if (argc < 2)
         error_func("No arguments!");
     else if (argc == 2)
     {
-        if (((fd = open(argv[1], O_RDONLY)) > 0) && ((read(fd, pnt,0) == 0)))
+        if (((fd = open(argv[1], O_RDONLY)) > 0) && ((read(fd, &pnt,0) == 0)))
         {
             valid_core(fd);
             close(fd);

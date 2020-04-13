@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dheredat <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/13 17:53:25 by dheredat          #+#    #+#             */
-/*   Updated: 2019/04/22 19:27:14 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/12 23:59:27 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ void	ft_memdel(void **ap)
 {
 	if (ap)
 	{
-		free(*ap);
-		*ap = NULL;
+		if (*ap)
+		{
+			free(*ap);
+			*ap = NULL;
+		}
 	}
 }

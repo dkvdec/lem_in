@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/01 12:11:47 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/12 16:58:14 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/13 16:26:54 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,19 +61,15 @@ void make_link_matrix()
 	}
 }
 
-void free_strsplit(char ***str)
+void free_strsplit(char **str)
 {
-	int i;
+	unsigned int i;
 
 	i = 0;
-	while ((*str)[i])
-	{
-		free((*str)[i]);
-		((*str)[i]) = NULL;
-		i++;
-	}
-	free(*str);
-	*str = NULL;
+	while (str[i])
+		ft_strdel(&str[i++]);
+	free(str);
+	str = NULL;
 }
 
 void link_to_matrix(char *line)
@@ -86,7 +82,7 @@ void link_to_matrix(char *line)
 		error_func("Malloc Error!");
 	room1 = get_room_nbr(rooms[0]);
 	room2 = get_room_nbr(rooms[1]);
-	free_strsplit(&rooms);
+	free_strsplit(rooms);
 	if (t_links.room_links[room1][room2] == 0)
 		t_links.room_links[room1][room2] = 1;
 	else

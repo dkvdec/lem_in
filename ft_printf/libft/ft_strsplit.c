@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dheredat <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/16 18:55:10 by dheredat          #+#    #+#             */
-/*   Updated: 2019/04/23 14:26:13 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/13 17:31:37 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 static int		ft_wordcounter(char const *s, char c)
 {
-	int		counter;
-	int		i;
+	unsigned int		counter;
+	unsigned int		i;
 
 	counter = 0;
 	i = 0;
-	while (*(s + i))
+	while (s[i])
 	{
-		if ((i == 0 && *(s + i) != c)
-				|| (*(s + i + 1) && *(s + i + 1) != c && *(s + i) == c))
+		if ((i == 0 && s[i] != c)
+				|| (s[i + 1] && s[i + 1] != c && s[i] == c))
 			counter++;
 		i++;
 	}
