@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 17:55:00 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/13 22:23:44 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/16 00:00:13 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ struct		s_rooms{
 
 struct		s_links{
 	int		**room_links;
+	//int		*room_price;
+	int		*room_tail; //linear deixtra
 	int		max_size;
 }			t_links;
 
@@ -84,6 +86,10 @@ void	parse_rooms(char **lines);
 void	check_room_duplicates();
 void	parse_links(char **lines);
 void	free_strsplit(char **str);
+void	kill_tails();
+int		deixtra_linear();
+int		deixtra_linear_2();
+void	make_room_tail();
 
 /*
 **			ALGO_PROTO_C

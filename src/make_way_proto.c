@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/12 11:09:41 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/12 11:12:45 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/16 00:02:58 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,26 +89,32 @@ void form_ways()
 	t_way *curr;
 	int i;
 
-	change_value();
-	ft_putendl("   value_changed");//visu//remove
+	//change_value();
+	kill_tails();
+	make_room_tail();
+	ft_putendl("tails killed");//visu//remove
 	if (map_mark(t_rooms.start_room_nbr, 0) < 1)
+	//if (deixtra_linear_2() < 1)
 		error_func("Map Error! No conection between ##start and ##end.");
-	ft_putendl("   map_marked");//visu//remove
+	//test_links_matrix();
+	//ft_putendl("   map_marked");//visu//remove
 	i = 0;
 	curr = make_way(i++);
 	t_move.head = curr;
 	change_value();
 	ft_putendl("   value_changed");//visu//remove
 	ft_putendl("first_way done");//visu//remove
-	while (map_mark(t_rooms.start_room_nbr, 0) == 1)
-	{
-		ft_putendl("   map_marked");//visu//remove
-		curr->next = make_way(i++);
-		curr = curr->next;
-		change_value();
-		ft_putendl("   value_changed");//visu//remove
-		ft_putendl("additional_way done");//visu//remove
-	}
+	//while (map_mark(t_rooms.start_room_nbr, 0) == 1)
+	// while (deixtra_linear_2() > 0)
+	// {
+	// 	ft_putendl("   map_marked");//visu//remove
+	// 	curr->next = make_way(i++);
+	// 	curr = curr->next;
+	// 	change_value();
+	// 	ft_putendl("   value_changed");//visu//remove
+	// 	ft_putendl("additional_way done");//visu//remove
+	// 	//test_links_matrix();
+	// }
 	t_move.ways = i;
 	//ft_printf("WAYS FORMED = %d\n", i);////////////
 }

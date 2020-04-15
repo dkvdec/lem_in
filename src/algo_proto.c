@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/01 12:11:24 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/12 11:17:38 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/15 10:05:32 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ void remove_link(int i)
 
 void change_value()
 {
-	int i;
-	int j;
+	unsigned int		i;
+	unsigned int		j;
 
 	i = 0;
 	while (i < t_links.max_size)
@@ -48,7 +48,7 @@ void change_value()
 		j = 0;
 		while (j < t_links.max_size)
 		{
-			if (t_links.room_links[i][j] != 0)
+			if (t_links.room_links[i][j] != 0 )
 				t_links.room_links[i][j] = 2147483647;
 			j++;
 		}

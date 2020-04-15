@@ -20,7 +20,7 @@ void	test_links_matrix()
 	{
 		j = 0;
 		while (j < t_links.max_size)
-			ft_printf("%-3d", t_links.room_links[i][j++]);
+			ft_printf("%-12d", t_links.room_links[i][j++]);
 		ft_printf("\n");
 		i++;
 	}

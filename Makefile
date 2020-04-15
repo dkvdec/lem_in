@@ -6,11 +6,11 @@
 #    By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/12 11:27:08 by dheredat          #+#    #+#              #
-#    Updated: 2020/04/12 13:52:03 by dheredat         ###   ########.fr        #
+#    Updated: 2020/04/15 20:21:12 by dheredat         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = lem_in
+NAME = lem_in_2
 
 LIBFT_DIR =	./ft_printf
 SRC_DIR =	./src
@@ -21,7 +21,8 @@ FLAGS	=	-Wall -Wextra -Werror
 HEAD	=	$(INC_DIR)/lem_in.h
 
 SRC		=	valid.c parser.c transport.c\
-			algo_proto.c make_way_proto.c
+			algo_proto.c make_way_proto.c\
+			line_alg.c zzz_test.c
 
 SRC_T	=	$(addprefix $(SRC_DIR)/,$(SRC))
 
