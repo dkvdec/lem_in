@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/01 12:12:12 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/13 21:25:35 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/17 21:50:15 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,9 +73,6 @@ int		is_comment(char *line)
 
 int		is_ants_nbr(char *line)
 {
-	// check is nbr
-	// check is positive
-	// check is < max_int
 	int i;
 
 	i = 0;
