@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 23:07:09 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/18 13:01:03 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/18 18:04:01 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,32 @@ struct              s_map{
 	t_room          *start;
 	t_room          *end;
 }                   t_map;
+////////////////////_UNDER_REFACTOR_////////////////////
+typedef struct		s_wroom{
+	int				room_nbr;
+	char			*name;
+	int				ant_nbr;
+	struct s_wroom	*next_room;
+	struct s_wroom	*prev_room;
+}					t_wroom;
 
+typedef struct		s_way{
+	int				way_nbr;
+	int				lenght;
+	t_wroom			*start;
+	t_wroom			*end;
+	struct s_way	*next;
+}					t_way;
+
+struct				s_move{
+	t_way			*head;
+	t_way			*curr;
+	int				*ways_len;
+	int				ant_nbr;
+	int				ants_in_rooms;
+	int				ways;
+}					t_move;
+///////////////////////////////////////////////////////
 /*
 **	CHECK_MAP_C
 */
@@ -86,9 +111,15 @@ void				link_connector(t_room *room1, t_room *room2);
 **
 */
 
-void	error_func(char *str);
-void	full_reset();
-void	room_connector(char *name1, char *name2);
-void	free_strsplit(char **str);
+void				error_func(char *str);
+void				full_reset();
+void				room_connector(char *name1, char *name2);
+void				free_strsplit(char **str);
+
+////////////////////_EXPERIMENTAL_BLOCK_///////////////////
+
+int					base_deixtra_rec(t_room *room, int price);
+void				base_way_former();
+void				transport_core(char *buff);
 
 #endif
