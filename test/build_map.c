@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/18 11:58:36 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/18 12:01:40 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/18 20:11:07 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_room		*make_room(char *name, int nbr)
 		error_func("Malloc  error!");
 	room->next = NULL;
 	room->room_nbr = nbr;
+	room->status = 0;
 	room->price = 2147483647;
 	room->name = name;
 	room->links = NULL;

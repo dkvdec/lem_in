@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/18 16:38:51 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/18 18:01:09 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/18 20:17:20 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,17 +60,19 @@ t_wroom *make_path(t_wroom **end_room, int *length)
 	*(end_room) = curr;
 	link = min_price_next_room(t_map.end, &length);
     room = link->room->home;
-    link->status = 0;//-1
-    link->room->status = 0;
+	room->status = 1;
+    // link->status = 0;//-1
+    // link->room->status = 0;
 	while(link->room->home->room_nbr != t_map.start->room_nbr)
 	{
         room = link->room->home;
+		room->status = 1;
 		curr->prev_room = make_wroom(room, curr);
 		curr = curr->prev_room;
 		link = min_price_next_room(room, &length);
-        room = link->room->home;
-		link->status = 0;//-1
-        link->room->status = 0;
+        //room = link->room->home;
+		// link->status = 0;//-1
+        // link->room->status = 0;
 	}
 	return (curr);
 }

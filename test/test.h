@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 23:07:09 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/18 18:04:01 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/18 20:10:30 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ typedef struct      s_link{
 
 typedef struct		s_room{
 	struct s_room   *next;
+	int				status;
 	int             room_nbr;
 	int             price;
 	char            *name;
