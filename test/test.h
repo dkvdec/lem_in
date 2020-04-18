@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 23:07:09 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/18 12:47:32 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/18 13:01:03 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ typedef struct      s_link{
 }                   t_link;
 
 typedef struct		s_room{
-	struct s_soom   *next;
+	struct s_room   *next;
 	int             room_nbr;
 	int             price;
 	char            *name;
@@ -85,5 +85,10 @@ void				link_connector(t_room *room1, t_room *room2);
 /*
 **
 */
+
+void	error_func(char *str);
+void	full_reset();
+void	room_connector(char *name1, char *name2);
+void	free_strsplit(char **str);
 
 #endif

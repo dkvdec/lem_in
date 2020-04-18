@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 15:44:14 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/18 12:54:38 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/18 13:18:08 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,17 @@ void error_func(char *str)
 {
     printf("%s\n", str);
     exit(0);
+}
+
+void free_strsplit(char **str)
+{
+	unsigned int i;
+
+	i = 0;
+	while (str[i])
+		ft_strdel(&str[i++]);
+	free(str);
+	str = NULL;
 }
 
 void full_reset()
@@ -104,7 +115,7 @@ void lem_in_core(int fd)
 		error_func("Split malloc error!");
 	get_map(lines);
 	free_strsplit(lines);
-    test_map_quality();
+    test_map_quality();// TEST_DELETE_LATER
 	//find_ways
 	//move_ants
 }

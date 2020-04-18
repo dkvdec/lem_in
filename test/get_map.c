@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/17 14:25:03 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/18 12:42:17 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/18 13:09:15 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void get_command(char *line)
 	if (!(ft_strcmp("##end", line)))
 	{
 		if (t_valid.end_flag == 0)
-			t_valid.start_flag = -1;
+			t_valid.end_flag = -1;
 		else
 			error_func("Map Error! Multiple ##end commands.");
 	}
@@ -66,7 +66,7 @@ void get_room(char *line)
 	if (t_valid.start_flag == -1 && t_map.start == NULL)
 	{
 		t_map.start = add_room(name);
-		t_valid.start_flag == 1;
+		t_valid.start_flag = 1;
 	}
 	else if (t_valid.end_flag == -1 && t_map.end == NULL)
 	{
@@ -103,7 +103,7 @@ void get_map(char **lines)
 	int i;
 
 	i = 0;
-	reset_struct();
+	full_reset();
 	while (lines[i])
 	{
 		if (t_valid.ants_flag == 0)
