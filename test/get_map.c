@@ -1,37 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t_pars.c                                           :+:      :+:    :+:   */
+/*   get_map.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/17 14:25:03 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/18 01:08:23 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/18 12:42:17 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
-
-void full_reset()
-{
-	//s_valid && s_map reset
-}
-////////////////////////////////////////////////////////
-int		exception_check(char *line)
-{
-	int		i;
-	char	*int_exc;
-
-	int_exc = "2147483647";
-	i = 0;
-	while (line[i])
-	{
-		if (line[i] > int_exc[i])
-			return (1);
-		i++;
-	}
-	return (0);
-}
 
 void		get_ants_nbr(char *line)
 {
@@ -51,7 +30,7 @@ void		get_ants_nbr(char *line)
 		error_func("Map Error! Invalid ants number.");
 	t_valid.ants_flag = 1;
 }
-//////////////////////////////////////////////////////////
+
 void get_command(char *line)
 {
 	if (line[1] != '#')
@@ -70,43 +49,6 @@ void get_command(char *line)
 		else
 			error_func("Map Error! Multiple ##end commands.");
 	}
-}
-////////////////////////////////////////////////////////////
-int		room_check(char *line)
-{
-	int i;
-	int j;
-
-	i = 0;
-	while (ft_isalnum(line[i]) || line[i] == '_')
-		i++;
-	if (i == 0 || line[i++] != ' ')
-		return (0);
-	j = i;
-	while (ft_isdigit(line[j]))
-		j++;
-	if (i == j || line[j++] != ' ')
-		return (0);
-	i = j;
-	while (ft_isdigit(line[i]))
-		i++;
-	if (i > j && line[i] == '\0')
-		return (1);
-	return (0);
-}
-
-int		is_room(char *line, int i)
-{
-	if (t_valid.ants_flag != 1)
-		error_func("Map Error! Invalid or absent ant number.");
-	if (line[0] == 'L')
-		error_func("Map Error! Room name begins with L.");
-	if (line[0] == '#' || !(room_check(line)))
-		return (0);
-	if (t_valid.start_flag == -1 && t_valid.end_flag == -1)
-		error_func("Map Error! No room after ##start or ##end command.");
-	t_valid.room_counter++;
-	return (1);
 }
 
 void get_room(char *line)
@@ -136,31 +78,11 @@ void get_room(char *line)
 	else
 		add_room(name);
 }
-//////////////////////////////////////////////////////////
-int		is_link(char *line)
-{
-	int i;
-	int j;
-
-	i = 0;
-	while (ft_isalnum(line[i]) || line[i] == '_')
-		i++;
-	if (i > 0 && line[i] == '-')
-		j = i + 1;
-	else
-		return (0);
-	while (ft_isalnum(line[j]) || line[j] == '_')
-		j++;
-	if (i + 1 < j && line[j] == '\0')
-	{
-	 	t_valid.link_counter++;
-	 	return (1);
-	}
-	return (0);
-}
 
 void get_link(char *line)
 {
+	char **names;
+
 	if (!(is_link(line)))
 		error_func("Map Error! Map contains invalid lines.");
 	if (t_valid.start_flag != 1 || t_valid.end_flag != 1)
@@ -170,7 +92,10 @@ void get_link(char *line)
 	if (t_valid.room_flag == 0)
 		t_valid.room_flag == 1;
 	t_valid.link_counter++;
-	//room searcher + checker
+	if (!(names = ft_strsplit(line, '-')))
+		error_func("Malloc Error!");
+	room_connector(names[0], names[1]);
+	free_strsplit(names);
 }
 
 void get_map(char **lines)
@@ -190,56 +115,8 @@ void get_map(char **lines)
 		else
 			get_link(lines[i++]);
 	}
-}
-
-void	empty_lines_check(char *buff)
-{
-	int i;
-
-	i = 0;
-	while(buff[i])
-	{
-		if (buff[i] == '\n' && buff[i + 1] == '\n')
-			error_func("Map Error! Empty lines.");
-		i++;
-	}
-}
-
-void parser_core(int fd)
-{
-	int data;
-	int i;
-	char **lines;
-	char buff[BUFFSIZE + 1];
-
-	if ((data = read(fd, buff, BUFFSIZE)) < 32)
-		error_func("Map Error!");
-	buff[data] = '\0';
-	empty_lines_check(buff);
-	if (!(lines = ft_strsplit(buff, '\n')))
-		error_func("Split malloc error!");
-	get_map(lines);
-	free_strsplit(lines);
-}
-
-int main(int argc, char **argv)
-{    
-	int fd;
-	char pnt;
-
-	if (argc < 2)
-		error_func("No arguments!");
-	else if (argc == 2)
-	{
-		if (((fd = open(argv[1], O_RDONLY)) > 0) && ((read(fd, &pnt,0) == 0)))
-		{
-			valid_core(fd);
-			close(fd);
-		}
-		else
-			error_func("Incorrect format or unreadable file!");
-	}
-	else
-		error_func("Too many arguments!");
-	return (0);
+	if (t_valid.ants_flag != 1 || t_map.ants_nbr < 1
+	|| t_valid.start_flag != 1 || t_valid.end_flag != 1
+	|| t_valid.room_counter < 2 || t_valid.link_counter < 1)
+		error_func("Map Error! Invalid map condition.");
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 15:44:14 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/18 00:59:09 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/18 12:54:38 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,119 @@ void error_func(char *str)
 {
     printf("%s\n", str);
     exit(0);
+}
+
+void full_reset()
+{
+	t_valid.ants_flag = 0;
+	t_valid.room_flag = 0;
+	t_valid.start_flag = 0;
+	t_valid.end_flag = 0;
+	t_valid.room_counter = 0;
+	t_valid.link_counter = 0;
+	t_map.ants_nbr = 0;
+	t_map.rooms = NULL;
+	t_map.start = NULL;
+	t_map.end = NULL;
+}
+
+void    room_connector(char *name1, char *name2)
+{
+    t_room  *room1;
+    t_room  *room2;
+    t_room  *curr;
+
+    if (!(ft_strcmp(name1, name2)))
+        error_func("Map Error! Same room relinks not allowed.");
+    room1 = NULL;
+    room2 = NULL;
+    curr = t_map.rooms;
+    while (curr)
+    {
+        if (room1 == NULL && (!(ft_strcmp(name1, curr->name))))
+            room1 = curr;
+        else if (room2 == NULL && (!(ft_strcmp(name2, curr->name))))
+            room2 = curr;
+        if ((room1 != NULL && room2 != NULL) || curr->next == NULL)
+            break;
+        curr = curr->next;
+    }
+    if (room1 == NULL || room2 == NULL)
+        error_func("Map Error! Link contains unknown room.");
+    link_connector(room1, room2);
+}
+
+t_room* get_next_room(t_link *curr, int price)
+{
+    while (curr)
+    {
+        if (curr->room->status == 1
+        && curr->room->home->price > price)
+            return (curr->room->home);
+        curr = curr->next;
+    }
+    return (NULL);
+}
+
+void test_map_quality(void)
+{
+    t_room *room;
+    t_link *link;
+
+    room = t_map.rooms;
+    while (room)
+    {
+        printf("Room |%s| is connected to:\n", room->name);
+        link = room->links;
+        while (link)
+        {
+            printf("--->|%s|\n", link->room->home->name);
+            link = link->next;
+        }
+        room = room->next;
+    }
+}
+
+void lem_in_core(int fd)
+{
+	int data;
+	int i;
+	char **lines;
+	char buff[BUFFSIZE + 1];
+
+	if ((data = read(fd, buff, BUFFSIZE)) < 32)
+		error_func("Map Error!");
+	buff[data] = '\0';
+	empty_lines_check(buff);
+	if (!(lines = ft_strsplit(buff, '\n')))
+		error_func("Split malloc error!");
+	get_map(lines);
+	free_strsplit(lines);
+    test_map_quality();
+	//find_ways
+	//move_ants
+}
+
+int main(int argc, char **argv)
+{    
+	int fd;
+	char pnt;
+
+	if (argc < 2)
+		error_func("No arguments!");
+	else if (argc == 2)
+	{
+		if (((fd = open(argv[1], O_RDONLY)) > 0) && ((read(fd, &pnt,0) == 0)))
+		{
+			lem_in_core(fd);
+			close(fd);
+		}
+		else
+			error_func("Incorrect format or unreadable file!");
+	}
+	else
+		error_func("Too many arguments!");
+	return (0);
 }
 
 // void room_generator()
@@ -36,46 +149,7 @@ void error_func(char *str)
 //     }
 // }
 
-t_room *make_room(char *name, int nbr)
-{
-    t_room  *room;
 
-    if (!(room = (t_room*)malloc(sizeof(t_room))))
-        error_func("Malloc  error!");
-    room->next = NULL;
-    room->room_nbr = nbr;
-    room->price = 2147483647;
-    room->name = name;
-    room->links = NULL;
-    return (room);
-}
-
-t_room    *add_room(char *name)
-{
-    t_room  *room;
-    int     nbr;
-
-    nbr = 0;
-    if (t_map.rooms == NULL)
-    {
-        room = make_room(name, nbr);
-        t_map.rooms = room;
-        return (room);
-    }
-    room = t_map.rooms;
-    while (room)
-    {
-        if (!(ft_strcmp(room->name, name)))
-			error_func("Map Error! Map contains room duplicates.");
-        nbr++;
-        if (room->next == NULL)
-            break;
-        room = room->next;
-    }
-    room->next = make_room(name, nbr);
-    room = room->next;
-    return (room);
-}
 
 // void room_checker_up()
 // {
@@ -106,112 +180,40 @@ t_room    *add_room(char *name)
 //     }
 // }
 
-t_link* make_link(t_room *home)
-{
-    t_link *link;
+// void room_checker_low()
+// {
+//     t_room *room;
+//     int i = 0;
 
-    if (!(link = (t_link*)malloc(sizeof(t_link))))
-        error_func("Malloc  error!");
-    link->next = NULL;
-    link->home = home;
-    link->room = NULL;
-    link->status = 0;
-    return (link);
-}
+//     printf("--->room_checker_low working\n");
+//     room = &t_rooms.array[0];
+//     while (room)
+//     {
+//         room->price = i++;
+//         printf("room nbr |%d| contains char |%c|\n", room->room_nbr, room->name);
+//         room = get_next_room(room->links, i);
+//     }
+// }
 
-t_link* add_link(t_room *room, int check_nbr)
-{
-    t_link *curr;
+// void price_check_up()
+// {
+//     int i = 0;
 
-    if (room->links == NULL)
-    {
-        curr = make_link(room);
-        room->links = curr;
-        return (curr);
-    }
-    curr = room->links;
-    while (curr)
-    {
-        if (check_nbr == curr->room->home->room_nbr)
-            error_func("Map Error! Map contains room relinks.");
-        if (curr->next == NULL)
-            break;
-        curr = curr->next;
-    }
-    curr->next = make_link(room);
-    curr = curr->next;
-    return (curr);
-}
+//     while (i < t_rooms.size)
+//     {
+//         printf("room nbr |%d| contains char |%c| and price |%d|\n", t_rooms.array[i].room_nbr, t_rooms.array[i].name, t_rooms.array[i].price);
+//         i++;
+//     }
+// }
 
-void    room_connector(t_room *room1,t_room *room2)
-{
-    t_link *link1;
-    t_link *link2;
+// void base_connections()
+// {
+//     int i = 0;
 
-    link1 = add_link(room1, room2->room_nbr);
-    link2 = add_link(room2, room1->room_nbr);
-    link1->room = link2;
-    link2->room = link1;
-    link1->status = 1;
-    link2->status = 1;
-}
-// *************************************room searcher + checker
-void base_connections()
-{
-    int i = 0;
-
-    printf("--->base_connections working\n");
-    while (i + 1 < t_rooms.size)
-    {
-        room_connector(&t_rooms.array[i], &t_rooms.array[i + 1]);
-        i++;
-    }
-}
-
-t_room* get_next_room(t_link *curr, int price)
-{
-    while (curr)
-    {
-        if (curr->room->status == 1
-        && curr->room->home->price > price)
-            return (curr->room->home);
-        curr = curr->next;
-    }
-    return (NULL);
-}
-
-void room_checker_low()
-{
-    t_room *room;
-    int i = 0;
-
-    printf("--->room_checker_low working\n");
-    room = &t_rooms.array[0];
-    while (room)
-    {
-        room->price = i++;
-        printf("room nbr |%d| contains char |%c|\n", room->room_nbr, room->name);
-        room = get_next_room(room->links, i);
-    }
-}
-
-void price_check_up()
-{
-    int i = 0;
-
-    while (i < t_rooms.size)
-    {
-        printf("room nbr |%d| contains char |%c| and price |%d|\n", t_rooms.array[i].room_nbr, t_rooms.array[i].name, t_rooms.array[i].price);
-        i++;
-    }
-}
-
-int main()
-{
-    room_generator();
-    room_checker_up();
-    base_connections();
-    room_checker_low();
-    price_check_up();
-    return (0);
-}
+//     printf("--->base_connections working\n");
+//     while (i + 1 < t_rooms.size)
+//     {
+//         room_connector(&t_rooms.array[i], &t_rooms.array[i + 1]);
+//         i++;
+//     }
+// }
