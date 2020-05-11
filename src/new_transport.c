@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/08 21:16:26 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/27 02:19:07 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/11 15:03:31 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,8 +109,7 @@ void display_status()
 
 void transport_core(char *buff)
 {
-	// ft_putendl(buff);
-	// ft_putchar('\n');
+	ft_putendl(buff);
 	while (t_wcs.min->ants_in_rooms > 0 || t_map.ants_nbr > 0)
 	{
 		if (t_wcs.min->ants_in_rooms > 0)

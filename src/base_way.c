@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/18 16:38:51 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/09 16:23:08 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/11 14:59:25 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -396,7 +396,7 @@ void base_way_former()
 	make_wcs();
 	add_new_path();//
     change_value();
-	test_show_paths();
+	// test_show_paths();
 	way_status_resulter();
     // while (base_deixtra(t_map.start, 0) > 0)
     // {
@@ -430,20 +430,20 @@ void base_way_former()
         // curr->next = make_way(i++);
 		// curr = curr->next;
 		// test_show_room_status();
-		printf("end room mark = %d\n", t_map.end->mark);
+		// printf("end room mark = %d\n", t_map.end->mark);
 		add_new_path();//
-    	printf("\ncur turn_nbr = %d\n", t_wcs.cur->turn_nbr);
-		printf("min turn_nbr = %d\n\n", t_wcs.min->turn_nbr);
+    	// printf("\ncur turn_nbr = %d\n", t_wcs.cur->turn_nbr);
+		// printf("min turn_nbr = %d\n\n", t_wcs.min->turn_nbr);
 		change_value();
 		way_status_resulter();
 		// 	break ;
-		test_show_paths();
-		printf("====================================================================================================================================================================\n\n\n\n");
+		// test_show_paths();
+		// printf("====================================================================================================================================================================\n\n\n\n");
     }
 	// test_show_room_status();
 	// test_show_paths();
-    printf("result cur turn_nbr = %d\n", t_wcs.cur->turn_nbr);
-	printf("result min turn_nbr = %d\n", t_wcs.min->turn_nbr);
+    // printf("result cur turn_nbr = %d\n", t_wcs.cur->turn_nbr);
+	// printf("result min turn_nbr = %d\n", t_wcs.min->turn_nbr);
     // t_move.ways = i;
     // get_ways_len();
 }

@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 15:44:14 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/27 03:09:15 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/11 15:18:58 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,32 +117,24 @@ void lem_in_core(int fd)
 	free_strsplit(lines);
     // test_map_quality();// TEST_DELETE_LATER
     base_way_former();
-    //transport_core(buff);
+    transport_core(buff);
     // printf("min turn_nbr = %d\n", t_wcs.min->turn_nbr);
     // printf("cur turn_nbr = %d\n", t_wcs.cur->turn_nbr);
-	//find_ways
-	//move_ants
 }
 
 int main(int argc, char **argv)
 {    
-	int fd;
 	char pnt;
 
-	if (argc < 2)
-		error_func("No arguments!");
-	else if (argc == 2)
+	if (argc == 1)
 	{
-		if (((fd = open(argv[1], O_RDONLY)) > 0) && ((read(fd, &pnt,0) == 0)))
-		{
-			lem_in_core(fd);
-			close(fd);
-		}
+		if ((read(0, &pnt, 0) == 0))
+			lem_in_core(0);
 		else
 			error_func("Incorrect format or unreadable file!");
 	}
 	else
-		error_func("Too many arguments!");
+		error_func("Error! Unknown arguments.");
 	return (0);
 }
 

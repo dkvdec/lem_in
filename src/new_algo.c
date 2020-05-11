@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/09 13:56:54 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/09 14:08:50 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/11 14:59:40 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,8 @@ int base_deixtra_rec(t_room *room, int price, int lvl)
     room->price = price + lvl * 2;
     if (room->room_nbr == t_map.end->room_nbr)
     {
-        if (t_wcs.min && price < t_wcs.min->turn_nbr)
-            printf("price = %d, lvl = %d, mark = %d\n", price, lvl, t_map.mark_sts + 1);
+        // if (t_wcs.min && price < t_wcs.min->turn_nbr)
+            // printf("price = %d, lvl = %d, mark = %d\n", price, lvl, t_map.mark_sts + 1);
         room->mark = ++t_map.mark_sts;
         return (room->mark);
     }

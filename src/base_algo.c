@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/18 13:20:31 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/09 16:20:25 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/11 15:01:08 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -285,7 +285,7 @@ t_w		*make_new_coll_path(t_w** end, t_wh* home)
 		link->status = 0;
         link->room->status = 0;
 	}
-    printf("\n t_col.col_flg = %d\n", t_col.col_flg);
+    // printf("\n t_col.col_flg = %d\n", t_col.col_flg);
 	link->status = 0;
     link->room->status = 0;
 	return (curr);

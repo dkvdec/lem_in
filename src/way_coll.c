@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 20:31:46 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/06 02:39:58 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/11 15:02:02 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ void	reconnect_ways(t_w *start, t_w *end, t_w *stop)
 	tmp = NULL;
 	while (prev && prev->room->room_nbr != stop->room->room_nbr)
 	{
-		printf("PLS FREE ME!\n");
+		// printf("PLS FREE ME!\n");
 		prev->room->status = 0;
 		open_links(prev->room);
 		tmp = prev;
@@ -147,7 +147,7 @@ void	claim_tail(t_w* curr)
 
 void	handle_collision()
 {
-	test_show_collision();
+	// test_show_collision();
 	reconnect_ways(t_col.w1_col_s, t_col.w2_col_e, t_col.w1_col_e);
 	reconnect_ways(t_col.w2_col_s, t_col.w1_col_e, t_col.w2_col_e);
 	reconnect_home(t_col.wh1);
