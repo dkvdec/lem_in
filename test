@@ -1,0 +1,11 @@
+#!/bin/bash
+maps=`ls maps_big | sort|uniq | tr '\n' ' '`
+date > log
+echo >> log
+for map in $maps
+do
+echo $map >> log
+./lem_in "maps_big/"$map | tail -2 >> log
+tail -1 "maps_big/"$map >> log
+echo >> log
+done

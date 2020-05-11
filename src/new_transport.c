@@ -1,45 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   transport.c                                        :+:      :+:    :+:   */
+/*   new_transport.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/08 21:16:26 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/24 03:32:49 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/04/27 02:19:07 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/lem_in.h"
 
-int acess_giver(int way_nbr)
+int acess_giver(t_ws *ws, t_wh *cur, int ants_nbr)
 {
-	int i;
-	int sum;
+	int     sum;
+    t_wh*   way;
 
-	i = way_nbr - 1;
 	sum = 0;
-	while (i >= 0)
+    way = ws->ways;
+	while (way && way->way_nbr < cur->way_nbr)
 	{
-		sum += t_move.ways_len[way_nbr] - t_move.ways_len[i];
-		i--;
+		sum += cur->way_len - way->way_len;
+		way = way->next;
 	}
-	if (sum <= t_map.ants_nbr)
+	if (sum < ants_nbr)
 		return (1);
 	return (0);
 }
 
 void ants_launcher()
 {
-	t_way	*curr;
+	t_wh	*curr;
 
-	curr = t_move.head;
+	curr = t_wcs.min->ways; //min
 	while (curr != NULL && t_map.ants_nbr > 0)
 	{
-		if (acess_giver(curr->way_nbr))
+		if (acess_giver(t_wcs.min ,curr, t_map.ants_nbr))
 		{
-			curr->start->ant_nbr = t_move.ant_nbr++;
-			t_move.ants_in_rooms++;
+			curr->start->ant_nbr = t_wcs.min->ant_nbr++;
+            curr->ants_in_rooms++;
+			t_wcs.min->ants_in_rooms++;
 			t_map.ants_nbr--;
 		}
 		curr = curr->next;
@@ -48,48 +49,49 @@ void ants_launcher()
 
 void ants_mover()
 {
-	t_way	*curr;
-	t_wroom	*room;
+	t_wh	*curr;
+	t_w 	*room;
 
-	curr = t_move.head;
+	curr = t_wcs.min->ways;
 	while (curr != NULL)
 	{
 		room = curr->end;
 		if (room->ant_nbr > 0)
 		{
 			room->ant_nbr = 0;
-			t_move.ants_in_rooms--;
+			curr->ants_in_rooms--;
+			t_wcs.min->ants_in_rooms--;
 		}
-		while (room->prev_room != NULL)
+		while (room->prev != NULL)
 		{
-			if (room->prev_room->ant_nbr != 0)
+			if (room->prev->ant_nbr != 0)
 			{
-				room->ant_nbr = room->prev_room->ant_nbr;
-				room->prev_room->ant_nbr = 0;
+				room->ant_nbr = room->prev->ant_nbr;
+				room->prev->ant_nbr = 0;
 			}
-			room = room->prev_room;
+			room = room->prev;
 		}
 		curr = curr->next;
 	}
 }
 
-void writer(int i, t_wroom* room)
+void writer(int i, t_w* room)
 {
 	if (i != 0)
 		ft_putchar(' ');
 	ft_putchar('L');
 	ft_putnbr(room->ant_nbr);
 	ft_putchar('-');
-	ft_putstr(room->name);
+	ft_putstr(room->room->name);
 }
 
 void display_status()
 {
-	t_way	*curr;
-	t_wroom	*room;
+	t_wh	*curr;
+	t_w 	*room;
 	int 	i;
 
-	curr = t_move.head;
+	curr = t_wcs.min->ways;
 	i = 0;
 	while (curr != NULL)
 	{
@@ -98,7 +100,7 @@ void display_status()
 		{
 			if (room->ant_nbr != 0)
 				writer(i++, room);
-			room = room->prev_room;
+			room = room->prev;
 		}
 		curr = curr->next;
 	}
@@ -107,16 +109,15 @@ void display_status()
 
 void transport_core(char *buff)
 {
-	t_move.ant_nbr = 1;
-	ft_putendl(buff);
-	ft_putchar('\n');
-	while (t_move.ants_in_rooms > 0 || t_map.ants_nbr > 0)
+	// ft_putendl(buff);
+	// ft_putchar('\n');
+	while (t_wcs.min->ants_in_rooms > 0 || t_map.ants_nbr > 0)
 	{
-		if (t_move.ants_in_rooms > 0)
+		if (t_wcs.min->ants_in_rooms > 0)
 			ants_mover();
 		if (t_map.ants_nbr > 0)
 			ants_launcher();
-		if (t_move.ants_in_rooms > 0)
+		if (t_wcs.min->ants_in_rooms > 0)
 			display_status();
 	}
 }

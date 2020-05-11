@@ -1,0 +1,50 @@
+Ср мая  6 01:09:30 +05 2020
+
+big1.map
+result min turn_nbr = 48
+#Here is the number of lines required: 48
+
+big2.map
+result min turn_nbr = 47
+#Here is the number of lines required: 47
+
+big3.map
+result min turn_nbr = 68
+#Here is the number of lines required: 68
+
+big4.map
+result min turn_nbr = 44
+#Here is the number of lines required: 44
+
+big5.map
+result min turn_nbr = 59
+#Here is the number of lines required: 59
+
+big.map
+result min turn_nbr = 80
+#Here is the number of lines required: 80
+
+sup1.map
+result min turn_nbr = 92
+#Here is the number of lines required: 88
+
+sup2.map
+result min turn_nbr = 86
+#Here is the number of lines required: 86
+
+sup3.map
+result min turn_nbr = 74
+#Here is the number of lines required: 69
+
+sup4.map
+result min turn_nbr = 108
+#Here is the number of lines required: 97
+
+sup5.map
+result min turn_nbr = 86
+#Here is the number of lines required: 77
+
+sup.map
+result min turn_nbr = 93
+#Here is the number of lines required: 90
+

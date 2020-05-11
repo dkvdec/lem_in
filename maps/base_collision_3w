@@ -1,0 +1,37 @@
+12
+##start
+A 1 1
+#way_1
+B 2 2
+C 3 3
+D 4 4
+E 5 5
+#way_2
+F 6 6
+G 7 7
+H 8 8
+I 9 9
+#way_3
+J 10 10
+K 11 11
+O 12 12
+M 13 13
+##end
+N 14 14
+A-B
+A-F
+A-J
+B-C
+C-D
+D-E
+E-N
+E-H
+F-G
+G-H
+H-I
+H-J
+I-N
+J-K
+K-O
+O-M
+M-N
