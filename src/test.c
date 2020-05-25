@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 15:44:14 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/25 08:36:00 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/25 19:50:29 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,25 +139,6 @@ t_room* get_next_room(t_link *curr, int price)
 		curr = curr->next;
 	}
 	return (NULL);
-}
-
-void test_map_quality(void)
-{
-	t_room *room;
-	t_link *link;
-
-	room = t_map.rooms;
-	while (room)
-	{
-		printf("Room |%s| is connected to:\n", room->name);
-		link = room->links;
-		while (link)
-		{
-			printf("--->|%s|\n", link->room->home->name);
-			link = link->next;
-		}
-		room = room->next;
-	}
 }
 
 void best_way_selector(char *buff)

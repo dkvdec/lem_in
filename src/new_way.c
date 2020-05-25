@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/23 20:24:54 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/25 08:24:05 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/25 19:49:25 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,15 +125,6 @@ void	add_new_path(t_ws *wcs)
 	recount_ways_len(wcs);
 	resort_ways_by_len(wcs);
 	get_turn_nbr(wcs);
-}
-
-//			WCS_FUCS
-
-void make_wcs()
-{
-	t_wcs.min = NULL;
-	t_wcs.smp = NULL;
-	t_wcs.cur = make_ws(NULL);
 }
 
 void get_way_len(t_wh *way)

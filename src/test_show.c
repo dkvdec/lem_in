@@ -6,13 +6,32 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/03 08:57:07 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/24 02:27:25 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/25 19:50:34 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/lem_in.h"
 
 void test_show_mark_status();
+
+void test_map_quality(void)
+{
+	t_room *room;
+	t_link *link;
+
+	room = t_map.rooms;
+	while (room)
+	{
+		printf("Room |%s| is connected to:\n", room->name);
+		link = room->links;
+		while (link)
+		{
+			printf("--->|%s|\n", link->room->home->name);
+			link = link->next;
+		}
+		room = room->next;
+	}
+}
 
 void    current_status(t_room* room, t_wh* home)
 {
