@@ -1,14 +1,14 @@
 #!/bin/bash
 maps=`ls $1 | sort|uniq | tr '\n' ' '`
-date > leaks.log
-echo >> leaks.log
+date > links.log
+echo >> links.log
 for map in $maps
 do
-echo $map >> leaks.log
+echo $map >> links.log
 orig=`cat $1/$map | wc -l`
-base=`./lem_in $1/$map | wc -l`
+base=`./lem-in < $1/$map | wc -l`
 base=$((base - orig - 1))
-echo $base >> leaks.log
-tail -1 $1/$map >> leaks.log
-echo >> leaks.log
+echo $base >> links.log
+tail -1 $1/$map >> links.log
+echo >> links.log
 done

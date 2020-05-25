@@ -1,332 +1,332 @@
-Пн мая 25 19:28:41 +05 2020
+Вт мая 26 00:51:02 +05 2020
 
 ants_empty
-==14975== HEAP SUMMARY:
-==14975==     in use at exit: 0 bytes in 0 blocks
-==14975==   total heap usage: 8 allocs, 8 frees, 131 bytes allocated
-==14975== 
-==14975== All heap blocks were freed -- no leaks are possible
-==14975== 
-==14975== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==14975== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3624== HEAP SUMMARY:
+==3624==     in use at exit: 0 bytes in 0 blocks
+==3624==   total heap usage: 8 allocs, 8 frees, 131 bytes allocated
+==3624== 
+==3624== All heap blocks were freed -- no leaks are possible
+==3624== 
+==3624== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3624== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 ants_nbr_inf_int_min
-==14979== HEAP SUMMARY:
-==14979==     in use at exit: 0 bytes in 0 blocks
-==14979==   total heap usage: 9 allocs, 9 frees, 151 bytes allocated
-==14979== 
-==14979== All heap blocks were freed -- no leaks are possible
-==14979== 
-==14979== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==14979== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3626== HEAP SUMMARY:
+==3626==     in use at exit: 0 bytes in 0 blocks
+==3626==   total heap usage: 9 allocs, 9 frees, 151 bytes allocated
+==3626== 
+==3626== All heap blocks were freed -- no leaks are possible
+==3626== 
+==3626== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3626== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 ants_nbr_invalid_char
-==14981== HEAP SUMMARY:
-==14981==     in use at exit: 0 bytes in 0 blocks
-==14981==   total heap usage: 9 allocs, 9 frees, 146 bytes allocated
-==14981== 
-==14981== All heap blocks were freed -- no leaks are possible
-==14981== 
-==14981== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==14981== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3629== HEAP SUMMARY:
+==3629==     in use at exit: 0 bytes in 0 blocks
+==3629==   total heap usage: 9 allocs, 9 frees, 146 bytes allocated
+==3629== 
+==3629== All heap blocks were freed -- no leaks are possible
+==3629== 
+==3629== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3629== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 ants_nbr_invalid_char_2
-==14983== HEAP SUMMARY:
-==14983==     in use at exit: 0 bytes in 0 blocks
-==14983==   total heap usage: 9 allocs, 9 frees, 145 bytes allocated
-==14983== 
-==14983== All heap blocks were freed -- no leaks are possible
-==14983== 
-==14983== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==14983== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3631== HEAP SUMMARY:
+==3631==     in use at exit: 0 bytes in 0 blocks
+==3631==   total heap usage: 9 allocs, 9 frees, 145 bytes allocated
+==3631== 
+==3631== All heap blocks were freed -- no leaks are possible
+==3631== 
+==3631== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3631== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 ants_nbr_invalid_spacing
-==14985== HEAP SUMMARY:
-==14985==     in use at exit: 0 bytes in 0 blocks
-==14985==   total heap usage: 9 allocs, 9 frees, 148 bytes allocated
-==14985== 
-==14985== All heap blocks were freed -- no leaks are possible
-==14985== 
-==14985== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==14985== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3634== HEAP SUMMARY:
+==3634==     in use at exit: 0 bytes in 0 blocks
+==3634==   total heap usage: 9 allocs, 9 frees, 148 bytes allocated
+==3634== 
+==3634== All heap blocks were freed -- no leaks are possible
+==3634== 
+==3634== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3634== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 ants_nbr_neg
-==14987== HEAP SUMMARY:
-==14987==     in use at exit: 0 bytes in 0 blocks
-==14987==   total heap usage: 9 allocs, 9 frees, 146 bytes allocated
-==14987== 
-==14987== All heap blocks were freed -- no leaks are possible
-==14987== 
-==14987== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==14987== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3636== HEAP SUMMARY:
+==3636==     in use at exit: 0 bytes in 0 blocks
+==3636==   total heap usage: 9 allocs, 9 frees, 146 bytes allocated
+==3636== 
+==3636== All heap blocks were freed -- no leaks are possible
+==3636== 
+==3636== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3636== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 ants_nbr_too_big
-==14989== HEAP SUMMARY:
-==14989==     in use at exit: 0 bytes in 0 blocks
-==14989==   total heap usage: 9 allocs, 9 frees, 151 bytes allocated
-==14989== 
-==14989== All heap blocks were freed -- no leaks are possible
-==14989== 
-==14989== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==14989== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3638== HEAP SUMMARY:
+==3638==     in use at exit: 0 bytes in 0 blocks
+==3638==   total heap usage: 9 allocs, 9 frees, 151 bytes allocated
+==3638== 
+==3638== All heap blocks were freed -- no leaks are possible
+==3638== 
+==3638== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3638== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 big_sup_relinks
-==14991== HEAP SUMMARY:
-==14991==     in use at exit: 0 bytes in 0 blocks
-==14991==   total heap usage: 15,977 allocs, 15,977 frees, 325,671 bytes allocated
-==14991== 
-==14991== All heap blocks were freed -- no leaks are possible
-==14991== 
-==14991== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==14991== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3640== HEAP SUMMARY:
+==3640==     in use at exit: 0 bytes in 0 blocks
+==3640==   total heap usage: 15,977 allocs, 15,977 frees, 325,671 bytes allocated
+==3640== 
+==3640== All heap blocks were freed -- no leaks are possible
+==3640== 
+==3640== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3640== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 empty_line_no_end_defined
-==14993== HEAP SUMMARY:
-==14993==     in use at exit: 0 bytes in 0 blocks
-==14993==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
-==14993== 
-==14993== All heap blocks were freed -- no leaks are possible
-==14993== 
-==14993== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==14993== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3642== HEAP SUMMARY:
+==3642==     in use at exit: 0 bytes in 0 blocks
+==3642==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==3642== 
+==3642== All heap blocks were freed -- no leaks are possible
+==3642== 
+==3642== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3642== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 empty_line_no_tube_to_end
-==14995== HEAP SUMMARY:
-==14995==     in use at exit: 0 bytes in 0 blocks
-==14995==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
-==14995== 
-==14995== All heap blocks were freed -- no leaks are possible
-==14995== 
-==14995== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==14995== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3644== HEAP SUMMARY:
+==3644==     in use at exit: 0 bytes in 0 blocks
+==3644==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==3644== 
+==3644== All heap blocks were freed -- no leaks are possible
+==3644== 
+==3644== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3644== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 empty_map
-==14997== HEAP SUMMARY:
-==14997==     in use at exit: 0 bytes in 0 blocks
-==14997==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
-==14997== 
-==14997== All heap blocks were freed -- no leaks are possible
-==14997== 
-==14997== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==14997== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3647== HEAP SUMMARY:
+==3647==     in use at exit: 0 bytes in 0 blocks
+==3647==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==3647== 
+==3647== All heap blocks were freed -- no leaks are possible
+==3647== 
+==3647== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3647== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 end_before_nb_ants
-==14999== HEAP SUMMARY:
-==14999==     in use at exit: 0 bytes in 0 blocks
-==14999==   total heap usage: 10 allocs, 10 frees, 155 bytes allocated
-==14999== 
-==14999== All heap blocks were freed -- no leaks are possible
-==14999== 
-==14999== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==14999== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3649== HEAP SUMMARY:
+==3649==     in use at exit: 0 bytes in 0 blocks
+==3649==   total heap usage: 10 allocs, 10 frees, 155 bytes allocated
+==3649== 
+==3649== All heap blocks were freed -- no leaks are possible
+==3649== 
+==3649== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3649== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 no_end
-==15001== HEAP SUMMARY:
-==15001==     in use at exit: 0 bytes in 0 blocks
-==15001==   total heap usage: 14 allocs, 14 frees, 264 bytes allocated
-==15001== 
-==15001== All heap blocks were freed -- no leaks are possible
-==15001== 
-==15001== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15001== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3651== HEAP SUMMARY:
+==3651==     in use at exit: 0 bytes in 0 blocks
+==3651==   total heap usage: 14 allocs, 14 frees, 264 bytes allocated
+==3651== 
+==3651== All heap blocks were freed -- no leaks are possible
+==3651== 
+==3651== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3651== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 no_start
-==15003== HEAP SUMMARY:
-==15003==     in use at exit: 0 bytes in 0 blocks
-==15003==   total heap usage: 14 allocs, 14 frees, 262 bytes allocated
-==15003== 
-==15003== All heap blocks were freed -- no leaks are possible
-==15003== 
-==15003== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15003== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3654== HEAP SUMMARY:
+==3654==     in use at exit: 0 bytes in 0 blocks
+==3654==   total heap usage: 14 allocs, 14 frees, 262 bytes allocated
+==3654== 
+==3654== All heap blocks were freed -- no leaks are possible
+==3654== 
+==3654== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3654== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 no_tubes
-==15005== HEAP SUMMARY:
-==15005==     in use at exit: 0 bytes in 0 blocks
-==15005==   total heap usage: 16 allocs, 16 frees, 308 bytes allocated
-==15005== 
-==15005== All heap blocks were freed -- no leaks are possible
-==15005== 
-==15005== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15005== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3657== HEAP SUMMARY:
+==3657==     in use at exit: 0 bytes in 0 blocks
+==3657==   total heap usage: 16 allocs, 16 frees, 308 bytes allocated
+==3657== 
+==3657== All heap blocks were freed -- no leaks are possible
+==3657== 
+==3657== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3657== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 room_after_tube
-==15012== HEAP SUMMARY:
-==15012==     in use at exit: 0 bytes in 0 blocks
-==15012==   total heap usage: 21 allocs, 21 frees, 399 bytes allocated
-==15012== 
-==15012== All heap blocks were freed -- no leaks are possible
-==15012== 
-==15012== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15012== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3662== HEAP SUMMARY:
+==3662==     in use at exit: 0 bytes in 0 blocks
+==3662==   total heap usage: 21 allocs, 21 frees, 399 bytes allocated
+==3662== 
+==3662== All heap blocks were freed -- no leaks are possible
+==3662== 
+==3662== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3662== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 room_coord_duplicated
-==15014== HEAP SUMMARY:
-==15014==     in use at exit: 0 bytes in 0 blocks
-==15014==   total heap usage: 48 allocs, 48 frees, 1,262 bytes allocated
-==15014== 
-==15014== All heap blocks were freed -- no leaks are possible
-==15014== 
-==15014== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15014== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3664== HEAP SUMMARY:
+==3664==     in use at exit: 0 bytes in 0 blocks
+==3664==   total heap usage: 48 allocs, 48 frees, 1,262 bytes allocated
+==3664== 
+==3664== All heap blocks were freed -- no leaks are possible
+==3664== 
+==3664== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3664== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 room_duplicated
-==15016== HEAP SUMMARY:
-==15016==     in use at exit: 0 bytes in 0 blocks
-==15016==   total heap usage: 17 allocs, 17 frees, 304 bytes allocated
-==15016== 
-==15016== All heap blocks were freed -- no leaks are possible
-==15016== 
-==15016== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15016== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3666== HEAP SUMMARY:
+==3666==     in use at exit: 0 bytes in 0 blocks
+==3666==   total heap usage: 17 allocs, 17 frees, 304 bytes allocated
+==3666== 
+==3666== All heap blocks were freed -- no leaks are possible
+==3666== 
+==3666== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3666== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 room_has_dash
-==15018== HEAP SUMMARY:
-==15018==     in use at exit: 0 bytes in 0 blocks
-==15018==   total heap usage: 11 allocs, 11 frees, 188 bytes allocated
-==15018== 
-==15018== All heap blocks were freed -- no leaks are possible
-==15018== 
-==15018== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15018== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3668== HEAP SUMMARY:
+==3668==     in use at exit: 0 bytes in 0 blocks
+==3668==   total heap usage: 11 allocs, 11 frees, 188 bytes allocated
+==3668== 
+==3668== All heap blocks were freed -- no leaks are possible
+==3668== 
+==3668== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3668== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 room_has_unprintable_char
-==15021== HEAP SUMMARY:
-==15021==     in use at exit: 0 bytes in 0 blocks
-==15021==   total heap usage: 11 allocs, 11 frees, 188 bytes allocated
-==15021== 
-==15021== All heap blocks were freed -- no leaks are possible
-==15021== 
-==15021== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15021== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3670== HEAP SUMMARY:
+==3670==     in use at exit: 0 bytes in 0 blocks
+==3670==   total heap usage: 11 allocs, 11 frees, 188 bytes allocated
+==3670== 
+==3670== All heap blocks were freed -- no leaks are possible
+==3670== 
+==3670== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3670== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 room_invalid_coord
-==15023== HEAP SUMMARY:
-==15023==     in use at exit: 0 bytes in 0 blocks
-==15023==   total heap usage: 9 allocs, 9 frees, 146 bytes allocated
-==15023== 
-==15023== All heap blocks were freed -- no leaks are possible
-==15023== 
-==15023== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15023== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3687== HEAP SUMMARY:
+==3687==     in use at exit: 0 bytes in 0 blocks
+==3687==   total heap usage: 9 allocs, 9 frees, 146 bytes allocated
+==3687== 
+==3687== All heap blocks were freed -- no leaks are possible
+==3687== 
+==3687== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3687== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 room_name_duplicated
-==15026== HEAP SUMMARY:
-==15026==     in use at exit: 0 bytes in 0 blocks
-==15026==   total heap usage: 17 allocs, 17 frees, 304 bytes allocated
-==15026== 
-==15026== All heap blocks were freed -- no leaks are possible
-==15026== 
-==15026== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15026== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3689== HEAP SUMMARY:
+==3689==     in use at exit: 0 bytes in 0 blocks
+==3689==   total heap usage: 17 allocs, 17 frees, 304 bytes allocated
+==3689== 
+==3689== All heap blocks were freed -- no leaks are possible
+==3689== 
+==3689== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3689== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 room_no_y_coord
-==15028== HEAP SUMMARY:
-==15028==     in use at exit: 0 bytes in 0 blocks
-==15028==   total heap usage: 11 allocs, 11 frees, 186 bytes allocated
-==15028== 
-==15028== All heap blocks were freed -- no leaks are possible
-==15028== 
-==15028== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15028== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3692== HEAP SUMMARY:
+==3692==     in use at exit: 0 bytes in 0 blocks
+==3692==   total heap usage: 11 allocs, 11 frees, 186 bytes allocated
+==3692== 
+==3692== All heap blocks were freed -- no leaks are possible
+==3692== 
+==3692== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3692== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 room_start_with_L
-==15030== HEAP SUMMARY:
-==15030==     in use at exit: 0 bytes in 0 blocks
-==15030==   total heap usage: 11 allocs, 11 frees, 188 bytes allocated
-==15030== 
-==15030== All heap blocks were freed -- no leaks are possible
-==15030== 
-==15030== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15030== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3695== HEAP SUMMARY:
+==3695==     in use at exit: 0 bytes in 0 blocks
+==3695==   total heap usage: 11 allocs, 11 frees, 188 bytes allocated
+==3695== 
+==3695== All heap blocks were freed -- no leaks are possible
+==3695== 
+==3695== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3695== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 room_too_much_arg
-==15035== HEAP SUMMARY:
-==15035==     in use at exit: 0 bytes in 0 blocks
-==15035==   total heap usage: 11 allocs, 11 frees, 190 bytes allocated
-==15035== 
-==15035== All heap blocks were freed -- no leaks are possible
-==15035== 
-==15035== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15035== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3704== HEAP SUMMARY:
+==3704==     in use at exit: 0 bytes in 0 blocks
+==3704==   total heap usage: 11 allocs, 11 frees, 190 bytes allocated
+==3704== 
+==3704== All heap blocks were freed -- no leaks are possible
+==3704== 
+==3704== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3704== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 room_without_coord
-==15038== HEAP SUMMARY:
-==15038==     in use at exit: 0 bytes in 0 blocks
-==15038==   total heap usage: 9 allocs, 9 frees, 140 bytes allocated
-==15038== 
-==15038== All heap blocks were freed -- no leaks are possible
-==15038== 
-==15038== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15038== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3706== HEAP SUMMARY:
+==3706==     in use at exit: 0 bytes in 0 blocks
+==3706==   total heap usage: 9 allocs, 9 frees, 140 bytes allocated
+==3706== 
+==3706== All heap blocks were freed -- no leaks are possible
+==3706== 
+==3706== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3706== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 start_and_comments_before_nb_ants
-==15040== HEAP SUMMARY:
-==15040==     in use at exit: 0 bytes in 0 blocks
-==15040==   total heap usage: 12 allocs, 12 frees, 209 bytes allocated
-==15040== 
-==15040== All heap blocks were freed -- no leaks are possible
-==15040== 
-==15040== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15040== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3708== HEAP SUMMARY:
+==3708==     in use at exit: 0 bytes in 0 blocks
+==3708==   total heap usage: 12 allocs, 12 frees, 209 bytes allocated
+==3708== 
+==3708== All heap blocks were freed -- no leaks are possible
+==3708== 
+==3708== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3708== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 start_before_nb_ants
-==15042== HEAP SUMMARY:
-==15042==     in use at exit: 0 bytes in 0 blocks
-==15042==   total heap usage: 10 allocs, 10 frees, 157 bytes allocated
-==15042== 
-==15042== All heap blocks were freed -- no leaks are possible
-==15042== 
-==15042== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15042== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3710== HEAP SUMMARY:
+==3710==     in use at exit: 0 bytes in 0 blocks
+==3710==   total heap usage: 10 allocs, 10 frees, 157 bytes allocated
+==3710== 
+==3710== All heap blocks were freed -- no leaks are possible
+==3710== 
+==3710== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3710== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 start_command_before_tube
-==15044== HEAP SUMMARY:
-==15044==     in use at exit: 0 bytes in 0 blocks
-==15044==   total heap usage: 22 allocs, 22 frees, 417 bytes allocated
-==15044== 
-==15044== All heap blocks were freed -- no leaks are possible
-==15044== 
-==15044== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15044== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3712== HEAP SUMMARY:
+==3712==     in use at exit: 0 bytes in 0 blocks
+==3712==   total heap usage: 22 allocs, 22 frees, 417 bytes allocated
+==3712== 
+==3712== All heap blocks were freed -- no leaks are possible
+==3712== 
+==3712== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3712== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 start_is_end
-==15047== HEAP SUMMARY:
-==15047==     in use at exit: 0 bytes in 0 blocks
-==15047==   total heap usage: 11 allocs, 11 frees, 201 bytes allocated
-==15047== 
-==15047== All heap blocks were freed -- no leaks are possible
-==15047== 
-==15047== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15047== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3714== HEAP SUMMARY:
+==3714==     in use at exit: 0 bytes in 0 blocks
+==3714==   total heap usage: 11 allocs, 11 frees, 201 bytes allocated
+==3714== 
+==3714== All heap blocks were freed -- no leaks are possible
+==3714== 
+==3714== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3714== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 start_not_followed_by_room
-==15049== HEAP SUMMARY:
-==15049==     in use at exit: 0 bytes in 0 blocks
-==15049==   total heap usage: 46 allocs, 46 frees, 1,219 bytes allocated
-==15049== 
-==15049== All heap blocks were freed -- no leaks are possible
-==15049== 
-==15049== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15049== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3716== HEAP SUMMARY:
+==3716==     in use at exit: 0 bytes in 0 blocks
+==3716==   total heap usage: 46 allocs, 46 frees, 1,219 bytes allocated
+==3716== 
+==3716== All heap blocks were freed -- no leaks are possible
+==3716== 
+==3716== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3716== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 tube_has_spaces
-==15051== HEAP SUMMARY:
-==15051==     in use at exit: 0 bytes in 0 blocks
-==15051==   total heap usage: 24 allocs, 24 frees, 474 bytes allocated
-==15051== 
-==15051== All heap blocks were freed -- no leaks are possible
-==15051== 
-==15051== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15051== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3718== HEAP SUMMARY:
+==3718==     in use at exit: 0 bytes in 0 blocks
+==3718==   total heap usage: 24 allocs, 24 frees, 474 bytes allocated
+==3718== 
+==3718== All heap blocks were freed -- no leaks are possible
+==3718== 
+==3718== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3718== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
 tube_room_does_not_exist
-==15053== HEAP SUMMARY:
-==15053==     in use at exit: 0 bytes in 0 blocks
-==15053==   total heap usage: 23 allocs, 23 frees, 424 bytes allocated
-==15053== 
-==15053== All heap blocks were freed -- no leaks are possible
-==15053== 
-==15053== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==15053== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3720== HEAP SUMMARY:
+==3720==     in use at exit: 0 bytes in 0 blocks
+==3720==   total heap usage: 23 allocs, 23 frees, 424 bytes allocated
+==3720== 
+==3720== All heap blocks were freed -- no leaks are possible
+==3720== 
+==3720== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==3720== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 

@@ -6,13 +6,13 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/14 00:14:20 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/25 08:18:01 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/25 20:09:51 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/lem_in.h"
 
-int way_control_system(t_ws **min, t_ws *cur, t_ws *org)
+int			way_control_system(t_ws **min, t_ws *cur, t_ws *org)
 {
 	if (*(min) == NULL
 	|| (*min)->turn_nbr > cur->turn_nbr)
@@ -20,42 +20,6 @@ int way_control_system(t_ws **min, t_ws *cur, t_ws *org)
 	if (cur->turn_nbr > org->turn_nbr)
 		return (1);
 	return (0);
-}
-
-void deep_recursion(t_ws *org, int lvl)
-{
-	t_ws *cur;
-	int stop;
-
-	cur = NULL;
-	stop = 0;
-	t_wcs.stop = stop;
-	copy_way(&cur, org);
-	map_reset();
-	coll_deixtra_base(t_map.start, 0, 0);
-	if (t_map.coll_lvl > 0)
-	{
-		map_reset();
-		while (deep_deixtra_base(t_map.start, 0, 0) > stop)
-		{
-			add_new_path(cur);
-			if (way_control_system(&t_wcs.deep_min, cur, org))
-				break ;
-			deep_recursion(cur, lvl + 1);
-			full_map_reset();
-			map_reclaim(org);
-			copy_way(&cur, org);
-			stop++;
-			t_wcs.stop = stop;
-		}
-	}
-	else
-	{
-		add_new_path(cur);
-		way_control_system(&t_wcs.deep_min, cur, org);
-		deep_recursion(cur, lvl + 1);
-	}
-	dstr_way(&cur);
 }
 
 void	way_deep_select()

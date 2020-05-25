@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 20:31:46 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/25 08:40:45 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/26 00:49:27 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	find_coll_way1(t_wh *way)
 	t_col.w1_col_e = curr;
 	if (t_col.w1_col_s == NULL || t_col.w1_col_e == NULL)
 	{
-		test_show_way(way);
+		// test_show_way(way);
 		error_func("Collision Error! w1 collision not allocated.");
 	}
 	// printf("way 1 sollision s = |%s| e = |%s|\n", t_col.w1_col_s->room->name, t_col.w1_col_e->room->name);
@@ -58,10 +58,10 @@ void	find_coll_way2(t_ws *wcs)
 	t_col.w2_col_e = curr;
 	if (t_col.w2_col_s == NULL || t_col.w2_col_e == NULL)
 	{
-		test_show_trouble_situation(t_map.end, 2);
-		test_show_way(t_col.wh1);
+		// test_show_trouble_situation(t_map.end, 2);
+		// test_show_way(t_col.wh1);
 		printf("collision |%s|->...->|%s|\n", t_col.w1_col_e->room->name, t_col.w1_col_s->room->name);
-		test_show_way(t_col.wh2);
+		// test_show_way(t_col.wh2);
 		error_func("Collision Error! w2 collision not allocated.");
 	}
 }
@@ -172,7 +172,7 @@ void	test_claim(t_ws *wcs)
 		{
 			if (curr->room->status != curr->home->way_nbr)
 			{
-				test_show_paths();
+				// test_show_paths();
 				error_func("Collision Error! Claim test failed.");
 			}
 			curr = curr->next;

@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 15:44:14 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/25 19:50:29 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/26 00:46:45 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,12 +153,12 @@ void best_way_selector(char *buff)
 		transport_core(buff, t_wcs.deep_min);
 }
 
-void lem_in_core(int fd)
+void lem_in_core(void)
 {
 	int data;
 	char buff[BUFFSIZE + 1];
 
-	if ((data = read(fd, buff, BUFFSIZE)) < 32)
+	if ((data = read(0, buff, BUFFSIZE)) < 32)
 		error_func("Map Error!");
 	buff[data] = '\0';
 	empty_lines_check(buff);
@@ -173,17 +173,14 @@ void lem_in_core(int fd)
 
 int main(int argc, char **argv)
 {    
-	int fd;
 	char pnt;
 
-	if (argc < 2)
-		error_func("No arguments!");
-	else if (argc == 2)
+	if (argc == 1)
 	{
-		if (((fd = open(argv[1], O_RDONLY)) > 0) && ((read(fd, &pnt,0) == 0)))
+		if ((read(0, &pnt,0) == 0))
 		{
-			lem_in_core(fd);
-			close(fd);
+			argv[1] = '\0';
+			lem_in_core();
 			free_map();
 			free_ways();
 		}
@@ -191,6 +188,6 @@ int main(int argc, char **argv)
 			error_func("Incorrect format or unreadable file!");
 	}
 	else
-		error_func("Too many arguments!");
+		error_func("Unknown arguments!");
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/18 13:20:31 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/25 08:18:41 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/26 00:48:29 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -185,8 +185,6 @@ t_w		*make_new_coll_path(t_w** end, t_wh* home)
 		if (room->status == 0)
 			room->status = home->way_nbr;
 		link = way_next_room(room);
-		if (link == NULL)
-			current_status(room, home);
 		link->status = 0;
 		link->room->status = 0;
 	}

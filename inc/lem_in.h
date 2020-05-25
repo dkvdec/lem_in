@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 23:07:09 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/25 19:47:48 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/25 20:04:28 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -207,6 +207,7 @@ int					coll_deixtra_coll(t_room *room, int price,
 					int lvl, int step);
 int					coll_deixtra_base(t_room *room, int price, int lvl);
 int					deep_deixtra_base(t_room *room, int price, int lvl);
+int					way_status_resulter(t_ws **min, t_ws *cur);
 
 ////////////////////_TEST_SHOW_FUNCS_////////////////////
 
