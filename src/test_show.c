@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/03 08:57:07 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/07 22:28:17 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/24 02:27:25 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void test_show_paths()
 	t_wh	*head;
 	t_w		*room;
 
-	head = t_wcs.cur->ways;
+	head = t_wcs.deep_min->ways;
 	while (head)
 	{
 		room = head->start;

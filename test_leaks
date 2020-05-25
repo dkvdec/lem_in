@@ -1,0 +1,10 @@
+#!/bin/bash
+maps=`ls $1 | sort|uniq | tr '\n' ' '`
+date > leaks.log
+echo >> leaks.log
+for map in $maps
+do
+echo $map >> leaks.log
+valgrind -v --leak-check=full --show-leak-kinds=all ./lem_in "$1/$map" 2>&1 | tail -8 >> leaks.log
+echo >> leaks.log
+done

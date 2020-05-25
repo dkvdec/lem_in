@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 20:31:46 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/11 15:02:02 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/25 08:40:45 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,14 @@ void	find_coll_way1(t_wh *way)
 	// printf("way 1 sollision s = |%s| e = |%s|\n", t_col.w1_col_s->room->name, t_col.w1_col_e->room->name);
 }
 
-void	find_coll_way2()
+void	find_coll_way2(t_ws *wcs)
 {
 	t_wh	*way2;
 	t_w		*curr;
 
 	if (t_col.w1_col_s->room->status != t_col.w1_col_e->room->status)
 		error_func("Collision Error! w1_s doesn't match w1_e.");
-	way2 = t_wcs.cur->ways;
+	way2 = wcs->ways;
 	while (way2 && way2->way_nbr != t_col.w1_col_s->room->status)
 		way2 = way2->next;
 	if (!(way2))
@@ -64,7 +64,6 @@ void	find_coll_way2()
 		test_show_way(t_col.wh2);
 		error_func("Collision Error! w2 collision not allocated.");
 	}
-	// printf("way 2 sollision s = |%s| e = |%s|\n", t_col.w2_col_s->room->name, t_col.w2_col_e->room->name);
 }
 
 void	open_links(t_room *room)
@@ -98,7 +97,6 @@ void	reconnect_ways(t_w *start, t_w *end, t_w *stop)
 	tmp = NULL;
 	while (prev && prev->room->room_nbr != stop->room->room_nbr)
 	{
-		// printf("PLS FREE ME!\n");
 		prev->room->status = 0;
 		open_links(prev->room);
 		tmp = prev;
@@ -147,7 +145,6 @@ void	claim_tail(t_w* curr)
 
 void	handle_collision()
 {
-	// test_show_collision();
 	reconnect_ways(t_col.w1_col_s, t_col.w2_col_e, t_col.w1_col_e);
 	reconnect_ways(t_col.w2_col_s, t_col.w1_col_e, t_col.w2_col_e);
 	reconnect_home(t_col.wh1);
@@ -162,12 +159,12 @@ void	handle_collision()
 	t_col.w2_col_e = NULL;
 }
 
-void	test_claim()
+void	test_claim(t_ws *wcs)
 {
 	t_wh*	head;
 	t_w*	curr;
 
-	head = t_wcs.cur->ways;
+	head = wcs->ways;
 	while (head)
 	{
 		curr = head->start;
@@ -184,11 +181,11 @@ void	test_claim()
 	}
 }
 
-void	recount_ways_len()
+void	recount_ways_len(t_ws *wcs)
 {
 	t_wh	*head;
 
-	head = t_wcs.cur->ways;
+	head = wcs->ways;
 	while (head)
 	{
 		get_way_len(head);
@@ -196,24 +193,24 @@ void	recount_ways_len()
 	}
 }
 
-void	get_ways_nbr()
+void	get_ways_nbr(t_ws *wcs)
 {
 	t_wh	*curr;
 
-	curr = t_wcs.cur->ways;
-	t_wcs.cur->ways_nbr = 1;
+	curr = wcs->ways;
+	wcs->ways_nbr = 1;
 	while (curr->next)
 	{
-		t_wcs.cur->ways_nbr++;
+		wcs->ways_nbr++;
 		curr = curr->next;
 	}
 }
 
-int		check_ways_sort()
+int		check_ways_sort(t_ws *wcs)
 {
 	t_wh	*curr;
 
-	curr = t_wcs.cur->ways;
+	curr = wcs->ways;
 	while (curr->next)
 	{
 		if (curr->way_len > curr->next->way_len)
@@ -223,20 +220,20 @@ int		check_ways_sort()
 	return (0);
 }
 
-void	sort_operation()
+void	sort_operation(t_ws *wcs)
 {
 	t_wh	*prev;
 	t_wh	*curr;
 	t_wh	*next;
 
-	prev = t_wcs.cur->ways;
-	curr = t_wcs.cur->ways->next;
-	next = t_wcs.cur->ways->next->next;
+	prev = wcs->ways;
+	curr = wcs->ways->next;
+	next = wcs->ways->next->next;
 	if (prev->way_len > curr->way_len)
 	{
 		prev->next = curr->next;
 		curr->next = prev;
-		t_wcs.cur->ways = curr;
+		wcs->ways = curr;
 	}
 	else
 		while (next)
@@ -254,33 +251,33 @@ void	sort_operation()
 		}
 }
 
-void	resort_ways_by_len()
+void	resort_ways_by_len(t_ws *wcs)
 {
 	t_wh	*curr;
 
-	get_ways_nbr();
-	if (t_wcs.cur->ways_nbr == 2
-	&& t_wcs.cur->ways->way_len > t_wcs.cur->ways->next->way_len)
+	get_ways_nbr(wcs);
+	if (wcs->ways_nbr == 2
+	&& wcs->ways->way_len > wcs->ways->next->way_len)
 	{
-		curr = t_wcs.cur->ways;
-		t_wcs.cur->ways = t_wcs.cur->ways->next;
-		t_wcs.cur->ways->next = curr;
-		t_wcs.cur->ways->next->next = NULL;
+		curr = wcs->ways;
+		wcs->ways = wcs->ways->next;
+		wcs->ways->next = curr;
+		wcs->ways->next->next = NULL;
 	}
-	else if (t_wcs.cur->ways_nbr > 2)
-		while (check_ways_sort())
-			sort_operation();			
+	else if (wcs->ways_nbr > 2)
+		while (check_ways_sort(wcs))
+			sort_operation(wcs);			
 }
 
-void	way_collision_handler(t_wh *way)
+void	way_collision_handler(t_ws *wcs, t_wh *way)
 {
 	while (t_col.col_flg > 0)
 	{
 		find_coll_way1(way);
-		find_coll_way2();
+		find_coll_way2(wcs);
 		handle_collision();
 		t_col.col_flg--;
 	}
 	claim_rooms(way);
-	test_claim(); // test
+	test_claim(wcs); // test
 }

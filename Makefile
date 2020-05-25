@@ -6,7 +6,7 @@
 #    By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/12 11:27:08 by dheredat          #+#    #+#              #
-#    Updated: 2020/05/09 14:10:03 by dheredat         ###   ########.fr        #
+#    Updated: 2020/05/25 08:25:24 by dheredat         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ SRC		=	base_algo.c base_way.c build_map.c\
 			check_map.c get_map.c test.c\
 			new_transport.c new_way.c\
 			way_copy.c way_dstr.c way_coll.c\
-			test_show.c new_algo.c
+			test_show.c way_deep.c\
+			algo_core.c algo_base.c algo_coll.c algo_deep.c
 
 SRC_T	=	$(addprefix $(SRC_DIR)/,$(SRC))
 
@@ -36,7 +37,7 @@ $(LIBFT):
 	make -C $(LIBFT_DIR)
 
 $(NAME): $(LIBFT)
-	gcc -g $(SRC_T) $(LIBFT) -o $(NAME)
+	gcc -g $(FLAGS) $(SRC_T) $(LIBFT) -o $(NAME)
 
 clean:
 	make -C libft clean

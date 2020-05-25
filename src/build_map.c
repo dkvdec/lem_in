@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/18 11:58:36 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/28 04:25:54 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/25 02:56:13 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,10 @@ t_room		*add_room(char *name)
 	while (room)
 	{
 		if (!(ft_strcmp(room->name, name)))
+		{
+			free(name);
 			error_func("Map Error! Map contains room duplicates.");
+		}
 		nbr++;
 		if (room->next == NULL)
 			break ;
@@ -68,7 +71,7 @@ t_link		*make_link(t_room *home)
 	return (link);
 }
 
-t_link		*add_link(t_room *room, int check_nbr)
+t_link		*add_link(t_room *room, int check_nbr, char **names)
 {
 	t_link	*curr;
 
@@ -81,7 +84,7 @@ t_link		*add_link(t_room *room, int check_nbr)
 	curr = room->links;
 	while (curr)
 	{
-		if (check_nbr == curr->room->home->room_nbr)
+		if (check_nbr == curr->room->home->room_nbr && free_strsplit(names))
 			error_func("Map Error! Map contains room relinks.");
 		if (curr->next == NULL)
 			break ;
@@ -92,13 +95,13 @@ t_link		*add_link(t_room *room, int check_nbr)
 	return (curr);
 }
 
-void		link_connector(t_room *room1, t_room *room2)
+void		link_connector(t_room *room1, t_room *room2, char **names)
 {
 	t_link	*link1;
 	t_link	*link2;
 
-	link1 = add_link(room1, room2->room_nbr);
-	link2 = add_link(room2, room1->room_nbr);
+	link1 = add_link(room1, room2->room_nbr, names);
+	link2 = add_link(room2, room1->room_nbr, names);
 	link1->room = link2;
 	link2->room = link1;
 	link1->status = 1;

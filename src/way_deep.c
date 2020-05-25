@@ -1,18 +1,57 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   new_algo.c                                         :+:      :+:    :+:   */
+/*   way_deep.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/09 13:56:54 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/11 14:59:40 by dheredat         ###   ########.fr       */
+/*   Created: 2020/05/11 19:39:22 by dheredat          #+#    #+#             */
+/*   Updated: 2020/05/25 08:43:00 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/lem_in.h"
 
-int coll_deixtra_rec(t_room *room, int price, int lvl, int step)
+void find_reset_link(t_room *prev, t_room *curr, int p_nbr, int c_nbr)
+{
+	t_link *link;
+
+	link = prev->links;
+	while (link && link->room->home->room_nbr != curr->room_nbr)
+		link = link->next;
+	link->status = p_nbr;
+	link->room->status = c_nbr;
+}
+
+void map_reclaim(t_ws *wcs)
+{
+	t_w*	curr;
+	t_wh*	head;
+
+	head = wcs->ways;
+	while (head)
+	{
+		if (head->end->prev)
+		{
+			curr = head->end->prev;
+			curr->room->status = curr->home->way_nbr;
+			find_reset_link(t_map.end, curr->room, 0, 0);
+			while (curr->prev)
+			{
+				curr->room->status = curr->home->way_nbr;
+				find_reset_link(curr->room, curr->prev->room, -1, 0);
+				curr = curr->prev;
+			}
+			curr->room->status = curr->home->way_nbr;
+			find_reset_link(curr->room, t_map.start, 0, 0);
+		}
+		else
+			find_reset_link(t_map.end, t_map.start, 0, 0);
+		head = head->next;
+	}
+}
+
+int deep_deixtra_coll(t_room *room, int price, int lvl, int step)
 {
     t_link *link;
     int flag;
@@ -23,30 +62,28 @@ int coll_deixtra_rec(t_room *room, int price, int lvl, int step)
     link = room->links;
     while (link)
     {
+        if (best > t_wcs.stop)
+            break ;
         if (step > 0
         && link->status == 1
         && link->room->home->status == 0
-        && link->room->home->price > price + 1 + lvl * 2)
+        && link->room->home->price > price)
         {
-            // link->status = 0;
-            // link->room->status = 0;
-            if ((flag = base_deixtra_rec(link->room->home, price + 1, lvl)))
+            if ((flag = deep_deixtra_base(link->room->home, price + 1, lvl)))
             {
-                room->price = price + lvl * 2;
+                room->price = price;
                 best = (flag > best) ? flag : best;
             }
-            // link->status = 1;
-            // link->room->status = 1;
         }
         else if (step >= 0
         && link->status == -1
         && link->room->home->status == room->status
-        && link->room->home->price > price - 1 + lvl * 2)
+        && link->room->home->price > price)
         {
             link->status = 0;
-            if ((flag = coll_deixtra_rec(link->room->home, price - 1, lvl + 1, step + 1)))
+            if ((flag = deep_deixtra_coll(link->room->home, price + 1, lvl + 1, step + 1)))
             {
-                room->price = price + lvl * 2;
+                room->price = price;
                 best = (flag > best) ? flag : best;
             }
             link->status = -1;
@@ -57,7 +94,7 @@ int coll_deixtra_rec(t_room *room, int price, int lvl, int step)
     return (best);
 }
 
-int base_deixtra_rec(t_room *room, int price, int lvl)
+int deep_deixtra_base(t_room *room, int price, int lvl)
 {
     t_link *link;
     int flag;
@@ -66,38 +103,33 @@ int base_deixtra_rec(t_room *room, int price, int lvl)
     flag = 0;
     best = 0;
     link = room->links;
-    room->price = price + lvl * 2;
+    room->price = price++;
     if (room->room_nbr == t_map.end->room_nbr)
     {
-        // if (t_wcs.min && price < t_wcs.min->turn_nbr)
-            // printf("price = %d, lvl = %d, mark = %d\n", price, lvl, t_map.mark_sts + 1);
+        if (room->price > t_wcs.deep_min->turn_nbr)
+            return (0);
+        t_map.coll_lvl = lvl;
         room->mark = ++t_map.mark_sts;
         return (room->mark);
     }
     while (link)
     {
+        if (best > t_wcs.stop)
+            break ;
         if (link->status == 1
         && link->room->home->status == 0
-        && link->room->home->price > price + lvl * 2)
+        && link->room->home->price > price)
         {
-            // link->status = 0;
-            // link->room->status = 0;
-            if ((flag = base_deixtra_rec(link->room->home, price + 1, lvl)))
+            if ((flag = deep_deixtra_base(link->room->home, price, lvl)))
                 best = (flag > best) ? flag : best;
-            // link->status = 1;
-            // link->room->status = 1;
         }
         else if (price > 0
         && link->status == 1
         && link->room->home->status > 0
-        && link->room->home->price > price + lvl * 2)
+        && link->room->home->price > price)
         {
-            // link->status = 0;
-            // link->room->status = 0;
-            if ((flag = coll_deixtra_rec(link->room->home, price + 1, lvl, 0)))
+            if ((flag = deep_deixtra_coll(link->room->home, price, lvl, 0)))
                 best = (flag > best) ? flag : best;
-            // link->status = 1;
-            // link->room->status = 1;
         }
         link = link->next;
     }

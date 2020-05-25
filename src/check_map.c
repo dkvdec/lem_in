@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/18 12:14:38 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/21 18:26:21 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/25 08:58:40 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,4 +98,6 @@ void	empty_lines_check(char *buff)
 			error_func("Map Error! Empty lines.");
 		i++;
 	}
+	if (i > 0 && buff[i - 1] != '\n')
+		error_func("Map Error! Map should end with \\n.");
 }

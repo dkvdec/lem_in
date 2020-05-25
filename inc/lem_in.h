@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 23:07:09 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/07 05:52:57 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/25 02:57:39 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ typedef struct		s_room{
 struct              s_map{
 	int             ants_nbr;
 	int				mark_sts;
+	int				coll_lvl;
+	char			**lines;
 	t_room          *rooms;
 	t_room          *start;
 	t_room          *end;
@@ -84,8 +86,21 @@ struct				s_move{
 ** WAY_CONTROL_SYSTEM
 */
 struct				s_wcs{
+	int				mark_lst;
+	int				stop;
+	int				brdr;
 	struct s_ws		*min;
 	struct s_ws		*cur;
+	struct s_ws		*smp;
+	//
+	struct s_ws		*base_min;
+	//
+	struct s_ws		*coll_min;
+	struct s_ws		*coll_cur;
+	//
+	struct s_ws		*deep_min;
+	struct s_ws		*deep_cur;
+	struct s_ws		*deep_smp;
 }					t_wcs;
 
 /*
@@ -165,8 +180,8 @@ void				get_map(char **lines);
 t_room				*make_room(char *name, int nbr);
 t_room				*add_room(char *name);
 t_link				*make_link(t_room *home);
-t_link				*add_link(t_room *room, int check_nbr);
-void				link_connector(t_room *room1, t_room *room2);
+t_link				*add_link(t_room *room, int check_nbr, char **names);
+void				link_connector(t_room *room1, t_room *room2, char **names);
 
 /*
 **
@@ -174,34 +189,37 @@ void				link_connector(t_room *room1, t_room *room2);
 
 void				error_func(char *str);
 void				full_reset();
-void				room_connector(char *name1, char *name2);
-void				free_strsplit(char **str);
+void				room_connector(char *name1, char *name2, char **names);
+int					free_strsplit(char **str);
 
 ////////////////////_EXPERIMENTAL_BLOCK_///////////////////
 
 int					base_deixtra(t_room *room, int price);
 int					base_deixtra_rec(t_room *room, int price, int lvl);
 void				base_way_former();
-void				transport_core(char *buff);
+void				transport_core(char *buff, t_ws *wcs);
 
 ////////////////////_NEW_WAY_FUNCTIONS_////////////////////
 
 t_w*    make_w(t_room *room, t_w *next, t_wh* home);
 t_wh*   make_wh(int way_nbr, t_wh *orig);
 t_ws*   make_ws(t_ws* orig);
-t_w		*make_new_path(t_w** end, t_wh* home);
-void	add_new_path(void);
+//t_w		*make_new_path(t_w** end, t_wh* home);
+void	add_new_path(t_ws *wcs);
 void	make_wcs();
-t_link	*min_price_next_room(t_room *room, t_wh *home);
-t_link	*next_room_norm_case(t_room *room, t_wh *home);
+//t_link	*min_price_next_room(t_room *room, t_wh *home);
+t_link	*next_room_norm_case(t_room *room);
 
 int acess_giver(t_ws *ws, t_wh *cur, int ants_nbr);
 void get_way_len(t_wh *way);
 void get_turn_nbr(t_ws *head);
 
-void	way_collision_handler(t_wh *way);
+void	way_collision_handler(t_ws *wcs, t_wh *way);
 t_w		*make_new_coll_path(t_w** end, t_wh* home);
-t_link	*next_room_decider(t_room *room, t_wh *home);
+t_link	*next_room_decider(t_room *room);
+void way_deep_select();
+void full_map_reset();
+void map_reclaim();
 
 ////////////////////_WAY_COPY_OR_DSTR_////////////////////
 
@@ -209,8 +227,8 @@ void copy_path(t_wh* dst, t_wh* src);
 void copy_way(t_ws **dst, t_ws *src);
 void dstr_path(t_w *curr);
 void dstr_way(t_ws **prey);
-void	recount_ways_len();
-void	resort_ways_by_len();
+void	recount_ways_len(t_ws *wcs);
+void	resort_ways_by_len(t_ws *wcs);
 
 ////////////////////_TEST_SHOW_FUNCS_////////////////////
 
@@ -221,5 +239,14 @@ void test_show_trouble_situation(t_room *room, int step);
 void test_show_end(t_wh *head);
 void test_show_way(t_wh *head);
 void test_show_collision();
+
+void algo_base();
+void algo_core();
+void algo_coll();
+void algo_deep();
+void map_reset();
+int coll_deixtra_coll(t_room *room, int price, int lvl, int step);
+int coll_deixtra_base(t_room *room, int price, int lvl);
+int deep_deixtra_base(t_room *room, int price, int lvl);
 
 #endif

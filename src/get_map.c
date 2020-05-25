@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/17 14:25:03 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/21 18:26:26 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/24 11:33:39 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,14 @@ void get_command(char *line)
 		return ;
 	if (!(ft_strcmp("##start", line)))
 	{
-		if (t_valid.start_flag == 0)
+		if (t_valid.start_flag == 0 && t_valid.end_flag != -1)
 			t_valid.start_flag = -1;
 		else
 			error_func("Map Error! Multiple ##start commands.");
 	}
 	if (!(ft_strcmp("##end", line)))
 	{
-		if (t_valid.end_flag == 0)
+		if (t_valid.end_flag == 0 && t_valid.start_flag != -1)
 			t_valid.end_flag = -1;
 		else
 			error_func("Map Error! Multiple ##end commands.");
@@ -90,11 +90,11 @@ void get_link(char *line)
 	if (t_valid.room_counter < 2)
 		error_func("Map Error! Invalid room number.");
 	if (t_valid.room_flag == 0)
-		t_valid.room_flag == 1;
+		t_valid.room_flag = 1;
 	t_valid.link_counter++;
 	if (!(names = ft_strsplit(line, '-')))
 		error_func("Malloc Error!");
-	room_connector(names[0], names[1]);
+	room_connector(names[0], names[1], names);
 	free_strsplit(names);
 }
 

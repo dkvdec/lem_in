@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/23 20:24:54 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/09 13:55:10 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/25 08:24:05 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,34 +74,6 @@ t_ws*   make_ws(t_ws* orig)
 	return (curr);
 }
 
-// t_w		*make_new_path(t_w** end, t_wh* home)
-// {
-// 	t_room* room;
-//     t_link* link;
-// 	t_w*	curr;
-
-// 	curr = make_w(t_map.end, NULL, home);
-// 	*(end) = curr;
-// 	link = min_price_next_room(t_map.end, home);
-// 	room = link->room->home;
-// 	link->status = 0;
-//     link->room->status = 0;
-// 	while(link->room->home->room_nbr != t_map.start->room_nbr)
-// 	{
-//         room = link->room->home;
-// 		room->status = 1;
-// 		curr->prev = make_w(room, curr, home);
-// 		curr = curr->prev;
-// 		link = min_price_next_room(room, home);
-// 		link->status = 0;
-//         link->room->status = 0;
-// 		room->status = home->way_nbr;
-// 	}
-// 	link->status = 0;
-//     link->room->status = 0;
-// 	return (curr);
-// }
-
 void	way_collision_reset()
 {
 	t_col.col_flg = 0;
@@ -128,33 +100,31 @@ void	open_ways_links(t_wh *way)
 	}
 }
 
-void	add_new_path(void)
+void	add_new_path(t_ws *wcs)
 {
 	t_wh	*path;
 
-	if (t_wcs.cur->ways == NULL)
+	if (wcs->ways == NULL)
 	{
-		t_wcs.cur->ways = make_wh(++t_wcs.cur->ways_nbr, NULL);
-		path = t_wcs.cur->ways;
+		wcs->ways = make_wh(++wcs->ways_nbr, NULL);
+		path = wcs->ways;
 	}
 	else
 	{
-		path = t_wcs.cur->ways;
+		path = wcs->ways;
 		while (path->next != NULL)
 			path = path->next;
-		path->next = make_wh(++t_wcs.cur->ways_nbr, NULL);
+		path->next = make_wh(++wcs->ways_nbr, NULL);
 		path = path->next;
 	}
 	way_collision_reset();
-	//path->start = make_new_path(&(path->end), path);
 	path->start = make_new_coll_path(&(path->end), path);
-	// test_show_paths();
 	open_ways_links(path);
 	if (t_col.col_flg > 0)
-		way_collision_handler(path);
-	recount_ways_len();
-	resort_ways_by_len();
-	get_turn_nbr(t_wcs.cur);
+		way_collision_handler(wcs, path);
+	recount_ways_len(wcs);
+	resort_ways_by_len(wcs);
+	get_turn_nbr(wcs);
 }
 
 //			WCS_FUCS
@@ -162,6 +132,7 @@ void	add_new_path(void)
 void make_wcs()
 {
 	t_wcs.min = NULL;
+	t_wcs.smp = NULL;
 	t_wcs.cur = make_ws(NULL);
 }
 
