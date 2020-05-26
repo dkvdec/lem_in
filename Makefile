@@ -6,7 +6,7 @@
 #    By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/12 11:27:08 by dheredat          #+#    #+#              #
-#    Updated: 2020/05/26 11:18:42 by dheredat         ###   ########.fr        #
+#    Updated: 2020/05/26 20:04:54 by dheredat         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ $(LIBFT):
 $(NAME): $(LIBFT) $(OBJ_DIR) $(OBJS) $(HEAD)
 	gcc -g $(LIBFT) $(FLAGS) $(OBJS) $(LIBFT) -o $(NAME)
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(INC_DIR)/%.h
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	gcc -g $(FLAGS) -c $< -I$(INC_DIR) -I$(LIBFT_DIR) -o $@
 clean:
 	rm -rf $(OBJ_DIR)
