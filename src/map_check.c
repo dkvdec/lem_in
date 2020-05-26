@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_map.c                                        :+:      :+:    :+:   */
+/*   map_check.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/18 12:14:38 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/25 08:58:40 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/26 05:37:58 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/lem_in.h"
 
-int		exception_check(char *line)
+int			exception_check(char *line)
 {
 	int		i;
 	char	*int_exc;
@@ -28,10 +28,10 @@ int		exception_check(char *line)
 	return (0);
 }
 
-int		room_check(char *line)
+int			room_check(char *line)
 {
-	int i;
-	int j;
+	int		i;
+	int		j;
 
 	i = 0;
 	while (ft_isalnum(line[i]) || line[i] == '_')
@@ -51,7 +51,7 @@ int		room_check(char *line)
 	return (0);
 }
 
-int		is_room(char *line)
+int			is_room(char *line)
 {
 	if (t_valid.ants_flag != 1)
 		error_func("Map Error! Invalid or absent ant number.");
@@ -65,10 +65,10 @@ int		is_room(char *line)
 	return (1);
 }
 
-int		is_link(char *line)
+int			is_link(char *line)
 {
-	int i;
-	int j;
+	int		i;
+	int		j;
 
 	i = 0;
 	while (ft_isalnum(line[i]) || line[i] == '_')
@@ -81,18 +81,18 @@ int		is_link(char *line)
 		j++;
 	if (i + 1 < j && line[j] == '\0')
 	{
-	 	t_valid.link_counter++;
-	 	return (1);
+		t_valid.link_counter++;
+		return (1);
 	}
 	return (0);
 }
 
-void	empty_lines_check(char *buff)
+void		empty_lines_check(char *buff)
 {
-	int i;
+	int		i;
 
 	i = 0;
-	while(buff[i])
+	while (buff[i])
 	{
 		if (buff[i] == '\n' && buff[i + 1] == '\n')
 			error_func("Map Error! Empty lines.");

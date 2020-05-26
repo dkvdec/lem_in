@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   build_map.c                                        :+:      :+:    :+:   */
+/*   map_build.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/18 11:58:36 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/25 02:56:13 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/26 05:44:00 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,13 @@ t_room		*add_room(char *name)
 		return (room);
 	}
 	room = t_map.rooms;
-	while (room)
+	while (room && ++nbr)
 	{
 		if (!(ft_strcmp(room->name, name)))
 		{
 			free(name);
 			error_func("Map Error! Map contains room duplicates.");
 		}
-		nbr++;
 		if (room->next == NULL)
 			break ;
 		room = room->next;

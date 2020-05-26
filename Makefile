@@ -6,7 +6,7 @@
 #    By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/12 11:27:08 by dheredat          #+#    #+#              #
-#    Updated: 2020/05/26 00:53:01 by dheredat         ###   ########.fr        #
+#    Updated: 2020/05/26 07:41:15 by dheredat         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,12 +20,27 @@ OBJ_DIR =	./obj
 FLAGS	=	-Wall -Wextra -Werror
 HEAD	=	$(INC_DIR)/lem_in.h
 
-SRC		=	base_algo.c base_way.c build_map.c\
-			check_map.c get_map.c test.c\
-			new_transport.c new_way.c\
-			way_copy.c way_dstr.c way_coll.c\
+SRC		=	algo_base.c\
+			algo_coll.c\
+			algo_core.c\
+			algo_deep.c\
+			coll_core.c\
+			coll_fncs.c\
+			coll_sort.c\
+			free_fncs.c\
+			main_core.c\
+			map_build.c\
+			map_check.c\
+			map_get.c\
+			map_reset.c\
+			next_coll.c\
+			next_norm.c\
+			transport.c\
+			way_build.c\
+			way_copy.c\
 			way_deep.c\
-			algo_core.c algo_base.c algo_coll.c algo_deep.c
+			way_dstr.c\
+			way_fncs.c
 
 SRC_T	=	$(addprefix $(SRC_DIR)/,$(SRC))
 

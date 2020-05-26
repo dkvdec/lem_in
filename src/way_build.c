@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   new_way.c                                          :+:      :+:    :+:   */
+/*   way_build.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/23 20:24:54 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/25 19:49:25 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/26 04:52:23 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/lem_in.h"
 
-t_w*    make_w(t_room *room, t_w *next, t_wh* home)
+t_w			*make_w(t_room *room, t_w *next, t_wh *home)
 {
 	t_w		*curr;
 
 	if (!(curr = (t_w*)malloc(sizeof(t_w))))
 		error_func("Malloc Error!");
-	curr->home = home; //mb delete later
+	curr->home = home;
 	curr->room = room;
 	curr->ant_nbr = 0;
 	curr->prev = NULL;
@@ -26,7 +26,7 @@ t_w*    make_w(t_room *room, t_w *next, t_wh* home)
 	return (curr);
 }
 
-t_wh*   make_wh(int way_nbr, t_wh *orig)
+t_wh		*make_wh(int way_nbr, t_wh *orig)
 {
 	t_wh	*curr;
 
@@ -50,7 +50,7 @@ t_wh*   make_wh(int way_nbr, t_wh *orig)
 	return (curr);
 }
 
-t_ws*   make_ws(t_ws* orig)
+t_ws		*make_ws(t_ws *orig)
 {
 	t_ws	*curr;
 
@@ -74,33 +74,34 @@ t_ws*   make_ws(t_ws* orig)
 	return (curr);
 }
 
-void	way_collision_reset()
+t_w			*make_new_coll_path(t_w **end, t_wh *home)
 {
-	t_col.col_flg = 0;
-	t_col.col_stp = 0;
-	t_col.col_sts = 0;
-}
-
-void	open_ways_links(t_wh *way)
-{
-	t_w		*curr;
+	t_room	*room;
 	t_link	*link;
+	t_w		*curr;
 
-	curr = way->start;
-	while (curr->next)
+	curr = make_w(t_map.end, NULL, home);
+	*(end) = curr;
+	link = way_first_room(t_map.end);
+	link->status = 0;
+	link->room->status = 0;
+	while (link->room->home->room_nbr != t_map.start->room_nbr)
 	{
-		link = curr->room->links;
-		if (curr->next->room->room_nbr == t_map.end->room_nbr)
-			break ;
-		while (curr->next->room->room_nbr != link->room->home->room_nbr)
-			link = link->next;
+		room = link->room->home;
+		curr->prev = make_w(room, curr, home);
+		curr = curr->prev;
+		if (room->status == 0)
+			room->status = home->way_nbr;
+		link = way_next_room(room);
 		link->status = 0;
-		link->room->status = -1;
-		curr = curr->next;
+		link->room->status = 0;
 	}
+	link->status = 0;
+	link->room->status = 0;
+	return (curr);
 }
 
-void	add_new_path(t_ws *wcs)
+void		add_new_path(t_ws *wcs)
 {
 	t_wh	*path;
 
@@ -125,45 +126,4 @@ void	add_new_path(t_ws *wcs)
 	recount_ways_len(wcs);
 	resort_ways_by_len(wcs);
 	get_turn_nbr(wcs);
-}
-
-void get_way_len(t_wh *way)
-{
-	t_w	*curr;
-
-	way->way_len = 1;
-	curr = way->start;
-	while (curr->next != NULL)
-	{
-		curr = curr->next;
-		way->way_len++;
-	}
-}
-
-void get_turn_nbr(t_ws *head)
-{
-	t_wh	*cur;
-	int		ant_nbr;
-	int		big_len;
-
-	ant_nbr = t_map.ants_nbr;
-	big_len = 0;
-	head->turn_nbr = 0;
-	while (ant_nbr > 0)
-	{
-		cur = head->ways;
-		while (cur != NULL && ant_nbr > 0)
-		{
-			if (acess_giver(head, cur, ant_nbr))
-			{
-				ant_nbr--;
-				if (big_len < cur->way_len)
-					 big_len = cur->way_len;
-			}
-			cur = cur->next;
-		}
-		head->turn_nbr++;
-		big_len--;
-	}
-	head->turn_nbr += big_len;
 }

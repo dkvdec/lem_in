@@ -6,23 +6,13 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/14 00:14:20 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/25 20:09:51 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/26 03:15:23 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/lem_in.h"
 
-int			way_control_system(t_ws **min, t_ws *cur, t_ws *org)
-{
-	if (*(min) == NULL
-	|| (*min)->turn_nbr > cur->turn_nbr)
-		copy_way(min, cur);
-	if (cur->turn_nbr > org->turn_nbr)
-		return (1);
-	return (0);
-}
-
-void	way_deep_select()
+void		way_deep_select(void)
 {
 	if (t_wcs.deep_smp)
 		dstr_way(&(t_wcs.deep_smp));
@@ -42,7 +32,7 @@ void	way_deep_select()
 	}
 }
 
-void algo_deep()
+void		algo_deep(void)
 {
 	t_wcs.deep_cur = make_ws(NULL);
 	while (coll_deixtra_base(t_map.start, 0, 0) > 0)

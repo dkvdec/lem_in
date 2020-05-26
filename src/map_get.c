@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_map.c                                          :+:      :+:    :+:   */
+/*   map_get.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/17 14:25:03 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/24 11:33:39 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/26 05:35:10 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 void		get_ants_nbr(char *line)
 {
-	int i;
+	int		i;
 
 	i = 0;
-	while(line[i])
+	while (line[i])
 	{
 		if (ft_isdigit(line[i]))
 			i++;
 		else
-			error_func("Map Error! Invalid ants number.");		
+			error_func("Map Error! Invalid ants number.");
 	}
 	if (i > 10 || (i == 10 && exception_check(line)))
 		error_func("Map Error! Invalid ants number.");
@@ -31,7 +31,7 @@ void		get_ants_nbr(char *line)
 	t_valid.ants_flag = 1;
 }
 
-void get_command(char *line)
+void		get_command(char *line)
 {
 	if (line[1] != '#')
 		return ;
@@ -51,7 +51,7 @@ void get_command(char *line)
 	}
 }
 
-void get_room(char *line)
+void		get_room(char *line)
 {
 	char	*name;
 	int		i;
@@ -79,9 +79,9 @@ void get_room(char *line)
 		add_room(name);
 }
 
-void get_link(char *line)
+void		get_link(char *line)
 {
-	char **names;
+	char	**names;
 
 	if (!(is_link(line)))
 		error_func("Map Error! Map contains invalid lines.");
@@ -98,9 +98,9 @@ void get_link(char *line)
 	free_strsplit(names);
 }
 
-void get_map(char **lines)
+void		get_map(char **lines)
 {
-	int i;
+	int		i;
 
 	i = 0;
 	full_reset();

@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/13 22:21:33 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/25 20:10:06 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/26 03:12:40 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ int			coll_deixtra_base(t_room *room, int price, int lvl)
 	return (best);
 }
 
-void		algo_coll()
+void		algo_coll(void)
 {
 	t_wcs.coll_cur = make_ws(NULL);
 	while (coll_deixtra_base(t_map.start, 0, 0) > 0)
