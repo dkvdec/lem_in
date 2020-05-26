@@ -6,7 +6,7 @@
 #    By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/12 11:27:08 by dheredat          #+#    #+#              #
-#    Updated: 2020/05/26 09:48:11 by dheredat         ###   ########.fr        #
+#    Updated: 2020/05/26 11:18:42 by dheredat         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,22 +41,29 @@ SRC		=	algo_base.c\
 			way_dstr.c\
 			way_fncs.c
 
-SRC_T	=	$(addprefix $(SRC_DIR)/,$(SRC))
+SRCS	=	$(addprefix $(SRC_DIR)/,$(SRC))
+OBJS	=	$(addprefix $(OBJ_DIR)/,$(SRC:%.c=%.o))
 
 LIBFT = $(LIBFT_DIR)/libft.a
 
 all: $(NAME)
 
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
+
 $(LIBFT):
 	make -C $(LIBFT_DIR)
 
-$(NAME): $(LIBFT)
-	gcc -g $(FLAGS) $(SRC_T) $(LIBFT) -o $(NAME)
+$(NAME): $(LIBFT) $(OBJ_DIR) $(OBJS) $(HEAD)
+	gcc -g $(LIBFT) $(FLAGS) $(OBJS) $(LIBFT) -o $(NAME)
 
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(INC_DIR)/%.h
+	gcc -g $(FLAGS) -c $< -I$(INC_DIR) -I$(LIBFT_DIR) -o $@
 clean:
+	rm -rf $(OBJ_DIR)
 	make -C libft clean
 
-fclean:
+fclean: clean
 	rm -rf $(NAME)
 	make -C libft fclean
 
