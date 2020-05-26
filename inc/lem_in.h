@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 23:07:09 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/26 07:44:27 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/26 10:08:50 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,7 +125,7 @@ struct				s_col{
 }					t_col;
 
 /*
-**	ALGO_BASE_C	**************************************************************************************
+**	ALGO_BASE_C
 */
 
 int					base_deixtra(t_room *room, int price);
@@ -138,27 +138,38 @@ void				algo_base(void);
 **	ALGO_COLL_C
 */
 
-int			coll_deixtra_coll(t_room *room, int price, int lvl, int step);
-int			coll_deixtra_base(t_room *room, int price, int lvl);
-void		algo_coll(void);
+int					coll_deixtra_coll_dcd(t_link *link,
+					int price, int lvl, int step);
+int					coll_deixtra_coll(t_room *room,
+					int price, int lvl, int step);
+int					coll_deixtra_base_dcd(t_link *link, int price, int lvl);
+int					coll_deixtra_base(t_room *room, int price, int lvl);
+void				algo_coll(void);
 
 /*
 **	ALGO_CORE_C
 */
 
-int			way_control_system(t_ws **min, t_ws *cur, t_ws *org);
-int			way_status_resulter(t_ws **min, t_ws *cur);
-void		algo_core(void);
+void				wcs_reset(void);
+int					way_control_system(t_ws **min, t_ws *cur, t_ws *org);
+int					way_status_resulter(t_ws **min, t_ws *cur);
+void				algo_deep(void);
+void				algo_core(void);
 
 /*
 **	ALGO_DEEP_C
 */
 
-void		way_deep_select(void);
-void		algo_deep(void);
+int					deep_deixtra_coll_dcd(t_link *link,
+					int price, int lvl, int step);
+int					deep_deixtra_coll(t_room *room,
+					int price, int lvl, int step);
+int					deep_deixtra_base_dcd(t_link *link, int price, int lvl);
+int					deep_deixtra_base(t_room *room, int price, int lvl);
+void				way_deep_select(void);
 
 /*
-**	COLL_CORE_C	**************************************************************************************
+**	COLL_CORE_C
 */
 
 void				find_coll_way1(t_wh *way);
@@ -168,17 +179,16 @@ void				claim_rooms(t_wh *home);
 void				way_collision_handler(t_ws *wcs, t_wh *way);
 
 /*
-**	COLL_FNCS_C	**************************************************************************************
+**	COLL_FNCS_C
 */
 
 void				open_links(t_room *room);
 void				reconnect_ways(t_w *start, t_w *end, t_w *stop);
 void				reconnect_home(t_wh *home);
 void				claim_tail(t_w *curr);
-void		test_claim(t_ws *wcs);// delete later
 
 /*
-**	COLL_SORT_C	**************************************************************************************
+**	COLL_SORT_C
 */
 
 int					check_ways_sort(t_ws *wcs);
@@ -188,7 +198,7 @@ void				get_ways_nbr(t_ws *wcs);
 void				resort_ways_by_len(t_ws *wcs);
 
 /*
-**	FREE_FNCS_C	**************************************************************************************
+**	FREE_FNCS_C
 */
 
 void				free_links(t_room *room);
@@ -198,7 +208,7 @@ int					free_strsplit(char **str);
 void				error_func(char *str);
 
 /*
-**	MAIN_CORE_C	**************************************************************************************
+**	MAIN_CORE_C
 */
 
 void				room_connector(char *name1, char *name2, char **names);
@@ -207,7 +217,7 @@ void				best_way_selector(char *buff);
 void				lem_in_core(void);
 
 /*
-**	MAP_BUILD_C	**************************************************************************************
+**	MAP_BUILD_C
 */
 
 t_room				*make_room(char *name, int nbr);
@@ -217,7 +227,7 @@ t_link				*add_link(t_room *room, int check_nbr, char **names);
 void				link_connector(t_room *room1, t_room *room2, char **names);
 
 /*
-**	MAP_CHECK_C	**************************************************************************************
+**	MAP_CHECK_C
 */
 
 int					exception_check(char *line);
@@ -227,7 +237,7 @@ int					is_link(char *line);
 void				empty_lines_check(char *buff);
 
 /*
-**	MAP_GET_C	**************************************************************************************
+**	MAP_GET_C
 */
 
 void				get_ants_nbr(char *line);
@@ -237,16 +247,18 @@ void				get_link(char *line);
 void				get_map(char **lines);
 
 /*
-**	MAP_RESET_C	**************************************************************************************
+**	MAP_RESET_C
 */
 
 void				map_reset(void);
 void				full_map_reset(void);
-void				wcs_reset(void);
 void				full_reset(void);
+void				find_reset_link(t_room *prev, t_room *curr,
+					int p_nbr, int c_nbr);
+void				map_reclaim(t_ws *wcs);
 
 /*
-**	NEXT_COLL_C	**************************************************************************************
+**	NEXT_COLL_C
 */
 
 t_link				*way_next_coll_entr_frcd(t_room *room);
@@ -255,7 +267,7 @@ t_link				*way_next_coll_cont(t_room *room);
 t_link				*way_next_coll_escp(t_room *room);
 
 /*
-**	NEXT_NORM_C	**************************************************************************************
+**	NEXT_NORM_C
 */
 
 t_link				*way_first_room(t_room *room);
@@ -263,50 +275,41 @@ t_link				*way_next_norm(t_room *room);
 t_link				*way_next_room(t_room *room);
 
 /*
-**	TRANSPORT_C	**************************************************************************************
+**	TRANSPORT_C
 */
 
 int					acess_giver(t_ws *wcs, t_wh *cur, int ants_nbr);
 void				ants_launcher(t_ws *wcs);
 void				ants_mover(t_ws *wcs);
-void				writer(int i, t_w* room);
+void				writer(int i, t_w *room);
 void				display_status(t_ws *wcs);
 
 /*
-**	WAY_BUILD_C	**************************************************************************************
+**	WAY_BUILD_C
 */
 
-t_w					*make_w(t_room *room, t_w *next, t_wh* home);
+t_w					*make_w(t_room *room, t_w *next, t_wh *home);
 t_wh				*make_wh(int way_nbr, t_wh *orig);
-t_ws				*make_ws(t_ws* orig);
-t_w					*make_new_coll_path(t_w** end, t_wh* home);
+t_ws				*make_ws(t_ws *orig);
+t_w					*make_new_coll_path(t_w **end, t_wh *home);
 void				add_new_path(t_ws *wcs);
 
 /*
-**	WAY_DEEP_C
-*/
-
-void find_reset_link(t_room *prev, t_room *curr, int p_nbr, int c_nbr);
-void map_reclaim(t_ws *wcs);
-int deep_deixtra_coll(t_room *room, int price, int lvl, int step);
-int deep_deixtra_base(t_room *room, int price, int lvl);
-
-/*
-**	WAY_DSTR_C	**************************************************************************************
+**	WAY_DSTR_C
 */
 
 void				dstr_path(t_w *curr);
 void				dstr_way(t_ws **prey);
 
 /*
-**	WAY_COPY_C	**************************************************************************************
+**	WAY_COPY_C
 */
 
 void				copy_path(t_wh *dst, t_wh *src);
 void				copy_way(t_ws **dst, t_ws *src);
 
 /*
-**	WAY_FNCS_C	**************************************************************************************
+**	WAY_FNCS_C
 */
 
 void				way_collision_reset();

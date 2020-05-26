@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/26 06:51:32 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/26 06:55:46 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/26 09:58:39 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,5 +94,4 @@ void		way_collision_handler(t_ws *wcs, t_wh *way)
 		t_col.col_flg--;
 	}
 	claim_rooms(way);
-	test_claim(wcs); // test
 }

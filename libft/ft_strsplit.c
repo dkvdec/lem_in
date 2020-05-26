@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dheredat <dheredat@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/16 18:55:10 by dheredat          #+#    #+#             */
-/*   Updated: 2020/04/13 17:31:37 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/26 10:11:46 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

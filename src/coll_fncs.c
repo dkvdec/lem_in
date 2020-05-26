@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/25 20:31:46 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/26 07:23:51 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/26 09:58:58 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,27 +74,5 @@ void		claim_tail(t_w *curr)
 	{
 		curr->room->status = curr->home->way_nbr;
 		curr = curr->next;
-	}
-}
-
-void		test_claim(t_ws *wcs)
-{
-	t_wh	*head;
-	t_w		*curr;
-
-	head = wcs->ways;
-	while (head)
-	{
-		curr = head->start;
-		while (curr && curr->room->room_nbr != t_map.end->room_nbr)
-		{
-			if (curr->room->status != curr->home->way_nbr)
-			{
-				// test_show_paths();
-				error_func("Collision Error! Claim test failed.");
-			}
-			curr = curr->next;
-		}
-		head = head->next;
 	}
 }

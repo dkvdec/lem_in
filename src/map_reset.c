@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/26 02:17:47 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/26 06:00:54 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/26 09:06:17 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,16 +50,6 @@ void		full_map_reset(void)
 	}
 }
 
-void		wcs_reset(void)
-{
-	t_wcs.base_min = NULL;
-	t_wcs.coll_cur = NULL;
-	t_wcs.coll_min = NULL;
-	t_wcs.deep_cur = NULL;
-	t_wcs.deep_min = NULL;
-	t_wcs.deep_smp = NULL;
-}
-
 void		full_reset(void)
 {
 	t_valid.ants_flag = 0;
@@ -74,4 +64,43 @@ void		full_reset(void)
 	t_map.rooms = NULL;
 	t_map.start = NULL;
 	t_map.end = NULL;
+}
+
+void		find_reset_link(t_room *prev, t_room *curr, int p_nbr, int c_nbr)
+{
+	t_link	*link;
+
+	link = prev->links;
+	while (link && link->room->home->room_nbr != curr->room_nbr)
+		link = link->next;
+	link->status = p_nbr;
+	link->room->status = c_nbr;
+}
+
+void		map_reclaim(t_ws *wcs)
+{
+	t_w		*curr;
+	t_wh	*head;
+
+	head = wcs->ways;
+	while (head)
+	{
+		if (head->end->prev)
+		{
+			curr = head->end->prev;
+			curr->room->status = curr->home->way_nbr;
+			find_reset_link(t_map.end, curr->room, 0, 0);
+			while (curr->prev)
+			{
+				curr->room->status = curr->home->way_nbr;
+				find_reset_link(curr->room, curr->prev->room, -1, 0);
+				curr = curr->prev;
+			}
+			curr->room->status = curr->home->way_nbr;
+			find_reset_link(curr->room, t_map.start, 0, 0);
+		}
+		else
+			find_reset_link(t_map.end, t_map.start, 0, 0);
+		head = head->next;
+	}
 }
