@@ -1,1002 +1,562 @@
-Вт мая 26 10:52:52 +05 2020
-
-map_big_01.map
-==31512== HEAP SUMMARY:
-==31512==     in use at exit: 0 bytes in 0 blocks
-==31512==   total heap usage: 22,492 allocs, 22,492 frees, 501,254 bytes allocated
-==31512== 
-==31512== All heap blocks were freed -- no leaks are possible
-==31512== 
-==31512== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31512== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_02.map
-==31524== HEAP SUMMARY:
-==31524==     in use at exit: 0 bytes in 0 blocks
-==31524==   total heap usage: 33,942 allocs, 33,942 frees, 811,048 bytes allocated
-==31524== 
-==31524== All heap blocks were freed -- no leaks are possible
-==31524== 
-==31524== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31524== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_03.map
-==31539== HEAP SUMMARY:
-==31539==     in use at exit: 0 bytes in 0 blocks
-==31539==   total heap usage: 31,577 allocs, 31,577 frees, 743,824 bytes allocated
-==31539== 
-==31539== All heap blocks were freed -- no leaks are possible
-==31539== 
-==31539== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31539== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_04.map
-==31565== HEAP SUMMARY:
-==31565==     in use at exit: 0 bytes in 0 blocks
-==31565==   total heap usage: 33,563 allocs, 33,563 frees, 770,684 bytes allocated
-==31565== 
-==31565== All heap blocks were freed -- no leaks are possible
-==31565== 
-==31565== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31565== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_05.map
-==31577== HEAP SUMMARY:
-==31577==     in use at exit: 0 bytes in 0 blocks
-==31577==   total heap usage: 37,666 allocs, 37,666 frees, 907,170 bytes allocated
-==31577== 
-==31577== All heap blocks were freed -- no leaks are possible
-==31577== 
-==31577== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31577== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_06.map
-==31597== HEAP SUMMARY:
-==31597==     in use at exit: 0 bytes in 0 blocks
-==31597==   total heap usage: 32,682 allocs, 32,682 frees, 766,540 bytes allocated
-==31597== 
-==31597== All heap blocks were freed -- no leaks are possible
-==31597== 
-==31597== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31597== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_07.map
-==31613== HEAP SUMMARY:
-==31613==     in use at exit: 0 bytes in 0 blocks
-==31613==   total heap usage: 36,811 allocs, 36,811 frees, 850,900 bytes allocated
-==31613== 
-==31613== All heap blocks were freed -- no leaks are possible
-==31613== 
-==31613== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31613== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_08.map
-==31647== HEAP SUMMARY:
-==31647==     in use at exit: 0 bytes in 0 blocks
-==31647==   total heap usage: 37,974 allocs, 37,974 frees, 911,584 bytes allocated
-==31647== 
-==31647== All heap blocks were freed -- no leaks are possible
-==31647== 
-==31647== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31647== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_09.map
-==31665== HEAP SUMMARY:
-==31665==     in use at exit: 0 bytes in 0 blocks
-==31665==   total heap usage: 26,752 allocs, 26,752 frees, 599,748 bytes allocated
-==31665== 
-==31665== All heap blocks were freed -- no leaks are possible
-==31665== 
-==31665== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31665== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_10.map
-==31680== HEAP SUMMARY:
-==31680==     in use at exit: 0 bytes in 0 blocks
-==31680==   total heap usage: 28,009 allocs, 28,009 frees, 649,290 bytes allocated
-==31680== 
-==31680== All heap blocks were freed -- no leaks are possible
-==31680== 
-==31680== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31680== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_12.map
-==31694== HEAP SUMMARY:
-==31694==     in use at exit: 0 bytes in 0 blocks
-==31694==   total heap usage: 36,189 allocs, 36,189 frees, 823,376 bytes allocated
-==31694== 
-==31694== All heap blocks were freed -- no leaks are possible
-==31694== 
-==31694== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31694== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_13.map
-==31708== HEAP SUMMARY:
-==31708==     in use at exit: 0 bytes in 0 blocks
-==31708==   total heap usage: 39,838 allocs, 39,838 frees, 952,884 bytes allocated
-==31708== 
-==31708== All heap blocks were freed -- no leaks are possible
-==31708== 
-==31708== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31708== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_14.map
-==31730== HEAP SUMMARY:
-==31730==     in use at exit: 0 bytes in 0 blocks
-==31730==   total heap usage: 28,281 allocs, 28,281 frees, 634,004 bytes allocated
-==31730== 
-==31730== All heap blocks were freed -- no leaks are possible
-==31730== 
-==31730== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31730== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_16.map
-==31743== HEAP SUMMARY:
-==31743==     in use at exit: 0 bytes in 0 blocks
-==31743==   total heap usage: 35,110 allocs, 35,110 frees, 791,702 bytes allocated
-==31743== 
-==31743== All heap blocks were freed -- no leaks are possible
-==31743== 
-==31743== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31743== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_17.map
-==31757== HEAP SUMMARY:
-==31757==     in use at exit: 0 bytes in 0 blocks
-==31757==   total heap usage: 31,669 allocs, 31,669 frees, 718,230 bytes allocated
-==31757== 
-==31757== All heap blocks were freed -- no leaks are possible
-==31757== 
-==31757== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31757== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_18.map
-==31775== HEAP SUMMARY:
-==31775==     in use at exit: 0 bytes in 0 blocks
-==31775==   total heap usage: 33,503 allocs, 33,503 frees, 774,434 bytes allocated
-==31775== 
-==31775== All heap blocks were freed -- no leaks are possible
-==31775== 
-==31775== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31775== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_19.map
-==31790== HEAP SUMMARY:
-==31790==     in use at exit: 0 bytes in 0 blocks
-==31790==   total heap usage: 28,576 allocs, 28,576 frees, 675,898 bytes allocated
-==31790== 
-==31790== All heap blocks were freed -- no leaks are possible
-==31790== 
-==31790== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31790== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_20.map
-==31802== HEAP SUMMARY:
-==31802==     in use at exit: 0 bytes in 0 blocks
-==31802==   total heap usage: 38,564 allocs, 38,564 frees, 892,402 bytes allocated
-==31802== 
-==31802== All heap blocks were freed -- no leaks are possible
-==31802== 
-==31802== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31802== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_21.map
-==31816== HEAP SUMMARY:
-==31816==     in use at exit: 0 bytes in 0 blocks
-==31816==   total heap usage: 21,796 allocs, 21,796 frees, 481,252 bytes allocated
-==31816== 
-==31816== All heap blocks were freed -- no leaks are possible
-==31816== 
-==31816== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31816== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_24.map
-==31833== HEAP SUMMARY:
-==31833==     in use at exit: 0 bytes in 0 blocks
-==31833==   total heap usage: 26,406 allocs, 26,406 frees, 598,206 bytes allocated
-==31833== 
-==31833== All heap blocks were freed -- no leaks are possible
-==31833== 
-==31833== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31833== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_26.map
-==31848== HEAP SUMMARY:
-==31848==     in use at exit: 0 bytes in 0 blocks
-==31848==   total heap usage: 27,342 allocs, 27,342 frees, 621,562 bytes allocated
-==31848== 
-==31848== All heap blocks were freed -- no leaks are possible
-==31848== 
-==31848== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31848== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_27.map
-==31868== HEAP SUMMARY:
-==31868==     in use at exit: 0 bytes in 0 blocks
-==31868==   total heap usage: 30,374 allocs, 30,374 frees, 714,036 bytes allocated
-==31868== 
-==31868== All heap blocks were freed -- no leaks are possible
-==31868== 
-==31868== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31868== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_28.map
-==31882== HEAP SUMMARY:
-==31882==     in use at exit: 0 bytes in 0 blocks
-==31882==   total heap usage: 33,941 allocs, 33,941 frees, 788,662 bytes allocated
-==31882== 
-==31882== All heap blocks were freed -- no leaks are possible
-==31882== 
-==31882== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31882== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_29.map
-==31904== HEAP SUMMARY:
-==31904==     in use at exit: 0 bytes in 0 blocks
-==31904==   total heap usage: 48,068 allocs, 48,068 frees, 1,291,872 bytes allocated
-==31904== 
-==31904== All heap blocks were freed -- no leaks are possible
-==31904== 
-==31904== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31904== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_30.map
-==31937== HEAP SUMMARY:
-==31937==     in use at exit: 0 bytes in 0 blocks
-==31937==   total heap usage: 43,795 allocs, 43,795 frees, 1,054,232 bytes allocated
-==31937== 
-==31937== All heap blocks were freed -- no leaks are possible
-==31937== 
-==31937== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31937== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_31.map
-==31943== HEAP SUMMARY:
-==31943==     in use at exit: 0 bytes in 0 blocks
-==31943==   total heap usage: 27,222 allocs, 27,222 frees, 615,468 bytes allocated
-==31943== 
-==31943== All heap blocks were freed -- no leaks are possible
-==31943== 
-==31943== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31943== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_32.map
-==31945== HEAP SUMMARY:
-==31945==     in use at exit: 0 bytes in 0 blocks
-==31945==   total heap usage: 47,496 allocs, 47,496 frees, 1,458,812 bytes allocated
-==31945== 
-==31945== All heap blocks were freed -- no leaks are possible
-==31945== 
-==31945== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31945== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_34.map
-==31963== HEAP SUMMARY:
-==31963==     in use at exit: 0 bytes in 0 blocks
-==31963==   total heap usage: 32,777 allocs, 32,777 frees, 761,412 bytes allocated
-==31963== 
-==31963== All heap blocks were freed -- no leaks are possible
-==31963== 
-==31963== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31963== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_35.map
-==31974== HEAP SUMMARY:
-==31974==     in use at exit: 0 bytes in 0 blocks
-==31974==   total heap usage: 34,135 allocs, 34,135 frees, 811,482 bytes allocated
-==31974== 
-==31974== All heap blocks were freed -- no leaks are possible
-==31974== 
-==31974== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31974== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_36.map
-==31978== HEAP SUMMARY:
-==31978==     in use at exit: 0 bytes in 0 blocks
-==31978==   total heap usage: 41,442 allocs, 41,442 frees, 1,099,198 bytes allocated
-==31978== 
-==31978== All heap blocks were freed -- no leaks are possible
-==31978== 
-==31978== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31978== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_37.map
-==31999== HEAP SUMMARY:
-==31999==     in use at exit: 0 bytes in 0 blocks
-==31999==   total heap usage: 25,573 allocs, 25,573 frees, 559,492 bytes allocated
-==31999== 
-==31999== All heap blocks were freed -- no leaks are possible
-==31999== 
-==31999== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==31999== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_38.map
-==32016== HEAP SUMMARY:
-==32016==     in use at exit: 0 bytes in 0 blocks
-==32016==   total heap usage: 25,818 allocs, 25,818 frees, 592,112 bytes allocated
-==32016== 
-==32016== All heap blocks were freed -- no leaks are possible
-==32016== 
-==32016== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32016== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_39.map
-==32020== HEAP SUMMARY:
-==32020==     in use at exit: 0 bytes in 0 blocks
-==32020==   total heap usage: 31,972 allocs, 31,972 frees, 726,708 bytes allocated
-==32020== 
-==32020== All heap blocks were freed -- no leaks are possible
-==32020== 
-==32020== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32020== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_40.map
-==32026== HEAP SUMMARY:
-==32026==     in use at exit: 0 bytes in 0 blocks
-==32026==   total heap usage: 33,259 allocs, 33,259 frees, 763,174 bytes allocated
-==32026== 
-==32026== All heap blocks were freed -- no leaks are possible
-==32026== 
-==32026== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32026== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_41.map
-==32039== HEAP SUMMARY:
-==32039==     in use at exit: 0 bytes in 0 blocks
-==32039==   total heap usage: 32,923 allocs, 32,923 frees, 757,570 bytes allocated
-==32039== 
-==32039== All heap blocks were freed -- no leaks are possible
-==32039== 
-==32039== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32039== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_42.map
-==32044== HEAP SUMMARY:
-==32044==     in use at exit: 0 bytes in 0 blocks
-==32044==   total heap usage: 36,623 allocs, 36,623 frees, 861,588 bytes allocated
-==32044== 
-==32044== All heap blocks were freed -- no leaks are possible
-==32044== 
-==32044== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32044== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_43.map
-==32051== HEAP SUMMARY:
-==32051==     in use at exit: 0 bytes in 0 blocks
-==32051==   total heap usage: 21,156 allocs, 21,156 frees, 462,262 bytes allocated
-==32051== 
-==32051== All heap blocks were freed -- no leaks are possible
-==32051== 
-==32051== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32051== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_47.map
-==32055== HEAP SUMMARY:
-==32055==     in use at exit: 0 bytes in 0 blocks
-==32055==   total heap usage: 23,695 allocs, 23,695 frees, 522,410 bytes allocated
-==32055== 
-==32055== All heap blocks were freed -- no leaks are possible
-==32055== 
-==32055== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32055== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_50.map
-==32057== HEAP SUMMARY:
-==32057==     in use at exit: 0 bytes in 0 blocks
-==32057==   total heap usage: 21,738 allocs, 21,738 frees, 497,384 bytes allocated
-==32057== 
-==32057== All heap blocks were freed -- no leaks are possible
-==32057== 
-==32057== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32057== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_51.map
-==32060== HEAP SUMMARY:
-==32060==     in use at exit: 0 bytes in 0 blocks
-==32060==   total heap usage: 20,937 allocs, 20,937 frees, 470,362 bytes allocated
-==32060== 
-==32060== All heap blocks were freed -- no leaks are possible
-==32060== 
-==32060== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32060== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_53.map
-==32067== HEAP SUMMARY:
-==32067==     in use at exit: 0 bytes in 0 blocks
-==32067==   total heap usage: 29,264 allocs, 29,264 frees, 655,438 bytes allocated
-==32067== 
-==32067== All heap blocks were freed -- no leaks are possible
-==32067== 
-==32067== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32067== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_55.map
-==32069== HEAP SUMMARY:
-==32069==     in use at exit: 0 bytes in 0 blocks
-==32069==   total heap usage: 30,904 allocs, 30,904 frees, 703,254 bytes allocated
-==32069== 
-==32069== All heap blocks were freed -- no leaks are possible
-==32069== 
-==32069== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32069== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_56.map
-==32082== HEAP SUMMARY:
-==32082==     in use at exit: 0 bytes in 0 blocks
-==32082==   total heap usage: 30,912 allocs, 30,912 frees, 711,196 bytes allocated
-==32082== 
-==32082== All heap blocks were freed -- no leaks are possible
-==32082== 
-==32082== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32082== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_01.map
-==32084== HEAP SUMMARY:
-==32084==     in use at exit: 0 bytes in 0 blocks
-==32084==   total heap usage: 72,231 allocs, 72,231 frees, 2,205,544 bytes allocated
-==32084== 
-==32084== All heap blocks were freed -- no leaks are possible
-==32084== 
-==32084== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32084== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_02.map
-==32097== HEAP SUMMARY:
-==32097==     in use at exit: 0 bytes in 0 blocks
-==32097==   total heap usage: 76,226 allocs, 76,226 frees, 2,044,564 bytes allocated
-==32097== 
-==32097== All heap blocks were freed -- no leaks are possible
-==32097== 
-==32097== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32097== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_03.map
-==32102== HEAP SUMMARY:
-==32102==     in use at exit: 0 bytes in 0 blocks
-==32102==   total heap usage: 25,275 allocs, 25,275 frees, 606,952 bytes allocated
-==32102== 
-==32102== All heap blocks were freed -- no leaks are possible
-==32102== 
-==32102== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32102== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_04.map
-==32105== HEAP SUMMARY:
-==32105==     in use at exit: 0 bytes in 0 blocks
-==32105==   total heap usage: 52,447 allocs, 52,447 frees, 1,242,928 bytes allocated
-==32105== 
-==32105== All heap blocks were freed -- no leaks are possible
-==32105== 
-==32105== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32105== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_05.map
-==32107== HEAP SUMMARY:
-==32107==     in use at exit: 0 bytes in 0 blocks
-==32107==   total heap usage: 35,641 allocs, 35,641 frees, 846,752 bytes allocated
-==32107== 
-==32107== All heap blocks were freed -- no leaks are possible
-==32107== 
-==32107== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32107== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_06.map
-==32110== HEAP SUMMARY:
-==32110==     in use at exit: 0 bytes in 0 blocks
-==32110==   total heap usage: 47,096 allocs, 47,096 frees, 1,131,920 bytes allocated
-==32110== 
-==32110== All heap blocks were freed -- no leaks are possible
-==32110== 
-==32110== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32110== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_07.map
-==32114== HEAP SUMMARY:
-==32114==     in use at exit: 0 bytes in 0 blocks
-==32114==   total heap usage: 29,292 allocs, 29,292 frees, 733,752 bytes allocated
-==32114== 
-==32114== All heap blocks were freed -- no leaks are possible
-==32114== 
-==32114== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32114== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_08.map
-==32118== HEAP SUMMARY:
-==32118==     in use at exit: 0 bytes in 0 blocks
-==32118==   total heap usage: 39,765 allocs, 39,765 frees, 874,816 bytes allocated
-==32118== 
-==32118== All heap blocks were freed -- no leaks are possible
-==32118== 
-==32118== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32118== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_09.map
-==32120== HEAP SUMMARY:
-==32120==     in use at exit: 0 bytes in 0 blocks
-==32120==   total heap usage: 29,821 allocs, 29,821 frees, 663,622 bytes allocated
-==32120== 
-==32120== All heap blocks were freed -- no leaks are possible
-==32120== 
-==32120== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32120== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_10.map
-==32122== HEAP SUMMARY:
-==32122==     in use at exit: 0 bytes in 0 blocks
-==32122==   total heap usage: 52,968 allocs, 52,968 frees, 1,327,584 bytes allocated
-==32122== 
-==32122== All heap blocks were freed -- no leaks are possible
-==32122== 
-==32122== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32122== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_11.map
-==32124== HEAP SUMMARY:
-==32124==     in use at exit: 0 bytes in 0 blocks
-==32124==   total heap usage: 31,800 allocs, 31,800 frees, 818,128 bytes allocated
-==32124== 
-==32124== All heap blocks were freed -- no leaks are possible
-==32124== 
-==32124== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32124== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_12.map
-==32129== HEAP SUMMARY:
-==32129==     in use at exit: 0 bytes in 0 blocks
-==32129==   total heap usage: 56,203 allocs, 56,203 frees, 1,477,092 bytes allocated
-==32129== 
-==32129== All heap blocks were freed -- no leaks are possible
-==32129== 
-==32129== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32129== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_13.map
-==32132== HEAP SUMMARY:
-==32132==     in use at exit: 0 bytes in 0 blocks
-==32132==   total heap usage: 17,583 allocs, 17,583 frees, 390,872 bytes allocated
-==32132== 
-==32132== All heap blocks were freed -- no leaks are possible
-==32132== 
-==32132== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32132== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_14.map
-==32134== HEAP SUMMARY:
-==32134==     in use at exit: 0 bytes in 0 blocks
-==32134==   total heap usage: 45,557 allocs, 45,557 frees, 1,025,304 bytes allocated
-==32134== 
-==32134== All heap blocks were freed -- no leaks are possible
-==32134== 
-==32134== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32134== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_15.map
-==32150== HEAP SUMMARY:
-==32150==     in use at exit: 0 bytes in 0 blocks
-==32150==   total heap usage: 24,706 allocs, 24,706 frees, 574,694 bytes allocated
-==32150== 
-==32150== All heap blocks were freed -- no leaks are possible
-==32150== 
-==32150== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32150== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_16.map
-==32165== HEAP SUMMARY:
-==32165==     in use at exit: 0 bytes in 0 blocks
-==32165==   total heap usage: 85,792 allocs, 85,792 frees, 2,492,846 bytes allocated
-==32165== 
-==32165== All heap blocks were freed -- no leaks are possible
-==32165== 
-==32165== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32165== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_17.map
-==32178== HEAP SUMMARY:
-==32178==     in use at exit: 0 bytes in 0 blocks
-==32178==   total heap usage: 66,077 allocs, 66,077 frees, 1,781,958 bytes allocated
-==32178== 
-==32178== All heap blocks were freed -- no leaks are possible
-==32178== 
-==32178== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32178== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_18.map
-==32195== HEAP SUMMARY:
-==32195==     in use at exit: 0 bytes in 0 blocks
-==32195==   total heap usage: 65,984 allocs, 65,984 frees, 1,570,444 bytes allocated
-==32195== 
-==32195== All heap blocks were freed -- no leaks are possible
-==32195== 
-==32195== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32195== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_19.map
-==32211== HEAP SUMMARY:
-==32211==     in use at exit: 0 bytes in 0 blocks
-==32211==   total heap usage: 56,951 allocs, 56,951 frees, 1,457,102 bytes allocated
-==32211== 
-==32211== All heap blocks were freed -- no leaks are possible
-==32211== 
-==32211== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32211== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_20.map
-==32224== HEAP SUMMARY:
-==32224==     in use at exit: 0 bytes in 0 blocks
-==32224==   total heap usage: 67,576 allocs, 67,576 frees, 1,630,614 bytes allocated
-==32224== 
-==32224== All heap blocks were freed -- no leaks are possible
-==32224== 
-==32224== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32224== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_21.map
-==32241== HEAP SUMMARY:
-==32241==     in use at exit: 0 bytes in 0 blocks
-==32241==   total heap usage: 30,983 allocs, 30,983 frees, 748,334 bytes allocated
-==32241== 
-==32241== All heap blocks were freed -- no leaks are possible
-==32241== 
-==32241== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32241== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_22.map
-==32253== HEAP SUMMARY:
-==32253==     in use at exit: 0 bytes in 0 blocks
-==32253==   total heap usage: 15,943 allocs, 15,943 frees, 374,760 bytes allocated
-==32253== 
-==32253== All heap blocks were freed -- no leaks are possible
-==32253== 
-==32253== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32253== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_23.map
-==32256== HEAP SUMMARY:
-==32256==     in use at exit: 0 bytes in 0 blocks
-==32256==   total heap usage: 60,264 allocs, 60,264 frees, 1,662,808 bytes allocated
-==32256== 
-==32256== All heap blocks were freed -- no leaks are possible
-==32256== 
-==32256== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32256== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_24.map
-==32270== HEAP SUMMARY:
-==32270==     in use at exit: 0 bytes in 0 blocks
-==32270==   total heap usage: 58,905 allocs, 58,905 frees, 1,546,210 bytes allocated
-==32270== 
-==32270== All heap blocks were freed -- no leaks are possible
-==32270== 
-==32270== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32270== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_25.map
-==32283== HEAP SUMMARY:
-==32283==     in use at exit: 0 bytes in 0 blocks
-==32283==   total heap usage: 24,935 allocs, 24,935 frees, 616,992 bytes allocated
-==32283== 
-==32283== All heap blocks were freed -- no leaks are possible
-==32283== 
-==32283== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32283== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_26.map
-==32286== HEAP SUMMARY:
-==32286==     in use at exit: 0 bytes in 0 blocks
-==32286==   total heap usage: 24,997 allocs, 24,997 frees, 567,940 bytes allocated
-==32286== 
-==32286== All heap blocks were freed -- no leaks are possible
-==32286== 
-==32286== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32286== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_27.map
-==32301== HEAP SUMMARY:
-==32301==     in use at exit: 0 bytes in 0 blocks
-==32301==   total heap usage: 26,229 allocs, 26,229 frees, 595,562 bytes allocated
-==32301== 
-==32301== All heap blocks were freed -- no leaks are possible
-==32301== 
-==32301== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32301== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_28.map
-==32303== HEAP SUMMARY:
-==32303==     in use at exit: 0 bytes in 0 blocks
-==32303==   total heap usage: 18,802 allocs, 18,802 frees, 437,150 bytes allocated
-==32303== 
-==32303== All heap blocks were freed -- no leaks are possible
-==32303== 
-==32303== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32303== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_29.map
-==32315== HEAP SUMMARY:
-==32315==     in use at exit: 0 bytes in 0 blocks
-==32315==   total heap usage: 53,559 allocs, 53,559 frees, 1,287,736 bytes allocated
-==32315== 
-==32315== All heap blocks were freed -- no leaks are possible
-==32315== 
-==32315== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32315== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_30.map
-==32328== HEAP SUMMARY:
-==32328==     in use at exit: 0 bytes in 0 blocks
-==32328==   total heap usage: 26,622 allocs, 26,622 frees, 567,286 bytes allocated
-==32328== 
-==32328== All heap blocks were freed -- no leaks are possible
-==32328== 
-==32328== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32328== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_31.map
-==32331== HEAP SUMMARY:
-==32331==     in use at exit: 0 bytes in 0 blocks
-==32331==   total heap usage: 55,622 allocs, 55,622 frees, 1,293,230 bytes allocated
-==32331== 
-==32331== All heap blocks were freed -- no leaks are possible
-==32331== 
-==32331== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32331== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_32.map
-==32348== HEAP SUMMARY:
-==32348==     in use at exit: 0 bytes in 0 blocks
-==32348==   total heap usage: 57,839 allocs, 57,839 frees, 1,334,688 bytes allocated
-==32348== 
-==32348== All heap blocks were freed -- no leaks are possible
-==32348== 
-==32348== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32348== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_33.map
-==32363== HEAP SUMMARY:
-==32363==     in use at exit: 0 bytes in 0 blocks
-==32363==   total heap usage: 26,600 allocs, 26,600 frees, 690,018 bytes allocated
-==32363== 
-==32363== All heap blocks were freed -- no leaks are possible
-==32363== 
-==32363== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32363== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_34.map
-==32375== HEAP SUMMARY:
-==32375==     in use at exit: 0 bytes in 0 blocks
-==32375==   total heap usage: 65,900 allocs, 65,900 frees, 1,579,868 bytes allocated
-==32375== 
-==32375== All heap blocks were freed -- no leaks are possible
-==32375== 
-==32375== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32375== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_35.map
-==32389== HEAP SUMMARY:
-==32389==     in use at exit: 0 bytes in 0 blocks
-==32389==   total heap usage: 31,027 allocs, 31,027 frees, 686,852 bytes allocated
-==32389== 
-==32389== All heap blocks were freed -- no leaks are possible
-==32389== 
-==32389== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32389== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_36.map
-==32413== HEAP SUMMARY:
-==32413==     in use at exit: 0 bytes in 0 blocks
-==32413==   total heap usage: 91,264 allocs, 91,264 frees, 2,762,332 bytes allocated
-==32413== 
-==32413== All heap blocks were freed -- no leaks are possible
-==32413== 
-==32413== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32413== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_37.map
-==32435== HEAP SUMMARY:
-==32435==     in use at exit: 0 bytes in 0 blocks
-==32435==   total heap usage: 32,666 allocs, 32,666 frees, 731,208 bytes allocated
-==32435== 
-==32435== All heap blocks were freed -- no leaks are possible
-==32435== 
-==32435== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32435== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_38.map
-==32449== HEAP SUMMARY:
-==32449==     in use at exit: 0 bytes in 0 blocks
-==32449==   total heap usage: 59,344 allocs, 59,344 frees, 1,317,938 bytes allocated
-==32449== 
-==32449== All heap blocks were freed -- no leaks are possible
-==32449== 
-==32449== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32449== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_39.map
-==32481== HEAP SUMMARY:
-==32481==     in use at exit: 0 bytes in 0 blocks
-==32481==   total heap usage: 78,380 allocs, 78,380 frees, 2,220,960 bytes allocated
-==32481== 
-==32481== All heap blocks were freed -- no leaks are possible
-==32481== 
-==32481== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32481== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_40.map
-==32483== HEAP SUMMARY:
-==32483==     in use at exit: 0 bytes in 0 blocks
-==32483==   total heap usage: 25,670 allocs, 25,670 frees, 590,852 bytes allocated
-==32483== 
-==32483== All heap blocks were freed -- no leaks are possible
-==32483== 
-==32483== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32483== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_41.map
-==32485== HEAP SUMMARY:
-==32485==     in use at exit: 0 bytes in 0 blocks
-==32485==   total heap usage: 29,397 allocs, 29,397 frees, 697,132 bytes allocated
-==32485== 
-==32485== All heap blocks were freed -- no leaks are possible
-==32485== 
-==32485== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32485== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_42.map
-==32488== HEAP SUMMARY:
-==32488==     in use at exit: 0 bytes in 0 blocks
-==32488==   total heap usage: 49,643 allocs, 49,643 frees, 1,146,090 bytes allocated
-==32488== 
-==32488== All heap blocks were freed -- no leaks are possible
-==32488== 
-==32488== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32488== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_43.map
-==32493== HEAP SUMMARY:
-==32493==     in use at exit: 0 bytes in 0 blocks
-==32493==   total heap usage: 25,153 allocs, 25,153 frees, 570,228 bytes allocated
-==32493== 
-==32493== All heap blocks were freed -- no leaks are possible
-==32493== 
-==32493== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32493== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_44.map
-==32495== HEAP SUMMARY:
-==32495==     in use at exit: 0 bytes in 0 blocks
-==32495==   total heap usage: 32,883 allocs, 32,883 frees, 778,002 bytes allocated
-==32495== 
-==32495== All heap blocks were freed -- no leaks are possible
-==32495== 
-==32495== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32495== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_45.map
-==32499== HEAP SUMMARY:
-==32499==     in use at exit: 0 bytes in 0 blocks
-==32499==   total heap usage: 21,836 allocs, 21,836 frees, 502,631 bytes allocated
-==32499== 
-==32499== All heap blocks were freed -- no leaks are possible
-==32499== 
-==32499== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32499== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_46.map
-==32503== HEAP SUMMARY:
-==32503==     in use at exit: 0 bytes in 0 blocks
-==32503==   total heap usage: 57,776 allocs, 57,776 frees, 1,584,734 bytes allocated
-==32503== 
-==32503== All heap blocks were freed -- no leaks are possible
-==32503== 
-==32503== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32503== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_47.map
-==32505== HEAP SUMMARY:
-==32505==     in use at exit: 0 bytes in 0 blocks
-==32505==   total heap usage: 21,851 allocs, 21,851 frees, 560,238 bytes allocated
-==32505== 
-==32505== All heap blocks were freed -- no leaks are possible
-==32505== 
-==32505== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32505== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_48.map
-==32509== HEAP SUMMARY:
-==32509==     in use at exit: 0 bytes in 0 blocks
-==32509==   total heap usage: 22,839 allocs, 22,839 frees, 536,256 bytes allocated
-==32509== 
-==32509== All heap blocks were freed -- no leaks are possible
-==32509== 
-==32509== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32509== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_49.map
-==32511== HEAP SUMMARY:
-==32511==     in use at exit: 0 bytes in 0 blocks
-==32511==   total heap usage: 29,531 allocs, 29,531 frees, 693,290 bytes allocated
-==32511== 
-==32511== All heap blocks were freed -- no leaks are possible
-==32511== 
-==32511== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32511== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_50.map
-==32513== HEAP SUMMARY:
-==32513==     in use at exit: 0 bytes in 0 blocks
-==32513==   total heap usage: 22,032 allocs, 22,032 frees, 519,838 bytes allocated
-==32513== 
-==32513== All heap blocks were freed -- no leaks are possible
-==32513== 
-==32513== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32513== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_51.map
-==32515== HEAP SUMMARY:
-==32515==     in use at exit: 0 bytes in 0 blocks
-==32515==   total heap usage: 62,209 allocs, 62,209 frees, 1,611,840 bytes allocated
-==32515== 
-==32515== All heap blocks were freed -- no leaks are possible
-==32515== 
-==32515== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32515== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_52.map
-==32518== HEAP SUMMARY:
-==32518==     in use at exit: 0 bytes in 0 blocks
-==32518==   total heap usage: 55,394 allocs, 55,394 frees, 1,370,570 bytes allocated
-==32518== 
-==32518== All heap blocks were freed -- no leaks are possible
-==32518== 
-==32518== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32518== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_53.map
-==32527== HEAP SUMMARY:
-==32527==     in use at exit: 0 bytes in 0 blocks
-==32527==   total heap usage: 47,747 allocs, 47,747 frees, 1,112,754 bytes allocated
-==32527== 
-==32527== All heap blocks were freed -- no leaks are possible
-==32527== 
-==32527== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32527== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_54.map
-==32530== HEAP SUMMARY:
-==32530==     in use at exit: 0 bytes in 0 blocks
-==32530==   total heap usage: 77,638 allocs, 77,638 frees, 2,015,924 bytes allocated
-==32530== 
-==32530== All heap blocks were freed -- no leaks are possible
-==32530== 
-==32530== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32530== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_55.map
-==32536== HEAP SUMMARY:
-==32536==     in use at exit: 0 bytes in 0 blocks
-==32536==   total heap usage: 27,742 allocs, 27,742 frees, 597,574 bytes allocated
-==32536== 
-==32536== All heap blocks were freed -- no leaks are possible
-==32536== 
-==32536== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32536== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_56.map
-==32543== HEAP SUMMARY:
-==32543==     in use at exit: 0 bytes in 0 blocks
-==32543==   total heap usage: 63,229 allocs, 63,229 frees, 1,541,820 bytes allocated
-==32543== 
-==32543== All heap blocks were freed -- no leaks are possible
-==32543== 
-==32543== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32543== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-
-map_big_s_57.map
-==32547== HEAP SUMMARY:
-==32547==     in use at exit: 0 bytes in 0 blocks
-==32547==   total heap usage: 34,857 allocs, 34,857 frees, 823,314 bytes allocated
-==32547== 
-==32547== All heap blocks were freed -- no leaks are possible
-==32547== 
-==32547== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==32547== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+Ср мая 27 15:57:49 +05 2020
+
+100_0.map
+==15688== HEAP SUMMARY:
+==15688==     in use at exit: 0 bytes in 0 blocks
+==15688==   total heap usage: 10,013 allocs, 10,013 frees, 308,724 bytes allocated
+==15688== 
+==15688== All heap blocks were freed -- no leaks are possible
+==15688== 
+==15688== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15688== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_10.map
+==15691== HEAP SUMMARY:
+==15691==     in use at exit: 0 bytes in 0 blocks
+==15691==   total heap usage: 9,686 allocs, 9,686 frees, 299,876 bytes allocated
+==15691== 
+==15691== All heap blocks were freed -- no leaks are possible
+==15691== 
+==15691== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15691== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_11.map
+==15695== HEAP SUMMARY:
+==15695==     in use at exit: 0 bytes in 0 blocks
+==15695==   total heap usage: 10,770 allocs, 10,770 frees, 336,032 bytes allocated
+==15695== 
+==15695== All heap blocks were freed -- no leaks are possible
+==15695== 
+==15695== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15695== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_12.map
+==15697== HEAP SUMMARY:
+==15697==     in use at exit: 0 bytes in 0 blocks
+==15697==   total heap usage: 5,927 allocs, 5,927 frees, 187,926 bytes allocated
+==15697== 
+==15697== All heap blocks were freed -- no leaks are possible
+==15697== 
+==15697== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15697== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_13.map
+==15699== HEAP SUMMARY:
+==15699==     in use at exit: 0 bytes in 0 blocks
+==15699==   total heap usage: 7,392 allocs, 7,392 frees, 234,490 bytes allocated
+==15699== 
+==15699== All heap blocks were freed -- no leaks are possible
+==15699== 
+==15699== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15699== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_14.map
+==15701== HEAP SUMMARY:
+==15701==     in use at exit: 0 bytes in 0 blocks
+==15701==   total heap usage: 8,754 allocs, 8,754 frees, 270,177 bytes allocated
+==15701== 
+==15701== All heap blocks were freed -- no leaks are possible
+==15701== 
+==15701== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15701== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_15.map
+==15703== HEAP SUMMARY:
+==15703==     in use at exit: 0 bytes in 0 blocks
+==15703==   total heap usage: 8,908 allocs, 8,908 frees, 268,410 bytes allocated
+==15703== 
+==15703== All heap blocks were freed -- no leaks are possible
+==15703== 
+==15703== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15703== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_16.map
+==15705== HEAP SUMMARY:
+==15705==     in use at exit: 0 bytes in 0 blocks
+==15705==   total heap usage: 9,447 allocs, 9,447 frees, 291,580 bytes allocated
+==15705== 
+==15705== All heap blocks were freed -- no leaks are possible
+==15705== 
+==15705== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15705== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_17.map
+==15707== HEAP SUMMARY:
+==15707==     in use at exit: 0 bytes in 0 blocks
+==15707==   total heap usage: 7,489 allocs, 7,489 frees, 218,261 bytes allocated
+==15707== 
+==15707== All heap blocks were freed -- no leaks are possible
+==15707== 
+==15707== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15707== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_18.map
+==15709== HEAP SUMMARY:
+==15709==     in use at exit: 0 bytes in 0 blocks
+==15709==   total heap usage: 11,072 allocs, 11,072 frees, 341,657 bytes allocated
+==15709== 
+==15709== All heap blocks were freed -- no leaks are possible
+==15709== 
+==15709== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15709== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_19.map
+==15711== HEAP SUMMARY:
+==15711==     in use at exit: 0 bytes in 0 blocks
+==15711==   total heap usage: 8,416 allocs, 8,416 frees, 258,558 bytes allocated
+==15711== 
+==15711== All heap blocks were freed -- no leaks are possible
+==15711== 
+==15711== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15711== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_1.map
+==15713== HEAP SUMMARY:
+==15713==     in use at exit: 0 bytes in 0 blocks
+==15713==   total heap usage: 9,720 allocs, 9,720 frees, 298,948 bytes allocated
+==15713== 
+==15713== All heap blocks were freed -- no leaks are possible
+==15713== 
+==15713== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15713== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_20.map
+==15717== HEAP SUMMARY:
+==15717==     in use at exit: 0 bytes in 0 blocks
+==15717==   total heap usage: 11,781 allocs, 11,781 frees, 365,278 bytes allocated
+==15717== 
+==15717== All heap blocks were freed -- no leaks are possible
+==15717== 
+==15717== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15717== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_21.map
+==15720== HEAP SUMMARY:
+==15720==     in use at exit: 0 bytes in 0 blocks
+==15720==   total heap usage: 8,595 allocs, 8,595 frees, 266,418 bytes allocated
+==15720== 
+==15720== All heap blocks were freed -- no leaks are possible
+==15720== 
+==15720== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15720== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_22.map
+==15722== HEAP SUMMARY:
+==15722==     in use at exit: 0 bytes in 0 blocks
+==15722==   total heap usage: 9,125 allocs, 9,125 frees, 279,232 bytes allocated
+==15722== 
+==15722== All heap blocks were freed -- no leaks are possible
+==15722== 
+==15722== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15722== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_23.map
+==15729== HEAP SUMMARY:
+==15729==     in use at exit: 0 bytes in 0 blocks
+==15729==   total heap usage: 11,289 allocs, 11,289 frees, 356,664 bytes allocated
+==15729== 
+==15729== All heap blocks were freed -- no leaks are possible
+==15729== 
+==15729== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15729== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_24.map
+==15733== HEAP SUMMARY:
+==15733==     in use at exit: 0 bytes in 0 blocks
+==15733==   total heap usage: 9,060 allocs, 9,060 frees, 275,540 bytes allocated
+==15733== 
+==15733== All heap blocks were freed -- no leaks are possible
+==15733== 
+==15733== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15733== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_25.map
+==15736== HEAP SUMMARY:
+==15736==     in use at exit: 0 bytes in 0 blocks
+==15736==   total heap usage: 7,336 allocs, 7,336 frees, 228,380 bytes allocated
+==15736== 
+==15736== All heap blocks were freed -- no leaks are possible
+==15736== 
+==15736== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15736== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_26.map
+==15738== HEAP SUMMARY:
+==15738==     in use at exit: 0 bytes in 0 blocks
+==15738==   total heap usage: 8,486 allocs, 8,486 frees, 251,986 bytes allocated
+==15738== 
+==15738== All heap blocks were freed -- no leaks are possible
+==15738== 
+==15738== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15738== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_27.map
+==15741== HEAP SUMMARY:
+==15741==     in use at exit: 0 bytes in 0 blocks
+==15741==   total heap usage: 10,124 allocs, 10,124 frees, 306,850 bytes allocated
+==15741== 
+==15741== All heap blocks were freed -- no leaks are possible
+==15741== 
+==15741== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15741== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_28.map
+==15743== HEAP SUMMARY:
+==15743==     in use at exit: 0 bytes in 0 blocks
+==15743==   total heap usage: 7,707 allocs, 7,707 frees, 234,216 bytes allocated
+==15743== 
+==15743== All heap blocks were freed -- no leaks are possible
+==15743== 
+==15743== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15743== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_29.map
+==15746== HEAP SUMMARY:
+==15746==     in use at exit: 0 bytes in 0 blocks
+==15746==   total heap usage: 10,643 allocs, 10,643 frees, 319,226 bytes allocated
+==15746== 
+==15746== All heap blocks were freed -- no leaks are possible
+==15746== 
+==15746== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15746== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_2.map
+==15748== HEAP SUMMARY:
+==15748==     in use at exit: 0 bytes in 0 blocks
+==15748==   total heap usage: 9,978 allocs, 9,978 frees, 304,180 bytes allocated
+==15748== 
+==15748== All heap blocks were freed -- no leaks are possible
+==15748== 
+==15748== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15748== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_30.map
+==15750== HEAP SUMMARY:
+==15750==     in use at exit: 0 bytes in 0 blocks
+==15750==   total heap usage: 8,026 allocs, 8,026 frees, 242,046 bytes allocated
+==15750== 
+==15750== All heap blocks were freed -- no leaks are possible
+==15750== 
+==15750== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15750== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_3.map
+==15752== HEAP SUMMARY:
+==15752==     in use at exit: 0 bytes in 0 blocks
+==15752==   total heap usage: 8,989 allocs, 8,989 frees, 267,945 bytes allocated
+==15752== 
+==15752== All heap blocks were freed -- no leaks are possible
+==15752== 
+==15752== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15752== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_4.map
+==15754== HEAP SUMMARY:
+==15754==     in use at exit: 0 bytes in 0 blocks
+==15754==   total heap usage: 8,030 allocs, 8,030 frees, 234,092 bytes allocated
+==15754== 
+==15754== All heap blocks were freed -- no leaks are possible
+==15754== 
+==15754== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15754== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_5.map
+==15756== HEAP SUMMARY:
+==15756==     in use at exit: 0 bytes in 0 blocks
+==15756==   total heap usage: 7,138 allocs, 7,138 frees, 228,384 bytes allocated
+==15756== 
+==15756== All heap blocks were freed -- no leaks are possible
+==15756== 
+==15756== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15756== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_6.map
+==15758== HEAP SUMMARY:
+==15758==     in use at exit: 0 bytes in 0 blocks
+==15758==   total heap usage: 8,698 allocs, 8,698 frees, 265,286 bytes allocated
+==15758== 
+==15758== All heap blocks were freed -- no leaks are possible
+==15758== 
+==15758== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15758== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_7.map
+==15760== HEAP SUMMARY:
+==15760==     in use at exit: 0 bytes in 0 blocks
+==15760==   total heap usage: 9,202 allocs, 9,202 frees, 274,731 bytes allocated
+==15760== 
+==15760== All heap blocks were freed -- no leaks are possible
+==15760== 
+==15760== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15760== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_8.map
+==15762== HEAP SUMMARY:
+==15762==     in use at exit: 0 bytes in 0 blocks
+==15762==   total heap usage: 10,856 allocs, 10,856 frees, 325,738 bytes allocated
+==15762== 
+==15762== All heap blocks were freed -- no leaks are possible
+==15762== 
+==15762== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15762== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+100_9.map
+==15764== HEAP SUMMARY:
+==15764==     in use at exit: 0 bytes in 0 blocks
+==15764==   total heap usage: 8,865 allocs, 8,865 frees, 268,964 bytes allocated
+==15764== 
+==15764== All heap blocks were freed -- no leaks are possible
+==15764== 
+==15764== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15764== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+10_0.map
+==15766== HEAP SUMMARY:
+==15766==     in use at exit: 0 bytes in 0 blocks
+==15766==   total heap usage: 4,727 allocs, 4,727 frees, 133,855 bytes allocated
+==15766== 
+==15766== All heap blocks were freed -- no leaks are possible
+==15766== 
+==15766== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15766== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+10_10.map
+==15768== HEAP SUMMARY:
+==15768==     in use at exit: 0 bytes in 0 blocks
+==15768==   total heap usage: 7,185 allocs, 7,185 frees, 203,835 bytes allocated
+==15768== 
+==15768== All heap blocks were freed -- no leaks are possible
+==15768== 
+==15768== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15768== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+10_1.map
+==15770== HEAP SUMMARY:
+==15770==     in use at exit: 0 bytes in 0 blocks
+==15770==   total heap usage: 9,451 allocs, 9,451 frees, 278,367 bytes allocated
+==15770== 
+==15770== All heap blocks were freed -- no leaks are possible
+==15770== 
+==15770== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15770== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+10_2.map
+==15772== HEAP SUMMARY:
+==15772==     in use at exit: 0 bytes in 0 blocks
+==15772==   total heap usage: 5,786 allocs, 5,786 frees, 163,870 bytes allocated
+==15772== 
+==15772== All heap blocks were freed -- no leaks are possible
+==15772== 
+==15772== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15772== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+10_3.map
+==15774== HEAP SUMMARY:
+==15774==     in use at exit: 0 bytes in 0 blocks
+==15774==   total heap usage: 5,857 allocs, 5,857 frees, 166,981 bytes allocated
+==15774== 
+==15774== All heap blocks were freed -- no leaks are possible
+==15774== 
+==15774== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15774== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+10_4.map
+==15776== HEAP SUMMARY:
+==15776==     in use at exit: 0 bytes in 0 blocks
+==15776==   total heap usage: 12,917 allocs, 12,917 frees, 380,951 bytes allocated
+==15776== 
+==15776== All heap blocks were freed -- no leaks are possible
+==15776== 
+==15776== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15776== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+10_5.map
+==15778== HEAP SUMMARY:
+==15778==     in use at exit: 0 bytes in 0 blocks
+==15778==   total heap usage: 11,542 allocs, 11,542 frees, 341,273 bytes allocated
+==15778== 
+==15778== All heap blocks were freed -- no leaks are possible
+==15778== 
+==15778== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15778== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+10_6.map
+==15780== HEAP SUMMARY:
+==15780==     in use at exit: 0 bytes in 0 blocks
+==15780==   total heap usage: 5,807 allocs, 5,807 frees, 157,439 bytes allocated
+==15780== 
+==15780== All heap blocks were freed -- no leaks are possible
+==15780== 
+==15780== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15780== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+10_7.map
+==15783== HEAP SUMMARY:
+==15783==     in use at exit: 0 bytes in 0 blocks
+==15783==   total heap usage: 9,914 allocs, 9,914 frees, 298,349 bytes allocated
+==15783== 
+==15783== All heap blocks were freed -- no leaks are possible
+==15783== 
+==15783== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15783== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+10_8.map
+==15785== HEAP SUMMARY:
+==15785==     in use at exit: 0 bytes in 0 blocks
+==15785==   total heap usage: 4,556 allocs, 4,556 frees, 125,882 bytes allocated
+==15785== 
+==15785== All heap blocks were freed -- no leaks are possible
+==15785== 
+==15785== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15785== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+10_9.map
+==15787== HEAP SUMMARY:
+==15787==     in use at exit: 0 bytes in 0 blocks
+==15787==   total heap usage: 7,747 allocs, 7,747 frees, 229,727 bytes allocated
+==15787== 
+==15787== All heap blocks were freed -- no leaks are possible
+==15787== 
+==15787== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15787== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+1_10.map
+==15789== HEAP SUMMARY:
+==15789==     in use at exit: 0 bytes in 0 blocks
+==15789==   total heap usage: 3,205 allocs, 3,205 frees, 86,898 bytes allocated
+==15789== 
+==15789== All heap blocks were freed -- no leaks are possible
+==15789== 
+==15789== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15789== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+1_1.map
+==15791== HEAP SUMMARY:
+==15791==     in use at exit: 0 bytes in 0 blocks
+==15791==   total heap usage: 6,220 allocs, 6,220 frees, 171,810 bytes allocated
+==15791== 
+==15791== All heap blocks were freed -- no leaks are possible
+==15791== 
+==15791== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15791== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+1_2.map
+==15796== HEAP SUMMARY:
+==15796==     in use at exit: 0 bytes in 0 blocks
+==15796==   total heap usage: 4,054 allocs, 4,054 frees, 105,730 bytes allocated
+==15796== 
+==15796== All heap blocks were freed -- no leaks are possible
+==15796== 
+==15796== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15796== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+1_3.map
+==15798== HEAP SUMMARY:
+==15798==     in use at exit: 0 bytes in 0 blocks
+==15798==   total heap usage: 3,485 allocs, 3,485 frees, 93,290 bytes allocated
+==15798== 
+==15798== All heap blocks were freed -- no leaks are possible
+==15798== 
+==15798== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15798== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+1_4.map
+==15800== HEAP SUMMARY:
+==15800==     in use at exit: 0 bytes in 0 blocks
+==15800==   total heap usage: 1,713 allocs, 1,713 frees, 45,286 bytes allocated
+==15800== 
+==15800== All heap blocks were freed -- no leaks are possible
+==15800== 
+==15800== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15800== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+1_5.map
+==15802== HEAP SUMMARY:
+==15802==     in use at exit: 0 bytes in 0 blocks
+==15802==   total heap usage: 3,583 allocs, 3,583 frees, 90,236 bytes allocated
+==15802== 
+==15802== All heap blocks were freed -- no leaks are possible
+==15802== 
+==15802== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15802== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+1_6.map
+==15804== HEAP SUMMARY:
+==15804==     in use at exit: 0 bytes in 0 blocks
+==15804==   total heap usage: 2,113 allocs, 2,113 frees, 53,112 bytes allocated
+==15804== 
+==15804== All heap blocks were freed -- no leaks are possible
+==15804== 
+==15804== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15804== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+1_7.map
+==15806== HEAP SUMMARY:
+==15806==     in use at exit: 0 bytes in 0 blocks
+==15806==   total heap usage: 5,051 allocs, 5,051 frees, 134,890 bytes allocated
+==15806== 
+==15806== All heap blocks were freed -- no leaks are possible
+==15806== 
+==15806== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15806== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+1_8.map
+==15808== HEAP SUMMARY:
+==15808==     in use at exit: 0 bytes in 0 blocks
+==15808==   total heap usage: 3,811 allocs, 3,811 frees, 101,000 bytes allocated
+==15808== 
+==15808== All heap blocks were freed -- no leaks are possible
+==15808== 
+==15808== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15808== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+1_9.map
+==15810== HEAP SUMMARY:
+==15810==     in use at exit: 0 bytes in 0 blocks
+==15810==   total heap usage: 7,080 allocs, 7,080 frees, 191,602 bytes allocated
+==15810== 
+==15810== All heap blocks were freed -- no leaks are possible
+==15810== 
+==15810== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15810== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+base_collision_2w
+==15812== HEAP SUMMARY:
+==15812==     in use at exit: 0 bytes in 0 blocks
+==15812==   total heap usage: 178 allocs, 178 frees, 4,977 bytes allocated
+==15812== 
+==15812== All heap blocks were freed -- no leaks are possible
+==15812== 
+==15812== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15812== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+base_collision_3w
+==15814== HEAP SUMMARY:
+==15814==     in use at exit: 0 bytes in 0 blocks
+==15814==   total heap usage: 387 allocs, 387 frees, 11,824 bytes allocated
+==15814== 
+==15814== All heap blocks were freed -- no leaks are possible
+==15814== 
+==15814== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15814== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+base_map
+==15816== HEAP SUMMARY:
+==15816==     in use at exit: 0 bytes in 0 blocks
+==15816==   total heap usage: 31 allocs, 31 frees, 809 bytes allocated
+==15816== 
+==15816== All heap blocks were freed -- no leaks are possible
+==15816== 
+==15816== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15816== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+hard_collision_2w
+==15818== HEAP SUMMARY:
+==15818==     in use at exit: 0 bytes in 0 blocks
+==15818==   total heap usage: 182 allocs, 182 frees, 3,783 bytes allocated
+==15818== 
+==15818== All heap blocks were freed -- no leaks are possible
+==15818== 
+==15818== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==15818== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 

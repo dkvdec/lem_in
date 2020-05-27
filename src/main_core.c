@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 15:44:14 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/26 05:59:09 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/27 15:55:52 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ void		lem_in_core(void)
 		error_func("Split malloc error!");
 	get_map(t_map.lines);
 	free_strsplit(t_map.lines);
+	t_map.lines = NULL;
 	algo_core();
 	best_way_selector(buff);
 }

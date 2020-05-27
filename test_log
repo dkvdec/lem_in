@@ -1,0 +1,10 @@
+#!/bin/bash
+maps=`ls $1 | sort|uniq | tr '\n' ' '`
+date > log.log
+echo >> log.log
+for map in $maps
+do
+echo $map >> log.log
+./lem-in < "$1/$map" >> log.log
+echo >> log.log
+done
