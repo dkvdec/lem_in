@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dheredat <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/06 13:31:57 by dheredat          #+#    #+#              #
-#    Updated: 2019/04/11 16:28:14 by dheredat         ###   ########.fr        #
+#    Updated: 2020/05/27 17:35:14 by dheredat         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,14 +35,18 @@ OBJS = ft_isprint.o ft_lstnew.o ft_memmove.o ft_putnbr_fd.o ft_strcpy.o \
 		ft_memcpy.o ft_putendl_fd.o ft_strclr.o ft_striteri.o ft_strncmp.o \
 		ft_strsplit.o ft_isdigit.o ft_lstmap.o ft_memdel.o ft_putnbr.o \
 		ft_strcmp.o ft_strjoin.o ft_strncpy.o ft_strstr.o ft_bzero_safe.o
+OBJ = $(subst .c,.o,$(SRC))
 HEAD = libft.h
 CCF = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): $(OBJS) $(HEAD)
 	gcc $(CCF) -c $(SRCS)
 	ar rc $(NAME) $(OBJS)
+
+%.o: %.c %.h
+	$(CC) $(CCF) $< -c -o  $@
 
 clean:
 	rm -rf $(OBJS)
