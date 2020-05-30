@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 23:07:09 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/27 17:58:48 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/30 18:40:14 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # define BUFFSIZE 300000
 
-# include "../libft/libft.h"
+# include "../libft/inc/libft.h"
 # include <fcntl.h>
 # include <stdarg.h>
 # include <stdio.h>
@@ -214,7 +214,7 @@ void				error_func(char *str);
 void				room_connector(char *name1, char *name2, char **names);
 void				transport_core(char *buff, t_ws *wcs);
 void				best_way_selector(char *buff);
-void				lem_in_core(void);
+void				lem_in_core(int fd);
 
 /*
 **	MAP_BUILD_C

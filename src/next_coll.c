@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/26 07:38:16 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/26 07:39:40 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/30 18:39:11 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,26 @@ t_link		*way_next_coll_entr(t_room *room)
 	return (next);
 }
 
+t_link		*way_next_coll_switch(t_room *room)
+{
+	t_link	*link;
+	t_link	*next;
+
+	link = room->links;
+	next = NULL;
+	while (link)
+	{
+		if (link->room->home->mark == room->mark
+		&& link->room->home->status != room->status
+		&& link->status == 1 && link->room->status == 1)
+			next = link;
+		link = link->next;
+	}
+	t_col.col_stp = 1;
+	t_col.col_flg++;
+	return (next);
+}
+
 t_link		*way_next_coll_cont(t_room *room)
 {
 	t_link	*link;
@@ -79,7 +99,10 @@ t_link		*way_next_coll_cont(t_room *room)
 			next = link;
 		link = link->next;
 	}
-	t_col.col_stp++;
+	if (next == NULL)
+		next = way_next_coll_switch(room);
+	else
+		t_col.col_stp++;
 	return (next);
 }
 

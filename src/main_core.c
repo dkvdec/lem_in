@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 15:44:14 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/27 15:55:52 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/27 22:39:20 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,12 @@ void		best_way_selector(char *buff)
 		transport_core(buff, t_wcs.deep_min);
 }
 
-void		lem_in_core(void)
+void		lem_in_core(int fd)
 {
 	int		data;
 	char	buff[BUFFSIZE + 1];
 
-	if ((data = read(0, buff, BUFFSIZE)) < 32)
+	if ((data = read(fd, buff, BUFFSIZE)) < 32)
 		error_func("Map Error!");
 	buff[data] = '\0';
 	empty_lines_check(buff);
@@ -85,13 +85,14 @@ void		lem_in_core(void)
 
 int			main(int argc, char **argv)
 {
+	int fd;
 	char	pnt;
 
-	if (argc == 1 && argv[1] == NULL)
+	if (argc == 2)
 	{
-		if ((read(0, &pnt, 0) == 0))
+		if (((fd = open(argv[1], O_RDONLY))>0) && (read(fd, &pnt, 0) == 0))
 		{
-			lem_in_core();
+			lem_in_core(fd);
 			free_map();
 			free_ways();
 		}

@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/13 22:21:33 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/26 09:50:19 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/31 02:54:09 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,16 @@ int			coll_deixtra_coll_dcd(t_link *link, int price, int lvl, int step)
 		flag = coll_deixtra_coll(link->room->home, price, lvl + 1, step + 1);
 		link->status = -1;
 	}
+	else if (step > 0
+	&& link->status == 1
+	&& link->room->home->status > 0
+	&& link->room->home->status != link->home->status
+	&& link->room->home->price > price)
+	{
+		link->status = 0;
+		flag = coll_deixtra_coll(link->room->home, price, lvl + 1, 0);
+		link->status = 1;
+	}
 	return (flag);
 }
 
@@ -42,10 +52,10 @@ int			coll_deixtra_coll(t_room *room, int price, int lvl, int step)
 
 	best = 0;
 	link = room->links;
-	room->price = price++;
 	while (link)
 	{
-		flag = coll_deixtra_coll_dcd(link, price, lvl, step);
+		if ((flag = coll_deixtra_coll_dcd(link, price + 1, lvl, step)))
+			room->price = price;
 		best = (flag > best) ? flag : best;
 		link = link->next;
 	}
@@ -95,6 +105,26 @@ int			coll_deixtra_base(t_room *room, int price, int lvl)
 	return (best);
 }
 
+void test_show_paths()
+{
+	t_wh	*head;
+	t_w		*room;
+
+	head = t_wcs.coll_min->ways;
+	while (head)
+	{
+		room = head->start;
+		printf("way nbr %d len %d\n|%s|", head->way_nbr, head->way_len, t_map.start->name);
+		while (room)
+		{
+			printf("->|%s|", room->room->name);
+			room = room->next;
+		}
+		printf("\n");
+		head = head->next;
+	}
+}
+
 void		algo_coll(void)
 {
 	t_wcs.coll_cur = make_ws(NULL);
@@ -103,6 +133,8 @@ void		algo_coll(void)
 		add_new_path(t_wcs.coll_cur);
 		if (way_status_resulter(&t_wcs.coll_min, t_wcs.coll_cur))
 			break ;
-		map_reset();
+		// test_show_paths();
+		full_map_reset();
+		map_reclaim(t_wcs.coll_cur);
 	}
 }

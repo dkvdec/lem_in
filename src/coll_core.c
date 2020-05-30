@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/26 06:51:32 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/26 09:58:39 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/27 23:52:19 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void		find_coll_way1(t_wh *way)
 	while (curr && curr->room->status == way->way_nbr)
 		curr = curr->prev;
 	t_col.w1_col_s = curr;
-	while (curr && curr->prev->room->status != way->way_nbr)
+	while (curr && curr->prev->room->status == t_col.w1_col_s->room->status)
 		curr = curr->prev;
 	t_col.w1_col_e = curr;
 	if (t_col.w1_col_s == NULL || t_col.w1_col_e == NULL)

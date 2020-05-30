@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/14 00:14:20 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/26 09:47:48 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/05/31 03:25:50 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int			deep_deixtra_coll_dcd(t_link *link, int price, int lvl, int step)
 	&& link->status == 1
 	&& link->room->home->status == 0
 	&& link->room->home->price > price)
-		flag = deep_deixtra_base(link->room->home, price + 1, lvl);
+		flag = deep_deixtra_base(link->room->home, price, lvl);
 	else if (step >= 0
 	&& link->status == -1
 	&& link->room->home->status == link->home->status
@@ -29,8 +29,17 @@ int			deep_deixtra_coll_dcd(t_link *link, int price, int lvl, int step)
 	{
 		link->status = 0;
 		flag = deep_deixtra_coll(link->room->home,
-		price + 1, lvl + 1, step + 1);
+		price, lvl + 1, step + 1);
 		link->status = -1;
+	}
+	else if (step > 0
+	&& link->status == 1
+	&& link->room->home->status != link->home->status
+	&& link->room->home->price > price)
+	{
+		link->status = 0;
+		flag = deep_deixtra_coll(link->room->home, price, lvl + 1, 0);
+		link->status = 1;
 	}
 	return (flag);
 }
@@ -45,8 +54,7 @@ int			deep_deixtra_coll(t_room *room, int price, int lvl, int step)
 	link = room->links;
 	while (link)
 	{
-		flag = deep_deixtra_coll_dcd(link, price, lvl, step);
-		if (flag > 0)
+		if ((flag = deep_deixtra_coll_dcd(link, price + 1, lvl, step)))
 			room->price = price;
 		best = (flag > best) ? flag : best;
 		if (best > t_wcs.stop)

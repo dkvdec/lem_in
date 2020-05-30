@@ -1,4 +1,4 @@
-10
+20
 ##start
 A 1 1
 B 2 2
@@ -12,20 +12,22 @@ I 9 9
 J 10 10
 ##end
 K 11 11
+#WAY1
 A-B
-A-E
 B-C
 C-D
-D-E
 D-I
-D-H
+I-J
+J-K
+#WAY2
+A-E
 E-F
 F-G
 G-H
 H-K
-I-J
-J-K
 #extended
+D-E
+D-H
 D-F
 D-G
 E-B
