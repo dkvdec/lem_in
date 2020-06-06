@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/14 00:14:20 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/31 03:25:50 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/06/06 12:39:18 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,11 @@ int			deep_deixtra_coll_dcd(t_link *link, int price, int lvl, int step)
 	int		flag;
 
 	flag = 0;
-	if (step > 0
-	&& link->status == 1
+	if (step > 0 && link->status == 1
 	&& link->room->home->status == 0
 	&& link->room->home->price > price)
 		flag = deep_deixtra_base(link->room->home, price, lvl);
-	else if (step >= 0
-	&& link->status == -1
+	else if (step >= 0 && link->status == -1
 	&& link->room->home->status == link->home->status
 	&& link->room->home->price > price)
 	{
@@ -32,8 +30,7 @@ int			deep_deixtra_coll_dcd(t_link *link, int price, int lvl, int step)
 		price, lvl + 1, step + 1);
 		link->status = -1;
 	}
-	else if (step > 0
-	&& link->status == 1
+	else if (step > 0 && link->status == 1
 	&& link->room->home->status != link->home->status
 	&& link->room->home->price > price)
 	{

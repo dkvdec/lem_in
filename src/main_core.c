@@ -6,7 +6,7 @@
 /*   By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 15:44:14 by dheredat          #+#    #+#             */
-/*   Updated: 2020/05/27 22:39:20 by dheredat         ###   ########.fr       */
+/*   Updated: 2020/06/06 12:40:54 by dheredat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,14 +85,13 @@ void		lem_in_core(int fd)
 
 int			main(int argc, char **argv)
 {
-	int fd;
 	char	pnt;
 
-	if (argc == 2)
+	if (argc == 1 && argv[1] == NULL)
 	{
-		if (((fd = open(argv[1], O_RDONLY))>0) && (read(fd, &pnt, 0) == 0))
+		if (read(0, &pnt, 0) == 0)
 		{
-			lem_in_core(fd);
+			lem_in_core(0);
 			free_map();
 			free_ways();
 		}
