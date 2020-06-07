@@ -1,402 +1,124 @@
-Сб июн  6 12:58:52 +05 2020
-
-map_big_01.map
-80
-#Here is the number of lines required: 80
-
-map_big_02.map
-48
-#Here is the number of lines required: 48
-
-map_big_03.map
-47
-#Here is the number of lines required: 47
-
-map_big_04.map
-68
-#Here is the number of lines required: 68
-
-map_big_05.map
-44
-#Here is the number of lines required: 44
-
-map_big_06.map
-59
-#Here is the number of lines required: 59
-
-map_big_07.map
-58
-#Here is the number of lines required: 58
-
-map_big_08.map
-58
-#Here is the number of lines required: 58
-
-map_big_09.map
-48
-#Here is the number of lines required: 48
-
-map_big_10.map
-53
-#Here is the number of lines required: 53
-
-map_big_11.map
-52
-#Here is the number of lines required: 53
-
-map_big_12.map
-58
-#Here is the number of lines required: 58
-
-map_big_13.map
-59
-#Here is the number of lines required: 59
-
-map_big_14.map
-81
-#Here is the number of lines required: 81
-
-map_big_15.map
-56
-#Here is the number of lines required: 56
-
-map_big_16.map
-82
-#Here is the number of lines required: 82
-
-map_big_17.map
-74
-#Here is the number of lines required: 74
-
-map_big_18.map
-50
-#Here is the number of lines required: 50
-
-map_big_19.map
-48
-#Here is the number of lines required: 48
-
-map_big_20.map
-47
-#Here is the number of lines required: 48
-
-map_big_21.map
-76
-#Here is the number of lines required: 76
-
-map_big_22.map
-55
-#Here is the number of lines required: 55
-
-map_big_23.map
-52
-#Here is the number of lines required: 52
-
-map_big_24.map
-68
-#Here is the number of lines required: 68
-
-map_big_25.map
-54
-#Here is the number of lines required: 54
-
-map_big_26.map
-66
-#Here is the number of lines required: 67
-
-map_big_27.map
-70
-#Here is the number of lines required: 70
-
-map_big_28.map
-44
-#Here is the number of lines required: 44
-
-map_big_29.map
-46
-#Here is the number of lines required: 47
-
-map_big_30.map
-53
-#Here is the number of lines required: 53
-
-map_big_31.map
-65
-#Here is the number of lines required: 65
-
-map_big_32.map
-63
-#Here is the number of lines required: 63
-
-map_big_33.map
-50
-#Here is the number of lines required: 50
-
-map_big_34.map
-66
-#Here is the number of lines required: 66
-
-map_big_35.map
-67
-#Here is the number of lines required: 67
-
-map_big_36.map
-42
-#Here is the number of lines required: 42
-
-map_big_37.map
-61
-#Here is the number of lines required: 61
-
-map_big_38.map
-72
-#Here is the number of lines required: 72
-
-map_big_39.map
-60
-#Here is the number of lines required: 60
-
-map_big_40.map
-58
-#Here is the number of lines required: 58
-
-map_big_41.map
-56
-#Here is the number of lines required: 56
-
-map_big_42.map
-58
-#Here is the number of lines required: 58
-
-map_big_43.map
-50
-#Here is the number of lines required: 50
-
-map_big_44.map
-76
-#Here is the number of lines required: 77
-
-map_big_45.map
-45
-#Here is the number of lines required: 45
-
-map_big_46.map
-76
-#Here is the number of lines required: 76
-
-map_big_47.map
-71
-#Here is the number of lines required: 71
-
-map_big_48.map
-45
-#Here is the number of lines required: 44
-
-map_big_49.map
-68
-#Here is the number of lines required: 68
-
-map_big_50.map
-62
-#Here is the number of lines required: 62
-
-map_big_s_01.map
-86
-#Here is the number of lines required: 86
-
-map_big_s_02.map
-81
-#Here is the number of lines required: 81
-
-map_big_s_03.map
-74
-#Here is the number of lines required: 73
-
-map_big_s_04.map
-82
-#Here is the number of lines required: 81
-
-map_big_s_05.map
-71
-#Here is the number of lines required: 71
-
-map_big_s_06.map
-76
-#Here is the number of lines required: 76
-
-map_big_s_07.map
-64
-#Here is the number of lines required: 63
-
-map_big_s_08.map
-65
-#Here is the number of lines required: 64
-
-map_big_s_09.map
-77
-#Here is the number of lines required: 77
-
-map_big_s_10.map
-69
-#Here is the number of lines required: 67
-
-map_big_s_11.map
-80
-#Here is the number of lines required: 80
-
-map_big_s_12.map
-91
-#Here is the number of lines required: 91
-
-map_big_s_13.map
-78
-#Here is the number of lines required: 76
-
-map_big_s_14.map
-56
-#Here is the number of lines required: 56
-
-map_big_s_15.map
-77
-#Here is the number of lines required: 77
-
-map_big_s_16.map
-94
-#Here is the number of lines required: 92
-
-map_big_s_17.map
-76
-#Here is the number of lines required: 73
-
-map_big_s_18.map
-81
-#Here is the number of lines required: 80
-
-map_big_s_19.map
-75
-#Here is the number of lines required: 74
-
-map_big_s_20.map
-91
-#Here is the number of lines required: 91
-
-map_big_s_21.map
-79
-#Here is the number of lines required: 76
-
-map_big_s_22.map
-69
-#Here is the number of lines required: 69
-
-map_big_s_23.map
-79
-#Here is the number of lines required: 78
-
-map_big_s_24.map
-59
-#Here is the number of lines required: 59
-
-map_big_s_25.map
-85
-#Here is the number of lines required: 83
-
-map_big_s_26.map
-57
-#Here is the number of lines required: 58
-
-map_big_s_27.map
-73
-#Here is the number of lines required: 74
-
-map_big_s_28.map
-82
-#Here is the number of lines required: 79
-
-map_big_s_29.map
-75
-#Here is the number of lines required: 74
-
-map_big_s_30.map
-83
-#Here is the number of lines required: 83
-
-map_big_s_31.map
-84
-#Here is the number of lines required: 83
-
-map_big_s_32.map
-74
-#Here is the number of lines required: 72
-
-map_big_s_33.map
-91
-#Here is the number of lines required: 88
-
-map_big_s_34.map
-74
-#Here is the number of lines required: 74
-
-map_big_s_35.map
-60
-#Here is the number of lines required: 60
-
-map_big_s_36.map
-84
-#Here is the number of lines required: 81
-
-map_big_s_37.map
-67
-#Here is the number of lines required: 68
-
-map_big_s_38.map
-92
-#Here is the number of lines required: 90
-
-map_big_s_39.map
-68
-#Here is the number of lines required: 70
-
-map_big_s_40.map
-61
-#Here is the number of lines required: 60
-
-map_big_s_41.map
-87
-#Here is the number of lines required: 85
-
-map_big_s_42.map
-79
-#Here is the number of lines required: 78
-
-map_big_s_43.map
-66
-#Here is the number of lines required: 69
-
-map_big_s_44.map
-80
-#Here is the number of lines required: 78
-
-map_big_s_45.map
-78
-#Here is the number of lines required: 76
-
-map_big_s_46.map
-90
-#Here is the number of lines required: 88
-
-map_big_s_47.map
-76
-#Here is the number of lines required: 78
-
-map_big_s_48.map
-78
-#Here is the number of lines required: 76
-
-map_big_s_49.map
-84
-#Here is the number of lines required: 82
-
-map_big_s_50.map
-77
-#Here is the number of lines required: 76
+Сб июн  6 21:29:15 +05 2020
+
+ant_nbr_big_int
+-6
+start-end
+
+ant_nbr_empty
+-5
+start-end
+
+ant_nbr_late
+-7
+start-end
+
+ant_nbr_neg
+-6
+start-end
+
+com_begin
+-10
+middle-end
+
+com_end_after_rooms
+-8
+middle-end
+
+com_end_start_tgthr
+-8
+middle-start
+
+com_mult_end
+-9
+middle-start
+
+com_mult_start
+-9
+middle-start
+
+com_no_end
+-7
+middle-start
+
+com_no_start
+-8
+middle-start
+
+com_start_after_rooms
+-8
+middle-start
+
+com_start_end_same_room
+-9
+middle-start
+
+com_start_end_tgthr
+-8
+middle-start
+
+empty_lines
+-8
+start-end
+
+empty_map
+0
+
+link_empty
+-6
+end 1 1
+
+link_incorrect
+-8
+middle- start
+
+link_in_rooms
+-8
+middle-end
+
+link_mult_unk_rooms
+-9
+room1-room99
+
+link_unknown_room
+-8
+niddle-start
+
+no_empty_line_on_end
+-7
+middle-start
+no_solution
+-7
+middle-start
+
+room_after_link
+-9
+middle-end
+
+room_Lname
+-9
+middle-end
+
+room_mult_coor
+-9
+middle-end
+
+room_mult_spaces
+-9
+middle-end
+
+room_no_name
+-9
+middle-end
+
+room_same_name
+-9
+middle-end
+
+room_space
+-9
+middle-end
+
+room_space_name
+-9
+middle-end
 

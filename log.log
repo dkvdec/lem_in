@@ -1,0 +1,95 @@
+Сб июн  6 21:29:36 +05 2020
+
+ant_nbr_big_int
+Map Error! Invalid ants number.
+
+ant_nbr_empty
+Map Error! Invalid ants number.
+
+ant_nbr_late
+Map Error! Invalid ants number.
+
+ant_nbr_neg
+Map Error! Invalid ants number.
+
+com_begin
+Map Error! Invalid ants number.
+
+com_end_after_rooms
+Map Error! Missing ##start or ##end or both.
+
+com_end_start_tgthr
+Map Error! Multiple ##end commands.
+
+com_mult_end
+Map Error! Multiple ##end commands.
+
+com_mult_start
+Map Error! Multiple ##start commands.
+
+com_no_end
+Map Error! Missing ##start or ##end or both.
+
+com_no_start
+Map Error! Multiple ##end commands.
+
+com_start_after_rooms
+Map Error! Missing ##start or ##end or both.
+
+com_start_end_same_room
+Map Error! Map contains room duplicates.
+
+com_start_end_tgthr
+Map Error! Multiple ##end commands.
+
+empty_lines
+Map Error! Empty lines.
+
+empty_map
+Map Error!
+
+link_empty
+Map Error! Invalid map condition.
+
+link_incorrect
+Map Error! Map contains invalid lines.
+
+link_in_rooms
+Map Error! Missing ##start or ##end or both.
+
+link_mult_unk_rooms
+Map Error! Link contains unknown room.
+
+link_unknown_room
+Map Error! Link contains unknown room.
+
+no_empty_line_on_end
+Map Error! Map should end with \n.
+
+no_solution
+Map Error! No conection between ##start and ##end.
+
+room_after_link
+Map Error! Map contains invalid lines.
+
+room_Lname
+Map Error! Room name begins with L.
+
+room_mult_coor
+Map Error! Map contains invalid lines.
+
+room_mult_spaces
+Map Error! Map contains invalid lines.
+
+room_no_name
+Map Error! Map contains invalid lines.
+
+room_same_name
+Map Error! Map contains room duplicates.
+
+room_space
+Map Error! Map contains invalid lines.
+
+room_space_name
+Map Error! Map contains invalid lines.
+

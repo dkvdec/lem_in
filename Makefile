@@ -6,7 +6,7 @@
 #    By: dheredat <dheredat@student.21school.ru>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/12 11:27:08 by dheredat          #+#    #+#              #
-#    Updated: 2020/05/30 18:39:42 by dheredat         ###   ########.fr        #
+#    Updated: 2020/06/07 03:52:24 by dheredat         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,7 +60,7 @@ $(NAME): $(LIBFT) $(OBJ_DIR) $(OBJS)
 	@echo "\033[1;32mDone lem-in\033[0m"
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEAD)
-	@gcc $(FLAGS) -g -c $< -I$(INC_DIR) -I$(LIBFT_DIR)/inc -o $@
+	@gcc $(FLAGS) -g -c $< -I$(INC_DIR) -I$(LIBFT_DIR)/inc -o $@ -MD
 	
 clean:
 	@rm -rf $(OBJ_DIR)
@@ -71,3 +71,5 @@ fclean: clean
 	@make -C libft fclean
 
 re: fclean all
+
+.PHONY: all clean fclean re
